@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600|Yanone+Kaffeesatz" rel="stylesheet">
+    
+    <%= favicon_tag 'favicon.ico' %>
+
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Upon Arrival" %></title>
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+  </head>
+  <body>
+
+    <%= partial 'shared/navigation' %>
+
+    <div class="container-fluid">
+
+      <div class="row row--logo">
+        <div class="col-lg-3 push-lg-9 logo--img">
+          <%= image_tag 'icon/logo.png' %>
+        </div>
+      </div>
+
+      <div class="container--content">
+
+        <%= yield %>
+
+        <%= partial 'shared/sidebar' %>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

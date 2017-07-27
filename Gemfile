@@ -1,8 +1,24 @@
-source 'https://rubygems.org'
+ruby '2.3.1'
 
-group :development, :test do
-  gem 'jekyll', '~> 3.3.1'
-  gem 'jekyll-redirect-from', '~> 0.12.0'
-  gem 'jekyll-sitemap', '~> 0.12.0'
-  gem 'scss_lint', '~> 0.51.0'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
+source 'https://rubygems.org' do
+  gem 'puma'
+  gem 'rake'
+
+  gem 'dotenv', groups: %i[development test]
+
+  gem 'middleman', '~> 4.2'
+  gem 'middleman-autoprefixer', '~> 2.7'
+  gem 'middleman-sprockets'
+
+  gem 'bootstrap', '~> 4.0.0.alpha6'
+
+  # Use jquery as the JavaScript library
+  gem 'jquery-rails', require: false
+
+  gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
+  gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 end
