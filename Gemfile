@@ -13,6 +13,7 @@ source 'https://rubygems.org' do
   gem 'middleman', '~> 4.2'
   gem 'middleman-autoprefixer', '~> 2.7'
   gem 'middleman-sprockets'
+  gem 'middleman-minify-html'
 
   gem 'bootstrap', '~> 4.0.0.alpha6'
 
