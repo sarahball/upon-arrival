@@ -49,6 +49,7 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.5.6)
+    htmlcompressor (0.2.0)
     i18n (0.7.0)
     jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
@@ -98,6 +99,9 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
+    middleman-minify-html (3.4.1)
+      htmlcompressor (~> 0.2.0)
+      middleman-core (>= 3.2)
     middleman-sprockets (4.1.0)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
@@ -156,6 +160,7 @@ DEPENDENCIES
   jquery-rails!
   middleman (~> 4.2)!
   middleman-autoprefixer (~> 2.7)!
+  middleman-minify-html!
   middleman-sprockets!
   puma!
   rails-assets-tether (>= 1.3.3)!
