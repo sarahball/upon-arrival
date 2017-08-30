@@ -19,25 +19,25 @@
 
 #### Money
 - currency
-..- [Open Exchange Rates] (https://openexchangerates.org/)
+  - [Open Exchange Rates] (https://openexchangerates.org/)
 - exchange rate
-..- [Open Exchange Rates] (https://openexchangerates.org/)
+  - [Open Exchange Rates] (https://openexchangerates.org/)
 - is the rate favorable?
-..- [Open Exchange Rates] (https://openexchangerates.org/)
+  - [Open Exchange Rates] (https://openexchangerates.org/)
 #### Language
 - primary language(s)
-..- [The Base Trip] (https://www.thebasetrip.com/en/api/docs/basic)
+  - [The Base Trip] (https://www.thebasetrip.com/en/api/docs/basic)
 - how to say key phrases
-..- *do this manually?*
+  - *do this manually?*
 #### Health & Safety
 - emergency service numbers
-..- *couldn't find a free source. do this manually too for now?*
+  - *couldn't find a free source. do this manually too for now?*
 #### Weather
 - what’s the weather like generally
-..- [World Factbook] (https://github.com/opendatajson/factbook.json) - climate description
-..- [Weather Underground] (https://www.wunderground.com/weather/api/d/docs?d=data/index) - that day's almanac + historical information planner over a date range
+  - [World Factbook] (https://github.com/opendatajson/factbook.json) - climate description
+  - [Weather Underground] (https://www.wunderground.com/weather/api/d/docs?d=data/index) - that day's almanac + historical information planner over a date range
 - what’s the weather like at the moment
-..- [Weather Underground] (https://www.wunderground.com/weather/api/d/docs?d=data/index) - current conditions
+  - [Weather Underground] (https://www.wunderground.com/weather/api/d/docs?d=data/index) - current conditions
 
 ## Goal Locations List
 
