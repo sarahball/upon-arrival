@@ -12,7 +12,7 @@
     <%= favicon_tag 'favicon.ico' %>
 
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Upon Arrival" %></title>
+    <title><%= yield_content(:title) || current_page.data.title || 'Upon Arrival' %></title>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
   </head>

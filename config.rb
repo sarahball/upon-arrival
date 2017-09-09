@@ -15,6 +15,18 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+# Create all the proxy pages for locations we support
+supported_countries = @app.data.locations
+supported_countries.each do |from_key, from_location|
+  supported_countries.each do |to_key, to_location|
+    if from_location[:slug] != to_location[:slug]
+      proxy "/#{from_location[:slug]}-visiting-#{to_location[:slug]}.html", '/countries/template.html', locals: { from_location: from_key, to_location: to_key }, ignore: true
+    end
+  end
+end
+
+ignore '/countries/template.html'
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
@@ -33,11 +45,48 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def location_combinations
+    final_location_combinations = []
+
+    data.locations.each do |from_key, _from_location|
+      data.locations.each do |to_key, _to_location|
+        if from_key != to_key
+          final_location_combinations << [location_data_for(from_key), location_data_for(to_key)]
+        end
+      end
+    end
+
+    final_location_combinations
+  end
+
+  def location_data_for(location)
+    country_data = ISO3166::Country.new(location)
+    data.locations[location].merge({
+      name: country_data.name,
+      latitude_dec: country_data.latitude_dec,
+      longitude_dec: country_data.longitude_dec,
+      currency: country_data.currency,
+      languages: country_data.languages
+    })
+  end
+
+  # from: https://apidock.com/rails/ActiveSupport/Inflector/parameterize
+  def parameterize(string, sep = '-')
+    # replace accented chars with their ascii equivalents
+    parameterized_string = transliterate(string)
+    # Turn unwanted chars into the separator
+    parameterized_string.gsub!(/[^a-z0-9\-_]+/, sep)
+    unless sep.nil? || sep.empty?
+      re_sep = Regexp.escape(sep)
+      # No more than one of the separator in a row.
+      parameterized_string.gsub!(/#{re_sep}{2,}/, sep)
+      # Remove leading/trailing separator.
+      parameterized_string.gsub!(/^#{re_sep}|#{re_sep}$/, '')
+    end
+    parameterized_string.downcase
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

@@ -15,6 +15,8 @@ source 'https://rubygems.org' do
   gem 'middleman-sprockets'
   gem 'middleman-minify-html'
 
+  gem 'countries'
+
   gem 'bootstrap', '~> 4.0.0.alpha6'
 
   # Use jquery as the JavaScript library

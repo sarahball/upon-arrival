@@ -1,0 +1,19 @@
+<%
+    from = location_data_for(from_location)
+    to = location_data_for(to_location)
+
+    # Set the title with a yield because it's dynamic.
+    content_for(:title, "#{from[:name]} going to #{to[:name]} - Upon Arrival")
+%>
+<p>You're coming from <%= from[:name] %> going to <%= to[:name] %></p>
+
+<div class="row row--content">
+  <div id="accordion" class="navblocks" role="tablist" aria-multiselectable="true">
+
+    <%= partial 'shared/money', locals: { from: from, to: to } %>
+    <%= partial 'shared/language', locals: { from: from, to: to } %>
+    <%= partial 'shared/health_and_safety', locals: { from: from, to: to } %>
+    <%= partial 'shared/weather', locals: { from: from, to: to } %>
+
+  </div>
+</div>
