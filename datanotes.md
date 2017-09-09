@@ -17,6 +17,9 @@
 
 ## Found Data Points (Free! :money_with_wings:)
 
+#### Countries
+ - https://github.com/hexorx/countries - This gem could be used to source our base info for countries.
+
 #### Money
 - currency
   - [Open Exchange Rates](https://openexchangerates.org/)

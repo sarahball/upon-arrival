@@ -1,31 +1,25 @@
 gb:
   slug: "united-kingdom"
-  name: "United Kingdom"
-  currency: "GBP"
-  languages:
-    - "English"
   key_phrases:
     greeting: "Hello"
     excuse_me: "Excuse me, mate"
-  capital_coordinates: 
-    latitude: "51.500152"
-    longitude: "-0.126236"
   emergency_numbers:
     "emergency": "999"
     "urgent care": "111"
     "police": "101"
 us:
   slug: "united-states"
-  name: "United States"
-  currency: "USD"
-  languages:
-    - "English"
   key_phrases:
     greeting: "Hello"
-    excuse_me: "Excuse me, mate"
-  capital_coordinates: 
-    latitude: "51.500152"
-    longitude: "-0.126236"
+    excuse_me: "Toot  Toot"
+  emergency_numbers:
+    "emergency": "911"
+    "police": "101"
+ca:
+  slug: "canada"
+  key_phrases:
+    greeting: "Hello"
+    excuse_me: "Sorry."
   emergency_numbers:
     "emergency": "911"
     "police": "101"

@@ -46,8 +46,45 @@ ignore '/countries/template.html'
 # https://middlemanapp.com/basics/helper-methods/
 
 helpers do
+  def location_combinations
+    final_location_combinations = []
+
+    data.locations.each do |from_key, _from_location|
+      data.locations.each do |to_key, _to_location|
+        if from_key != to_key
+          final_location_combinations << [location_data_for(from_key), location_data_for(to_key)]
+        end
+      end
+    end
+
+    final_location_combinations
+  end
+
   def location_data_for(location)
-    data.locations[location]
+    country_data = ISO3166::Country.new(location)
+    data.locations[location].merge({
+      name: country_data.name,
+      latitude_dec: country_data.latitude_dec,
+      longitude_dec: country_data.longitude_dec,
+      currency: country_data.currency,
+      languages: country_data.languages
+    })
+  end
+
+  # from: https://apidock.com/rails/ActiveSupport/Inflector/parameterize
+  def parameterize(string, sep = '-')
+    # replace accented chars with their ascii equivalents
+    parameterized_string = transliterate(string)
+    # Turn unwanted chars into the separator
+    parameterized_string.gsub!(/[^a-z0-9\-_]+/, sep)
+    unless sep.nil? || sep.empty?
+      re_sep = Regexp.escape(sep)
+      # No more than one of the separator in a row.
+      parameterized_string.gsub!(/#{re_sep}{2,}/, sep)
+      # Remove leading/trailing separator.
+      parameterized_string.gsub!(/^#{re_sep}|#{re_sep}$/, '')
+    end
+    parameterized_string.downcase
   end
 end
 

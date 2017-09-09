@@ -5,10 +5,14 @@ title: Upon Arrival
 <div class="row row--content">
   <div id="accordion" class="navblocks" role="tablist" aria-multiselectable="true">
 
-    <%= partial 'shared/money' %>
-    <%= partial 'shared/language' %>
-    <%= partial 'shared/health_and_safety' %>
-    <%= partial 'shared/weather' %>
+    <p>TODO: This should become a search/select box which sends people to the below pages.</p>
 
+    <ul>
+      <% location_combinations.each do |from, to| %>
+        <li>
+          <%= link_to "#{from[:name]} ✈️ #{to[:name]}", "/#{from[:slug]}-visiting-#{to[:slug]}.html" %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>
