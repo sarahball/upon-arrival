@@ -1,6 +1,10 @@
----
-title: Upon Arrival
----
+<%
+    from = location_data_for(from_location)
+    to = location_data_for(to_location)
+%>
+<% content_for(:title, "#{from[:name]} going to #{to[:name]} - Upon Arrival") %>
+
+<p>You're coming from <%= from[:name] %> going to <%= to[:name] %></p>
 
 <div class="row row--content">
   <div id="accordion" class="navblocks" role="tablist" aria-multiselectable="true">

@@ -15,6 +15,18 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+# Create all the proxy pages for locations we support
+supported_countries = @app.data.locations
+supported_countries.each do |from_key, from_location|
+  supported_countries.each do |to_key, to_location|
+    if from_location[:slug] != to_location[:slug]
+      proxy "/#{from_location[:slug]}-visiting-#{to_location[:slug]}.html", '/countries/template.html', locals: { from_location: from_key, to_location: to_key }, ignore: true
+    end
+  end
+end
+
+ignore '/countries/template.html'
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
@@ -33,11 +45,11 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def location_data_for(location)
+    data.locations[location]
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
