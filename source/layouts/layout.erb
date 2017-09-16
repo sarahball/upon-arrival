@@ -19,22 +19,26 @@
   <body>
 
     <%= partial 'shared/navigation' %>
+    <%= partial 'shared/sprite' %>
 
-    <div class="container-fluid">
+    <div class="container">
 
-      <div class="row row--logo">
-        <div class="col-lg-3 push-lg-9 logo--img">
-          <%= image_tag 'icon/logo.png' %>
+      <div class="row">
+        <div class="three columns offset-by-nine logo">
+          <%= image_tag('icon/logo.png', :class => "fit") %>
         </div>
       </div>
 
-      <div class="container--content">
+     
+
+      <div class="blocks-container" id="accordion">
 
         <%= yield %>
 
         <%= partial 'shared/sidebar' %>
 
       </div>
+
 
     </div>
 

@@ -1,3 +1,9 @@
 // This is where it all goes :)
 //= require jquery
-//= require bootstrap-sprockets
+//= require jquery-ui
+
+//=require jquery-ui/widgets/accordion
+
+$( function() {
+  $( "#accordion" ).accordion();
+} );
