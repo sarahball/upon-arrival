@@ -5,5 +5,8 @@
 //=require jquery-ui/widgets/accordion
 
 $( function() {
-  $( "#accordion" ).accordion();
+  $( "#accordion" ).accordion({
+  	//collapsible: true,
+  	//heightStyle: "content"
+  });
 } );
