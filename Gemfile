@@ -1,4 +1,4 @@
-ruby '2.3.1'
+ruby '2.4.1'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
@@ -18,6 +18,9 @@ source 'https://rubygems.org' do
   gem 'countries'
 
   gem 'bootstrap', '~> 4.0.0.alpha6'
+
+  gem 'dalli'
+  gem 'middleman-cache-do', '~> 0.1.0'
 
   # Use jquery as the JavaScript library
   gem 'jquery-rails', require: false
