@@ -7,6 +7,15 @@ end
 
 activate :sprockets
 
+activate :middleman_cache_do do |config|
+  config.client = Dalli::Client.new(ENV['MEMCACHEDCLOUD_SERVERS'].split(','), {
+    username: ENV['MEMCACHEDCLOUD_USERNAME'],
+    password: ENV['MEMCACHEDCLOUD_PASSWORD'],
+    namespace: 'middleman_cache_do',
+    compress: true
+  }) if ENV['MEMCACHEDCLOUD_SERVERS']
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
