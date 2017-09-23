@@ -3,5 +3,8 @@
   "description": "Everything you need to know the moment you touch down.",
   "repository": "https://github.com/sarahball/upon-arrival",
   "logo": "https://raw.githubusercontent.com/sarahball/upon-arrival/master/source/images/icon/logo.png",
-  "keywords": ["middleman", "static"]
+  "keywords": ["middleman", "static"],
+  "addons": [
+    "memcachedcloud"
+  }
 }
