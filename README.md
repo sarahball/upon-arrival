@@ -10,6 +10,7 @@ Copy and paste the below command and you should be good to go!
 
 ### Services and Libraries
 
+    brew install memcached &&
     gem install foreman &&
     gem install middleman &&
     gem install powder
