@@ -26,4 +26,4 @@ Follow the instructions found [in this gist](https://gist.github.com/MikeRogers0
     puma-dev link &&
     powder open
 
-You should be able to access the local version of the site at https://upon-arrival.localhost/ .
+You should be able to access the local version of the site at https://upon-arrival.localhost/.
