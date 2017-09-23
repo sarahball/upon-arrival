@@ -24,7 +24,7 @@ Follow the instructions found [in this gist](https://gist.github.com/MikeRogers0
     git clone git@github.com:sarahball/upon-arrival.git &&
     cd upon-arrival &&
     bundle &&
-    puma-dev link &&
+    puma-dev link -n Upon-Arrival &&
     powder open
 
 You should be able to access the local version of the site at https://upon-arrival.localhost/.
