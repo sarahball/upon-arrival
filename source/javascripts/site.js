@@ -6,7 +6,8 @@
 
 $( function() {
   $( "#accordion" ).accordion({
-  	//collapsible: true,
-  	//heightStyle: "content"
+  	collapsible: true,
+  	active: false,
+  	heightStyle: "content"
   });
 } );

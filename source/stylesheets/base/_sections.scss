@@ -1,0 +1,24 @@
+// Sections
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+/* Items */
+
+.item-title {
+	cursor: pointer;
+	height: calc(25vh - 2px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-top: 2px solid $white;
+
+	&:first-of-type {
+		border-top: 2px solid transparent;
+	}
+}
+
+.item-content {
+	background-color: $white;
+	padding: 0 30px 75px;
+	padding: 0 calc(5% + 20px) 73px;
+}
