@@ -1,11 +1,12 @@
 // Navigation
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.logo, #mainNavigation {display: none;}
+.nav {display: none;}
 
-nav {
-	position: absolute;
-	right: 0;
-	top: 0;
-	z-index: 1000;
+// Larger than tablet
+@media (#{$bp-larger-than-tablet}) {
+	.nav {display: block;}
 }
+
+// Larger than desktop
+@media (#{$bp-larger-than-desktop}) {}

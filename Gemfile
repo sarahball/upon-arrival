@@ -25,7 +25,8 @@ source 'https://rubygems.org' do
   # Use jquery as the JavaScript library
   gem 'jquery-rails', require: false
   gem 'jquery-ui-rails', require: false
-
+  gem 'jquery-matchheight-rails', require: false
+  
   gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
   gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 end

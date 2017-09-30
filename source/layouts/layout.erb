@@ -18,22 +18,18 @@
   </head>
   <body>
 
-    <%= partial 'shared/navigation' %>
     <%= partial 'shared/sprite' %>
 
     <div class="container">
 
-      <div class="row">
-        <div class="three columns offset-by-nine logo">
-          <%= image_tag('icon/logo.png', :class => "fit") %>
-        </div>
-      </div>
+        <%= partial 'shared/navigation' %>
 
         <%= yield %>
-
-        <%= partial 'shared/sidebar' %>
-
+        
     </div>
 
+    <script>
+        
+    </script>
   </body>
 </html>
