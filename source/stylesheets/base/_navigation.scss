@@ -1,0 +1,12 @@
+// Navigation
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.nav {display: none;}
+
+// Larger than tablet
+@media (#{$bp-larger-than-tablet}) {
+	.nav {display: block;}
+}
+
+// Larger than desktop
+@media (#{$bp-larger-than-desktop}) {}

@@ -1,66 +1,51 @@
 <!-- Weather -->
-<div class="navblocks--wrapper col-lg-6">
-  <div class="navblocks--parent">
-    <div class="navblocks--container d-flex flex-column align-items-center justify-content-center" role="tab" id="headingFour">
-      <a class="collapsed navblocks--title d-flex flex-column align-items-center justify-content-center" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-        <h1 class="mb-0">Weather</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="14" viewBox="0 0 26 14">
-          <title>Caret Down</title>
-          <g class="caret--icn-a">
-            <g class="caret--icn-b">
-              <polyline points="0 0 12 12 24 0"/>
-            </g>
-          </g>
-        </svg>
-      </a>
-    </div>
-    <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
-      <svg class="slope-border" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-        <polygon points="0 0 100 10 0 10" />
-      </svg>
-      <div class="card-block">
-        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="29" viewBox="0 0 27 29">
-          <title>Zap</title>
-          <g fill="none">
-            <g transform="translate(-74 -18)translate(74 20)">
-              <polygon points="1 15 12.3 15 11 25 23.5 10 12.3 10 13.5 0" class="zap--icn" />
-            </g>
-          </g>
-        </svg>
-        <h2>Typical Weather</h2>
-        <p>Temperate. Moderated by prevailing southwest winds over the North Atlantic Current. More than one-half of the days are overcast.</p>
-      </div>
-      <div class="card-block">
-        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="29" viewBox="0 0 27 29">
-          <title>Zap</title>
-          <g fill="none">
-            <g transform="translate(-74 -18)translate(74 20)">
-              <polygon points="1 15 12.3 15 11 25 23.5 10 12.3 10 13.5 0" class="zap--icn" />
-            </g>
-          </g>
-        </svg>
-        <h2>Weather Upon Arrival</h2>
-        <div class="d-flex align-items-center justify-content-around">
-          <div><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"><title>Cloud-Rain</title><g fill="none"><rect x="1" y="1" width="25" height="25"/><path d="M18 14.6L18 23.7" class="zap--icn"/><path d="M9 14.6L9 23.7" class="zap--icn"/><path d="M13 16.9L13 26" class="zap--icn"/><path d="M22.6 18.7C25.1 17.6 26.4 15 25.9 12.3 25.3 9.7 23 7.8 20.3 7.8L18.9 7.8C17.9 4 14.6 1.2 10.7 1 6.7 0.8 3.1 3.1 1.7 6.8 0.3 10.5 1.4 14.7 4.5 17.2" class="zap--icn"/></g></svg></div>
-          <div>50% chance of rain</div>
-        </div>
-        <table class="table">
-          <tbody>
-            <tr>
-              <td>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="27" viewBox="0 0 13 27"><title>Thermometer</title><g fill="none"><rect x="-6" y="1" width="25" height="24.5" /><path d="M9.3 16.6L9.3 3.8C9.3 2.3 8 1 6.5 1 5 1 3.7 2.3 3.7 3.8L3.7 16.6C1.9 17.9 1.1 20.2 1.7 22.4 2.4 24.5 4.3 26 6.5 26 8.7 26 10.6 24.5 11.3 22.4 11.9 20.2 11.1 17.9 9.3 16.6L9.3 16.6Z" class="therm--icn" /></g></svg>
-              </td>
-              <td>
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="27" viewBox="0 0 13 27"><title>Thermometer</title><g fill="none"><rect x="-6" y="1" width="25" height="24.5" /><path d="M9.3 16.6L9.3 3.8C9.3 2.3 8 1 6.5 1 5 1 3.7 2.3 3.7 3.8L3.7 16.6C1.9 17.9 1.1 20.2 1.7 22.4 2.4 24.5 4.3 26 6.5 26 8.7 26 10.6 24.5 11.3 22.4 11.9 20.2 11.1 17.9 9.3 16.6L9.3 16.6Z" class="zap--icn" /></g></svg>
-              </td>
-            </tr>
-            <tr>
-              <td>high 17°c</td>
-              <td>low 12°c</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+<div class="item-container">
+  <div class="item-title">
+    <h1>Weather</h1>
+    <svg width="26px" height="14px">
+      <use xlink:href="#caret-down"></use>
+    </svg>
   </div>
+  <section>
+    <svg width="100%" height="75px">
+      <use xlink:href="#slope-border"></use>
+    </svg>
+    <div class="item-content">
+      <svg width="27px" height="29px">
+        <use xlink:href="#icn-zap"></use>
+      </svg>
+      <h2>Typical Weather</h2>
+      <p>Temperate. Moderated by prevailing southwest winds over the North Atlantic Current. More than one-half of the days are overcast.</p>
+      <svg width="27px" height="29px">
+        <use xlink:href="#icn-zap"></use>
+      </svg>
+      <h2>Weather Upon Arrival</h2>
+      <div>
+        <svg width="27px" height="27px">
+          <use xlink:href="#icn-rain"></use>
+        </svg>
+        <div>50% chance of rain</div>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <svg width="13px" height="27px">
+                <use xlink:href="#icn-therm-full"></use>
+              </svg>
+            </td>
+            <td>
+              <svg width="13px" height="27px">
+                <use xlink:href="#icn-therm-empty"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <td>high 17°c</td>
+            <td>low 12°c</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 </div>

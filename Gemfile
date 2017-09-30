@@ -17,14 +17,19 @@ source 'https://rubygems.org' do
 
   gem 'countries'
 
-  gem 'bootstrap', '~> 4.0.0.alpha6'
+  # gem 'bootstrap', '~> 4.0.0.alpha6'
+
+  gem 'dalli'
+  gem 'middleman-cache-do', '~> 0.1.0'
 
   gem 'dalli'
   gem 'middleman-cache-do', '~> 0.1.0'
 
   # Use jquery as the JavaScript library
   gem 'jquery-rails', require: false
-
+  gem 'jquery-ui-rails', require: false
+  gem 'jquery-matchheight-rails', require: false
+  
   gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
   gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 end
