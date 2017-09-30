@@ -22,6 +22,9 @@ source 'https://rubygems.org' do
   gem 'dalli'
   gem 'middleman-cache-do', '~> 0.1.0'
 
+  gem 'dalli'
+  gem 'middleman-cache-do', '~> 0.1.0'
+
   # Use jquery as the JavaScript library
   gem 'jquery-rails', require: false
   gem 'jquery-ui-rails', require: false
