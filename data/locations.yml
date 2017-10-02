@@ -3,8 +3,8 @@ london-gb:
   title: London
   country: gb
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Excuse me, mate"
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse me, mate"
   emergency_numbers:
     "emergency": "999"
     "non-emergency": "101"
@@ -14,8 +14,8 @@ chiang-mai-th:
   title: Chiang Mai
   country: th
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Excuse me"
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse me"
   emergency_numbers:
     "Tourist Police": "1155"
     "Police": "191"
@@ -27,8 +27,8 @@ bangkok-th:
   title: Bangkok
   country: th
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Excuse Me"
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse Me"
   emergency_numbers:
     "Tourist Police": "1155"
     "Police": "191"
@@ -40,8 +40,8 @@ berlin-de:
   title: Berlin
   country: de
   key_phrases:
-    greeting: "Bitte"
-    excuse_me: "Bitte?"
+    "Greeting": "Bitte"
+    "Excuse Me": "Bitte?"
   emergency_numbers:
     "emergency": "112"
     "Emergency Police": "110"
@@ -51,8 +51,8 @@ lisbon-pt:
   title: Lisbon
   country: pt
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Excuse me, mate"
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse me, mate"
   emergency_numbers:
     "emergency": "112"
     "urgent care": "111"
@@ -62,8 +62,8 @@ new-york-city-us:
   title: New York City
   country: us
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Are you Will Ferrell?"
+    "Greeting": "Hello"
+    "Excuse Me": "Are you Will Ferrell?"
   emergency_numbers:
     "emergency": "911"
     "police": "911"
@@ -73,8 +73,8 @@ barcelona-es:
   title: Barcelona
   country: es
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Excuse Me"
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse Me"
   emergency_numbers:
     "emergency": "112"
     "police": "092"
@@ -85,8 +85,8 @@ buenos-aires-ar:
   title: Buenos Aires
   country: ar
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Excuse Me"
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse Me"
   emergency_numbers:
     "Tourist Police": "436"
     "Medical Emergency Emergency Service": "107"
@@ -96,8 +96,8 @@ amsterdam-nl:
   title: Amsterdam
   country: nl
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Are you Peter Levels?"
+    "Greeting": "Hello"
+    "Excuse Me": "Are you Peter Levels?"
   emergency_numbers:
     "emergency": "112"
 
@@ -106,8 +106,8 @@ budapest-hu:
   title: Budapest
   country: hu
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Excuse Me"
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse Me"
   emergency_numbers:
     "emergency": "112"
     "police": "107"
