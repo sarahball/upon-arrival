@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-size: $font-size; // currently ems cause chrome bug misinterpreting rems on body element
+  font-size: $font-size;
   line-height: 1.6;
   font-weight: 400;
   font-family: $font-family;

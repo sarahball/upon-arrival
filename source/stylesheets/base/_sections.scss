@@ -27,6 +27,14 @@
 	padding: 0 calc(5% + 20px) 73px;
 }
 
+/* Locations */
+
+.locations {
+	label {display: none;}
+}
+
+
+
 // Larger than tablet
 @media (#{$bp-larger-than-tablet}) {
 
