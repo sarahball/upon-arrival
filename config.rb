@@ -29,7 +29,7 @@ supported_countries = @app.data.locations
 supported_countries.each do |from_key, from_location|
   supported_countries.each do |to_key, to_location|
     if from_location[:slug] != to_location[:slug]
-      proxy "/#{from_location[:slug]}-visiting-#{to_location[:slug]}.html", '/locations/template.html', locals: { from_location: from_key, to_location: to_key }, ignore: true
+      proxy "/#{from_location[:slug]}-from-#{to_location[:slug]}.html", '/locations/template.html', locals: { from_location: from_key, to_location: to_key }, ignore: true
     end
   end
 end

@@ -10,7 +10,7 @@ title: Upon Arrival
     <ul>
       <% location_combinations.each do |from, to| %>
         <li>
-          <%= link_to "#{from[:title]} ✈️ #{to[:title]}", "/#{from[:slug]}-visiting-#{to[:slug]}.html" %>
+          <%= link_to "#{from[:title]} ✈️ #{to[:title]}", "/#{from[:slug]}-from-#{to[:slug]}.html" %>
         </li>
       <% end %>
     </ul>
