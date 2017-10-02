@@ -70,9 +70,9 @@ helpers do
   end
 
   def location_data_for(location)
-    country_data = ISO3166::Country.new(location)
+    country_data = ISO3166::Country.new(data.locations[location].country)
     data.locations[location].merge({
-      name: country_data.name,
+      title: data.locations[location].title,
       latitude_dec: country_data.latitude_dec,
       longitude_dec: country_data.longitude_dec,
       currency: country_data.currency,
