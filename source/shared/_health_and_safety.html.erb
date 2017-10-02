@@ -17,18 +17,12 @@
       <h2>Emergency Services</h2>
       <table>
         <tbody>
-          <tr>
-            <td>emergency</td>
-            <td>999</td>
-          </tr>
-          <tr>
-            <td>urgent care</td>
-            <td>111</td>
-          </tr>
-          <tr>
-            <td>police</td>
-            <td>101</td>
-          </tr>
+          <% to.emergency_numbers.each do |department, number| %>
+            <tr>
+              <td><%= department %></td>
+              <td><%= number %></td>
+            </tr>
+          <% end %>
         </tbody>
       </table>
     </div>

@@ -3,7 +3,9 @@
     to = location_data_for(to_location)
 
     # Set the title with a yield because it's dynamic.
-    content_for(:title, "#{from[:name]} going to #{to[:name]} - Upon Arrival")
+    content_for(:title, "#{to[:title]} from #{from[:title]} - Upon Arrival")
+    content_for(:from_location, "from-#{from_location}")
+    content_for(:to_location, "to-#{to_location}")
 %>
 
 <div id="accordion" class="navblocks" role="tablist" aria-multiselectable="true">
