@@ -1,25 +1,114 @@
-gb:
-  slug: "united-kingdom"
+london-gb:
+  slug: london-united
+  title: London
+  country: gb
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Excuse me, mate"
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse me, mate"
   emergency_numbers:
     "emergency": "999"
+    "non-emergency": "101"
+
+chiang-mai-th:
+  slug: chiang-mai
+  title: Chiang Mai
+  country: th
+  key_phrases:
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse me"
+  emergency_numbers:
+    "Tourist Police": "1155"
+    "Police": "191"
+    "Medical Emergency": "1669"
+    "Vehicle Theft Police": "1192"
+
+bangkok-th:
+  slug: bangkok
+  title: Bangkok
+  country: th
+  key_phrases:
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse Me"
+  emergency_numbers:
+    "Tourist Police": "1155"
+    "Police": "191"
+    "Medical Emergency": "1669"
+    "Vehicle Theft Police": "1192"
+
+berlin-de:
+  slug: berlin
+  title: Berlin
+  country: de
+  key_phrases:
+    "Greeting": "Bitte"
+    "Excuse Me": "Bitte?"
+  emergency_numbers:
+    "emergency": "112"
+    "Emergency Police": "110"
+
+lisbon-pt:
+  slug: lisbon
+  title: Lisbon
+  country: pt
+  key_phrases:
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse me, mate"
+  emergency_numbers:
+    "emergency": "112"
     "urgent care": "111"
-    "police": "101"
-us:
-  slug: "united-states"
+
+new-york-city-us:
+  slug: new-york-city
+  title: New York City
+  country: us
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Toot  Toot"
+    "Greeting": "Hello"
+    "Excuse Me": "Are you Will Ferrell?"
   emergency_numbers:
     "emergency": "911"
-    "police": "101"
-ca:
-  slug: "canada"
+    "police": "911"
+
+barcelona-es:
+  slug: barcelona
+  title: Barcelona
+  country: es
   key_phrases:
-    greeting: "Hello"
-    excuse_me: "Sorry."
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse Me"
   emergency_numbers:
-    "emergency": "911"
-    "police": "101"
+    "emergency": "112"
+    "police": "092"
+    "Accident / Ambulance": "061"
+
+buenos-aires-ar:
+  slug: buenos-aires
+  title: Buenos Aires
+  country: ar
+  key_phrases:
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse Me"
+  emergency_numbers:
+    "Tourist Police": "436"
+    "Medical Emergency Emergency Service": "107"
+
+amsterdam-nl:
+  slug: amsterdam
+  title: Amsterdam
+  country: nl
+  key_phrases:
+    "Greeting": "Hello"
+    "Excuse Me": "Are you Peter Levels?"
+  emergency_numbers:
+    "emergency": "112"
+
+budapest-hu:
+  slug: budapest
+  title: Budapest
+  country: hu
+  key_phrases:
+    "Greeting": "Hello"
+    "Excuse Me": "Excuse Me"
+  emergency_numbers:
+    "emergency": "112"
+    "police": "107"
+    "Ambulance": "104"
