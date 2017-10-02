@@ -1,5 +1,7 @@
-gb:
-  slug: "united-kingdom"
+london-gb:
+  slug: london-united
+  title: London
+  country: gb
   key_phrases:
     greeting: "Hello"
     excuse_me: "Excuse me, mate"
@@ -7,19 +9,105 @@ gb:
     "emergency": "999"
     "urgent care": "111"
     "police": "101"
-us:
-  slug: "united-states"
+
+chiang-mai-th:
+  slug: chiang-mai
+  title: Chiang Mai
+  country: th
   key_phrases:
     greeting: "Hello"
-    excuse_me: "Toot  Toot"
+    excuse_me: "Excuse me, mate"
   emergency_numbers:
-    "emergency": "911"
+    "emergency": "999"
+    "urgent care": "111"
     "police": "101"
-ca:
-  slug: "canada"
+
+berlin-de:
+  slug: berlin
+  title: Berlin
+  country: de
+  key_phrases:
+    greeting: "Bitte"
+    excuse_me: "Bitte?"
+  emergency_numbers:
+    "emergency": "999"
+    "urgent care": "111"
+    "police": "101"
+
+lisbon-pt:
+  slug: lisbon
+  title: Lisbon
+  country: pt
   key_phrases:
     greeting: "Hello"
-    excuse_me: "Sorry."
+    excuse_me: "Excuse me, mate"
+  emergency_numbers:
+    "emergency": "999"
+    "urgent care": "111"
+    "police": "101"
+
+new-york-city-us:
+  slug: new-york-city
+  title: New York City
+  country: us
+  key_phrases:
+    greeting: "Hello"
+    excuse_me: "Are you Will Ferrell?"
   emergency_numbers:
     "emergency": "911"
-    "police": "101"
+    "police": "911"
+
+barcelona-es:
+  slug: barcelona
+  title: Barcelona
+  country: es
+  key_phrases:
+    greeting: "Hello"
+    excuse_me: "Are you Will Ferrell?"
+  emergency_numbers:
+    "emergency": "911"
+    "police": "911"
+
+bangkok-th:
+  slug: bangkok
+  title: Bangkok
+  country: th
+  key_phrases:
+    greeting: "Hello"
+    excuse_me: "Are you Will Ferrell?"
+  emergency_numbers:
+    "emergency": "911"
+    "police": "911"
+
+buenos-aires-ar:
+  slug: buenos-aires
+  title: Buenos Aires
+  country: ar
+  key_phrases:
+    greeting: "Hello"
+    excuse_me: "Are you Will Ferrell?"
+  emergency_numbers:
+    "emergency": "911"
+    "police": "911"
+
+amsterdam-nl:
+  slug: amsterdam
+  title: Amsterdam
+  country: nl
+  key_phrases:
+    greeting: "Hello"
+    excuse_me: "Are you Levels?"
+  emergency_numbers:
+    "emergency": "911"
+    "police": "911"
+
+Budapest-hu:
+  slug: budapest
+  title: Budapest
+  country: hu
+  key_phrases:
+    greeting: "Hello"
+    excuse_me: "Are you Levels?"
+  emergency_numbers:
+    "emergency": "911"
+    "police": "911"
