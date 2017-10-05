@@ -6,5 +6,5 @@
   "keywords": ["middleman", "static"],
   "addons": [
     "memcachedcloud"
-  }
+  ]
 }
