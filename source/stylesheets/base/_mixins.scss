@@ -1,0 +1,15 @@
+// Mixins
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@mixin background($location) {
+	background:
+	  linear-gradient(
+	    45deg,
+	    rgba($gradient-warm-a, 0.65) 0%,
+	    rgba($gradient-warm-b, 0.65) 100%),
+	  url(/images/bg-#{$location}.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

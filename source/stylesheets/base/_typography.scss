@@ -4,7 +4,7 @@
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
-  font-weight: 300;
+  font-weight: $font-normal;
 }
 
 h1 { font-size: 2.9rem; line-height: 1.2;  letter-spacing: .29rem;  }

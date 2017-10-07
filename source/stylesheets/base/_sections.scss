@@ -27,6 +27,83 @@
 	padding: 0 calc(5% + 20px) 73px;
 }
 
+/* Locations */
+
+#locations-form {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.locations {
+	nav, 
+	label {display: none;}
+
+	@each $location in 'london' 'chiangmai' 'berlin' 'lisbon' 'newyorkcity' 'barcelona' 'bangkok' 'buenosaires' 'amsterdam' 'budapest' {
+    &-#{$location} {
+    	@include background(#{$location});
+    }
+	}
+
+	&-#{icon} {
+		order: 1;
+	  background-image: url(../images/icon/icn-map-pin.svg);
+	  background-size: 23px 27px;
+	  width: 23px;
+	  height: 27px;
+	  display: inline-block;
+	  line-height: 0;
+	}
+}
+
+#wherefrom-button, #wheregoing-button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ui-menu {
+  .ui-menu-item-wrapper {padding: 10px 20px;}
+
+  .ui-icon {
+    margin: auto 10px;
+  }
+
+  .ui-state-focus, .ui-state-active {
+    margin: 0;
+    background-color: rgba($tangerine, 0.25);
+  }
+}
+
+.ui-selectmenu {
+
+  &-#{button}.ui-button {
+    background: rgba($white, 0.7);
+    padding: 18px;
+    margin-bottom: 15px;
+  }
+
+  &-#{menu} .ui-menu {background: $white;}
+
+  &-#{text} {
+  	order: 2;
+  	display: inline-block;
+  	margin-right: 0;
+  }
+
+  &-#{icon}.ui-icon {
+  	order: 3;
+    content: "";
+    height: 8px;
+    width: 14px;
+    background-image: url(../images/icon/icn-chevron-down.svg);
+  }
+}
+
 // Larger than tablet
 @media (#{$bp-larger-than-tablet}) {
 
@@ -42,10 +119,10 @@
 	.item-container {
 		flex: 1 33.333%;
 		margin: 0 3% 6%;
-		border: 2px solid $white;
+		border: 1px solid $white;
 
 		&:first-of-type {
-			border: 2px solid $white;
+			border: 1px solid $white;
 		}
 	}
 

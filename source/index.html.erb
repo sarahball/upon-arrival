@@ -2,7 +2,44 @@
 title: Upon Arrival
 ---
 
-<div class="row">
+<form id="locations-form" action="#" method="post">
+
+    <label for="wherefrom">Where are you from?</label>
+    <select name="Where are you from?" id="wherefrom">
+      <option value="from0">Where are you from?</option>
+      <option value="from1">United States</option>
+      <option value="from2">United Kingdom</option>
+      <option value="from3">Canada</option>
+      <option value="from4">France</option>
+      <option value="from5">Germany</option>
+      <option value="from6">The Netherlands</option>
+      <option value="from7">Australia</option>
+      <option value="from8">South Korea</option>
+    </select>
+
+    <label for="wheregoing">Where are you going?</label>
+    <select name="Where are you going?" id="wheregoing">
+      <option value="going0">Where are you going?</option>
+      <option value="going1">London</option>
+      <option value="going2">Chiang Mai</option>
+      <option value="going3">Berlin</option>
+      <option value="going4">Lisbon</option>
+      <option value="going5">New York City</option>
+      <option value="going6">Barcelona</option>
+      <option value="going7">Bangkok</option>
+      <option value="going8">Buenos Aires</option>
+      <option value="going9">Amsterdam</option>
+      <option value="going10">Budapest</option>
+    </select>
+
+    <input type="submit" value="Search">
+
+</form>
+
+
+
+
+<div class="row" style="display:none;">
   <div>
 
     <p>TODO: This should become a search/select box which sends people to the below pages.</p>
@@ -16,3 +53,7 @@ title: Upon Arrival
     </ul>
   </div>
 </div>
+
+<script>
+    $('body').addClass('locations')
+</script>
