@@ -2,12 +2,8 @@
 title: Upon Arrival
 ---
 
-<svg width="23px" height="27px">
-  <use xlink:href="#icn-map-pin"></use>
-</svg>
+<form id="locations-form" action="#" method="post">
 
-<div class="container locations">
-  <div class="row">
     <label for="wherefrom">Where are you from?</label>
     <select name="Where are you from?" id="wherefrom">
       <option value="from0">Where are you from?</option>
@@ -20,9 +16,7 @@ title: Upon Arrival
       <option value="from7">Australia</option>
       <option value="from8">South Korea</option>
     </select>
-  </div>
 
-  <div class="row">
     <label for="wheregoing">Where are you going?</label>
     <select name="Where are you going?" id="wheregoing">
       <option value="going0">Where are you going?</option>
@@ -37,14 +31,15 @@ title: Upon Arrival
       <option value="going9">Amsterdam</option>
       <option value="going10">Budapest</option>
     </select>
-  </div>
-</div>
+
+    <input type="submit" value="Search">
+
+</form>
 
 
 
 
-
-<div class="row">
+<div class="row" style="display:none;">
   <div>
 
     <p>TODO: This should become a search/select box which sends people to the below pages.</p>
@@ -58,3 +53,7 @@ title: Upon Arrival
     </ul>
   </div>
 </div>
+
+<script>
+    $('body').addClass('locations')
+</script>

@@ -63,7 +63,7 @@ label,
 legend {
   display: block;
   margin-bottom: .5rem;
-  font-weight: 600;
+  font-weight: $font-heavy;
 }
 
 fieldset {
@@ -81,45 +81,5 @@ input {
 label > .label-body {
   display: inline-block;
   margin-left: .5rem;
-  font-weight: normal;
+  font-weight: $font-normal;
 }
-
-// Selectors
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-.ui-selectmenu-menu .ui-menu {
-  background: $white;
-}
-
-.ui-menu .ui-menu-item-wrapper {padding: 10px 20px;}
-
-.ui-selectmenu-button.ui-button {
-  background: rgba($white, 0.7);
-  padding: 18px;
-  margin-bottom: 15px;
-}
-
-.ui-menu .ui-icon {
-  margin: auto 10px;
-}
-
-//.ui-state-disabled {display: none;}
-
-/* Custom Icons */
-
-/*.ui-selectmenu-menu .ui-menu.customicons .ui-menu-item-wrapper {
-  padding: 15px 10px 15px 52px;
-  height: 28px;
-  background-color: $white;
-}
-
-.ui-selectmenu-menu .ui-menu.customicons .ui-menu-item .ui-icon {
-  height: 27px;
-  width: 24px;
-  top: 0.1em;
-}
-
-.ui-icon {
-  background: url("../images/icn-map-pin.svg") 0 0 no-repeat;
-}
-*/

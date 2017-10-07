@@ -1,31 +1,23 @@
 // Base Styles
 //––––––––––––––––––––––––––––––––––––––––––––––––––
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 html {
   font-size: 62.5%;
-  background-color: $gradient-cool-a;
+  background-color: $gradient-warm-a;
 }
 
 body {
   font-size: $font-size;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: $font-normal;
   font-family: $font-family;
   color: $font-color;
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba($gradient-cool-a, 0.2) 0%,
-      rgba($gradient-cool-a, 0.2) 100%),
-    linear-gradient(
-      45deg,
-      rgba($gradient-cool-a, 0.65) 0%,
-      rgba($gradient-cool-b, 0.65) 100%),
-    url(/images/bg-budapest.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  @include background(bangkok);
   min-height: 100vh;
 }
 
@@ -51,22 +43,6 @@ hr {
 
 // Larger than tablet
 @media (#{$bp-larger-than-tablet}) {
-  body {
-    background:
-      radial-gradient(
-        ellipse at center,
-        rgba($gradient-cool-a, 0.5) 0%,
-        transparent 100%),
-      linear-gradient(
-        45deg,
-        rgba($gradient-cool-a, 0.65) 0%,
-        rgba($gradient-cool-b, 0.65) 100%),
-      url(/images/bg-budapest.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
 }
 
 // Larger than desktop

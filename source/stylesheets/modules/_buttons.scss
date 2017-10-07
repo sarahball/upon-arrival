@@ -1,47 +1,29 @@
 // Buttons
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.button,
-button {
-  display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: $tangerine;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: $global-radius;
-  border: 1px solid $tangerine;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
 input {
   &[type="submit"],
   &[type="reset"],
   &[type="button"] {
     display: inline-block;
-    height: 38px;
-    padding: 0 30px;
-    color: $tangerine;
+    line-height: 20px;
+    padding: 18px 54px;
+    color: $white;
+    background-color: $tangerine;
     text-align: center;
-    font-size: 11px;
-    font-weight: 600;
-    line-height: 38px;
+    font-weight: $font-heavy;
     letter-spacing: .1rem;
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
-    background-color: transparent;
-    border-radius: $global-radius;
-    border: 1px solid $tangerine;
+    border: none;
     cursor: pointer;
     box-sizing: border-box;
+    transition: background 0.5s ease;
+
+    &:hover {
+      background: rgba($tangerine, 0.7);
+      transition: background 0.5s ease;
+    }
   }
 }

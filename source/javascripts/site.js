@@ -24,50 +24,45 @@ $(function() {
 });
 
 $(function() {
-  $("#wherefrom").selectmenu();
+
+  $("#wherefrom").selectmenu({
+  });
   
   $("#wheregoing").selectmenu({
     change: function(event, data){ 
       if (data.item.value == "going1") { 
-        $("body").css("background", "url(/images/bg-london.jpg) no-repeat center center fixed");
+        document.body.classList.add("locations-london");
       }
       else if (data.item.value == "going2") {
-        $("body").css("background", "url(/images/bg-chiangmai.jpg) no-repeat center center fixed");
+        document.body.classList.add("locations-chiangmai");
       }
       else if (data.item.value == "going3") {
-        $("body").css("background", "url(/images/bg-berlin.jpg) no-repeat center center fixed");
+        document.body.classList.add("locations-berlin");
       }
       else if (data.item.value == "going4") {
-        $("body").css("background", "url(/images/bg-lisbon.jpg) no-repeat center center fixed");
+       document.body.classList.add("locations-lisbon");
+      }
+      else if (data.item.value == "going5") {
+       document.body.classList.add("locations-newyorkcity");
+      }
+      else if (data.item.value == "going6") {
+       document.body.classList.add("locations-barcelona");
+      }
+      else if (data.item.value == "going7") {
+       document.body.classList.add("locations-bangkok");
+      }
+      else if (data.item.value == "going8") {
+       document.body.classList.add("locations-buenosaires");
+      }
+      else if (data.item.value == "going9") {
+       document.body.classList.add("locations-amsterdam");
+      }
+      else if (data.item.value == "going10") {
+       document.body.classList.add("locations-budapest");
       }
     }
   })
+
+  $( ".ui-selectmenu-text" ).before( "<span class='locations-icon'></span>" );
 });
 
-
-
-/*$( function() {
-  $.widget( "custom.iconselectmenu", $.ui.selectmenu, {
-    _renderItem: function( ul, item ) {
-      var li = $( "<li>" ),
-        wrapper = $( "<div>", { text: item.label } );
-
-      if ( item.disabled ) {
-        li.addClass( "ui-state-disabled" );
-      }
-
-      $( "<span>", {
-        style: item.element.attr( "data-style" ),
-        "class": "ui-icon " + item.element.attr( "data-class" )
-      })
-        .appendTo( wrapper );
-
-      return li.append( wrapper ).appendTo( ul );
-    }
-  });
-
-  $( "#wherefrom" )
-    .iconselectmenu()
-    .iconselectmenu( "menuWidget" )
-      .addClass( "ui-menu-icons customicons" );
-} );*/
