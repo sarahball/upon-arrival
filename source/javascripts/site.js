@@ -30,7 +30,7 @@ $(function() {
   
   $("#wheregoing").selectmenu({
     change: function(event, data){ 
-      var labelClassName = data.item.label.toLowerCase().replace(' ', '');
+      var labelClassName = data.item.label.toLowerCase().replace(/ /g, '');
       $('body').attr('class', 'locations locations-'+labelClassName);
     }
   })
