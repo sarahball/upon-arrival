@@ -6,49 +6,37 @@ title: Upon Arrival
 
     <label for="wherefrom">Where are you from?</label>
     <select name="Where are you from?" id="wherefrom">
-      <option value="from0">Where are you from?</option>
-      <option value="from1">United States</option>
-      <option value="from2">United Kingdom</option>
-      <option value="from3">Canada</option>
-      <option value="from4">France</option>
-      <option value="from5">Germany</option>
-      <option value="from6">The Netherlands</option>
-      <option value="from7">Australia</option>
-      <option value="from8">South Korea</option>
+      <option value="">Where are you from?</option>
+      <% departures.each do |departure| %>
+        <option value="<%= departure.country_code %>"><%= departure.name %></option>
+      <% end %>
     </select>
 
     <label for="wheregoing">Where are you going?</label>
     <select name="Where are you going?" id="wheregoing">
-      <option value="going0">Where are you going?</option>
-      <option value="going1">London</option>
-      <option value="going2">Chiang Mai</option>
-      <option value="going3">Berlin</option>
-      <option value="going4">Lisbon</option>
-      <option value="going5">New York City</option>
-      <option value="going6">Barcelona</option>
-      <option value="going7">Bangkok</option>
-      <option value="going8">Buenos Aires</option>
-      <option value="going9">Amsterdam</option>
-      <option value="going10">Budapest</option>
+      <option value="">Where are you going?</option>
+      
+      <% destinations.each do |destination| %>
+        <option value="<%= destination[:slug] %>"><%= destination[:title] %></option>
+      <% end %>
     </select>
 
     <input type="submit" value="Search">
 
 </form>
 
-
-
-
-<div class="row" style="display:none;">
+<div class="row">
   <div>
 
     <p>TODO: This should become a search/select box which sends people to the below pages.</p>
 
     <ul>
-      <% location_combinations.each do |from, to| %>
-        <li>
-          <%= link_to "#{from[:title]} ✈️ #{to[:title]}", "/#{from[:slug]}-from-#{to[:slug]}.html" %>
-        </li>
+      <% departures.each do |departure| %>
+        <% destinations.each do |destination| %>
+          <li>
+            <%= link_to "#{departure.name} ✈️ #{destination[:title]}", "/#{destination[:slug]}-from-#{departure.alpha2.downcase}.html" %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </div>

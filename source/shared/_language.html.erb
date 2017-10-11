@@ -15,14 +15,14 @@
         <use xlink:href="#icn-zap"></use>
       </svg>
       <h2>Languages</h2>
-      <p><%= to.languages.join(', ') %></p>
+      <p><%= destination.languages.join(', ') %></p>
       <svg width="27px" height="29px">
         <use xlink:href="#icn-zap"></use>
       </svg>
       <h2>Key Phrases</h2>
       <table>
         <tbody>
-          <% to.key_phrases.each do |meaning, phrase| %>
+          <% destination.key_phrases.each do |meaning, phrase| %>
             <tr>
               <td><%= meaning %></td>
               <td><%= phrase %></td>
