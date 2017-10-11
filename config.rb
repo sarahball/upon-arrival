@@ -24,18 +24,6 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# Create all the proxy pages for locations we support
-supported_countries = @app.data.locations
-supported_countries.each do |from_key, from_location|
-  supported_countries.each do |to_key, to_location|
-    if from_location[:slug] != to_location[:slug]
-      proxy "/#{from_location[:slug]}-from-#{to_location[:slug]}.html", '/locations/template.html', locals: { from_location: from_key, to_location: to_key }, ignore: true
-    end
-  end
-end
-
-ignore '/locations/template.html'
-
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
@@ -54,36 +42,25 @@ ignore '/locations/template.html'
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
+require 'helpers/trips_helper'
+include TripsHelper
+
+# Create all the proxy pages for locations we support
+departures.each do |departure|
+  destinations.each do |destination|
+    proxy "/#{destination[:slug]}-from-#{departure.alpha2.downcase}.html", '/locations/template.html', locals: { departure: departure, destination: destination }, ignore: true
+  end
+end
+
+ignore '/locations/template.html'
+
 helpers do
-  def location_combinations
-    final_location_combinations = []
-
-    data.locations.each do |from_key, _from_location|
-      data.locations.each do |to_key, _to_location|
-        if from_key != to_key
-          final_location_combinations << [location_data_for(from_key), location_data_for(to_key)]
-        end
-      end
-    end
-
-    final_location_combinations
-  end
-
-  def location_data_for(location)
-    country_data = ISO3166::Country.new(data.locations[location].country)
-    data.locations[location].merge({
-      title: data.locations[location].title,
-      latitude_dec: country_data.latitude_dec,
-      longitude_dec: country_data.longitude_dec,
-      currency: country_data.currency,
-      languages: country_data.languages
-    })
-  end
-
   # from: https://apidock.com/rails/ActiveSupport/Inflector/parameterize
   def parameterize(string, sep = '-')
     # replace accented chars with their ascii equivalents
-    parameterized_string = transliterate(string)
+    # parameterized_string = transliterate(string)
+    parameterized_string = string
+
     # Turn unwanted chars into the separator
     parameterized_string.gsub!(/[^a-z0-9\-_]+/, sep)
     unless sep.nil? || sep.empty?
