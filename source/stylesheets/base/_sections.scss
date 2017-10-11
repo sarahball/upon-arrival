@@ -49,8 +49,8 @@
 	}
 
 	&-#{icon} {
-		order: 1;
-	  background-image: url(../images/icon/icn-map-pin.svg);
+      order: 1;
+	  background-image: image-url("icon/icn-map-pin.svg");
 	  background-size: 23px 27px;
 	  width: 23px;
 	  height: 27px;
@@ -100,7 +100,7 @@
     content: "";
     height: 8px;
     width: 14px;
-    background-image: url(../images/icon/icn-chevron-down.svg);
+    background-image: image-url("icon/icn-chevron-down.svg");
   }
 }
 

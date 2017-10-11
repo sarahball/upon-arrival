@@ -1,6 +1,7 @@
 ---
 title: Upon Arrival
 ---
+<% content_for(:body_class, 'locations') %>
 
 <form id="locations-form" action="#" method="post">
 
@@ -15,7 +16,6 @@ title: Upon Arrival
     <label for="wheregoing">Where are you going?</label>
     <select name="Where are you going?" id="wheregoing">
       <option value="">Where are you going?</option>
-      
       <% destinations.each do |destination| %>
         <option value="<%= destination[:slug] %>"><%= destination[:title] %></option>
       <% end %>
@@ -41,7 +41,3 @@ title: Upon Arrival
     </ul>
   </div>
 </div>
-
-<script>
-    $('body').addClass('locations')
-</script>
