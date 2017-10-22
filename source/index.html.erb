@@ -3,13 +3,13 @@ title: Upon Arrival
 ---
 <% content_for(:body_class, 'locations') %>
 
-<form id="locations-form" action="#" method="post">
+<form id="locations-form" data-redirect-to="/#{wheregoing}-from-#{wherefrom}.html" action="#" method="post">
 
     <label for="wherefrom">Where are you from?</label>
     <select name="Where are you from?" id="wherefrom">
       <option value="">Where are you from?</option>
       <% departures.each do |departure| %>
-        <option value="<%= departure.country_code %>"><%= departure.name %></option>
+        <option value="<%= departure.alpha2.downcase %>"><%= departure.name %></option>
       <% end %>
     </select>
 
