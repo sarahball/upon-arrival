@@ -25,19 +25,8 @@ title: Upon Arrival
 
 </form>
 
-<div class="row hidden">
-  <div>
-
-    <p>TODO: This should become a search/select box which sends people to the below pages.</p>
-
-    <ul>
-      <% departures.each do |departure| %>
-        <% destinations.each do |destination| %>
-          <li>
-            <%= link_to "#{departure.name} ✈️ #{destination[:title]}", "/#{destination[:slug]}-from-#{departure.alpha2.downcase}.html" %>
-          </li>
-        <% end %>
-      <% end %>
-    </ul>
-  </div>
+<div class="locations-preloader">
+  <% destinations.each do |destination| %>
+    <div class="locations-<%= destination.slug %>"></div>
+  <% end %>
 </div>
