@@ -49,6 +49,7 @@
       right: 0;
       height: 1px;
       width: 1px;
+      z-index: -1;
     }
 
 	@each $location in 'london' 'chiang-mai' 'berlin' 'lisbon' 'new-york-city' 'barcelona' 'bangkok' 'buenos-aires' 'amsterdam' 'budapest' {
