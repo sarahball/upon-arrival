@@ -48,7 +48,7 @@ include TripsHelper
 # Create all the proxy pages for locations we support
 departures.each do |departure|
   destinations.each do |destination|
-    proxy "/#{destination[:slug]}-from-#{departure.alpha2.downcase}.html", '/locations/template.html', locals: { departure: departure, destination: destination }, ignore: true
+    proxy "/#{destination.slug}-from-#{departure.alpha2.downcase}.html", '/locations/template.html', locals: { departure: departure, destination: destination }, ignore: true
   end
 end
 
@@ -59,7 +59,7 @@ helpers do
   def parameterize(string, sep = '-')
     # replace accented chars with their ascii equivalents
     # parameterized_string = transliterate(string)
-    parameterized_string = string
+    parameterized_string = string.dup
 
     # Turn unwanted chars into the separator
     parameterized_string.gsub!(/[^a-z0-9\-_]+/, sep)
