@@ -26,12 +26,12 @@ $(function() {
 $(function() {
 
   // Restore previous selections
-  if( typeof(localStorage["wherefrom"]) != 'undefined' && typeof(localStorage["wheregoing"]) != 'undefined'){
+  if( $("#wheregoing").length > 0 &&  typeof(localStorage["wherefrom"]) != 'undefined' && typeof(localStorage["wheregoing"]) != 'undefined'){
     $("select#wherefrom option").each(function() { this.selected = (this.value == localStorage["wherefrom"]); });
     $("select#wheregoing option").each(function() { this.selected = (this.value == localStorage["wheregoing"]); });
 
     // Set the background image to be the same
-    var labelClassName = $("select#wheregoing option:selected").text().toLowerCase().replace(/ /g, '');
+    var labelClassName = $("select#wheregoing option:selected").val();
     $('body').attr('class', 'locations locations-'+labelClassName);
   }
 
@@ -39,7 +39,7 @@ $(function() {
   
   $("#wheregoing").selectmenu({
     change: function(event, data){ 
-      var labelClassName = data.item.label.toLowerCase().replace(/ /g, '');
+      var labelClassName = data.item.value;
       $('body').attr('class', 'locations locations-'+labelClassName);
     }
   });

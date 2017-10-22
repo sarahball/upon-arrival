@@ -42,7 +42,7 @@
 	nav, 
 	label {display: none;}
 
-	@each $location in 'london' 'chiangmai' 'berlin' 'lisbon' 'newyorkcity' 'barcelona' 'bangkok' 'buenosaires' 'amsterdam' 'budapest' {
+	@each $location in 'london' 'chiang-mai' 'berlin' 'lisbon' 'new-york-city' 'barcelona' 'bangkok' 'buenos-aires' 'amsterdam' 'budapest' {
     &-#{$location} {
     	@include background(#{$location});
     }
