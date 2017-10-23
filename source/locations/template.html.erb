@@ -1,7 +1,7 @@
 <%
   # Set the title with a yield because it's dynamic.
-  content_for(:title, "#{destination[:title]} from #{departure.name} - Upon Arrival")
-  content_for(:body_class, "locations-#{parameterize(destination[:title], '')}")
+  content_for(:title, "#{destination.title} from #{departure.name} - Upon Arrival")
+  content_for(:body_class, "locations locations-#{destination.slug}")
 %>
 
 <div id="accordion" class="navblocks" role="tablist" aria-multiselectable="true">

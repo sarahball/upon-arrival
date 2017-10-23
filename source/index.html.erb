@@ -3,13 +3,13 @@ title: Upon Arrival
 ---
 <% content_for(:body_class, 'locations') %>
 
-<form id="locations-form" action="#" method="post">
+<form id="locations-form" data-redirect-to="/#{wheregoing}-from-#{wherefrom}.html" action="#" method="post">
 
     <label for="wherefrom">Where are you from?</label>
     <select name="Where are you from?" id="wherefrom">
       <option value="">Where are you from?</option>
       <% departures.each do |departure| %>
-        <option value="<%= departure.country_code %>"><%= departure.name %></option>
+        <option value="<%= departure.alpha2.downcase %>"><%= departure.name %></option>
       <% end %>
     </select>
 
@@ -25,19 +25,8 @@ title: Upon Arrival
 
 </form>
 
-<div class="row hidden">
-  <div>
-
-    <p>TODO: This should become a search/select box which sends people to the below pages.</p>
-
-    <ul>
-      <% departures.each do |departure| %>
-        <% destinations.each do |destination| %>
-          <li>
-            <%= link_to "#{departure.name} ✈️ #{destination[:title]}", "/#{destination[:slug]}-from-#{departure.alpha2.downcase}.html" %>
-          </li>
-        <% end %>
-      <% end %>
-    </ul>
-  </div>
+<div class="locations-preloader">
+  <% destinations.each do |destination| %>
+    <div class="locations-<%= destination.slug %>"></div>
+  <% end %>
 </div>

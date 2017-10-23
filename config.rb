@@ -48,30 +48,13 @@ include TripsHelper
 # Create all the proxy pages for locations we support
 departures.each do |departure|
   destinations.each do |destination|
-    proxy "/#{destination[:slug]}-from-#{departure.alpha2.downcase}.html", '/locations/template.html', locals: { departure: departure, destination: destination }, ignore: true
+    proxy "/#{destination.slug}-from-#{departure.alpha2.downcase}.html", '/locations/template.html', locals: { departure: departure, destination: destination }, ignore: true
   end
 end
 
 ignore '/locations/template.html'
 
 helpers do
-  # from: https://apidock.com/rails/ActiveSupport/Inflector/parameterize
-  def parameterize(string, sep = '-')
-    # replace accented chars with their ascii equivalents
-    # parameterized_string = transliterate(string)
-    parameterized_string = string
-
-    # Turn unwanted chars into the separator
-    parameterized_string.gsub!(/[^a-z0-9\-_]+/, sep)
-    unless sep.nil? || sep.empty?
-      re_sep = Regexp.escape(sep)
-      # No more than one of the separator in a row.
-      parameterized_string.gsub!(/#{re_sep}{2,}/, sep)
-      # Remove leading/trailing separator.
-      parameterized_string.gsub!(/^#{re_sep}|#{re_sep}$/, '')
-    end
-    parameterized_string.downcase
-  end
 end
 
 # Build-specific configuration
