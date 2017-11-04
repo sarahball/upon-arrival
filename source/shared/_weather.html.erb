@@ -15,16 +15,16 @@
         <use xlink:href="#icn-zap"></use>
       </svg>
       <h2>Typical Weather</h2>
-      <p>Temperate. Moderated by prevailing southwest winds over the North Atlantic Current. More than one-half of the days are overcast.</p>
+      <p><%= weather_typical(destination) %></p>
       <svg width="27px" height="29px">
         <use xlink:href="#icn-zap"></use>
       </svg>
       <h2>Weather Upon Arrival</h2>
       <div>
         <svg width="27px" height="27px">
-          <use xlink:href="#icn-rain"></use>
+          <use xlink:href="#icn-<%= weather_today_icon(destination) %>"></use>
         </svg>
-        <div>50% chance of rain</div>
+        <div><%= weather_today_summary(destination) %></div>
       </div>
       <table>
         <tbody>
@@ -41,8 +41,8 @@
             </td>
           </tr>
           <tr>
-            <td>high 17°c</td>
-            <td>low 12°c</td>
+            <td>high <%= weather_temperature_high(destination) %>°c</td>
+            <td>low <%= weather_temperature_low(destination) %>°c</td>
           </tr>
         </tbody>
       </table>
