@@ -44,8 +44,6 @@ page '/*.txt', layout: false
 
 require 'helpers/trips_helper'
 include TripsHelper
-require 'helpers/weather_helper'
-include WeatherHelper
 
 # Create all the proxy pages for locations we support
 departures.each do |departure|
