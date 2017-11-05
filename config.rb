@@ -16,6 +16,10 @@ activate :middleman_cache_do do |config|
   }) if ENV['MEMCACHEDCLOUD_SERVERS']
 end
 
+OpenExchangeRates.configure do |config|
+  config.app_id = ENV['OPEN_EXCHANGE_RATE_API']
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 

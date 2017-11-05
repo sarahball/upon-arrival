@@ -20,12 +20,18 @@
         <use xlink:href="#icn-zap"></use>
       </svg>
       <h2>Exchange Rate</h2>
-      <p>£1.00 = $1.29 | $1.00 = £0.77</p>
+      <p>
+        <%= exchange_rate_between(departure, destination) %> | <%= exchange_rate_between(destination, departure) %>
+      </p>
       <svg width="27px" height="29px">
             <use xlink:href="#icn-zap"></use>
           </svg>
       <h2>Is the rate favorable?</h2>
-      <p>No. The US dollar has typically been stronger in the past month.</p>
+      <% if exchange_rate_between_favorable?(departure, destination) %>
+        <p>Yes. <%= departure.currency.name %> have typically been stronger in the past three months.</p>
+      <% else %>
+        <p>No. <%= destination.currency.name %> have typically been stronger in the past three months.</p>
+      <% end %>
     </div>
   </section>
 </div>
