@@ -16,7 +16,7 @@ module ExchangeRateHelper
 
   def get_exchange_rate_between(departure, destination, date_sampled)
     app.cache "open-exchange-rate-2/#{departure.currency.code},#{destination.currency.code}/#{date_sampled.to_s}" do
-      value = open_exchange_rates_client.exchange_rate(from: departure.currency.code, to: destination.currency.code, on: date_sampled.to_s)
+      open_exchange_rates_client.exchange_rate(from: departure.currency.code, to: destination.currency.code, on: date_sampled.to_s)
     end
   end
 
