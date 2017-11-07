@@ -16,6 +16,8 @@ source 'https://rubygems.org' do
   gem 'middleman-minify-html'
 
   gem 'countries'
+  gem 'money'
+  gem 'open_exchange_rates'
 
   # gem 'bootstrap', '~> 4.0.0.alpha6'
 
