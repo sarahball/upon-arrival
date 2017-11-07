@@ -12,6 +12,7 @@ activate :middleman_cache_do do |config|
     username: ENV['MEMCACHEDCLOUD_USERNAME'],
     password: ENV['MEMCACHEDCLOUD_PASSWORD'],
     namespace: 'middleman_cache_do',
+    expires_in: 86_400, # 12 hour default cache.
     compress: true
   }) if ENV['MEMCACHEDCLOUD_SERVERS']
 end
