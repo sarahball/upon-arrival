@@ -51,7 +51,20 @@ if ENV['RACK_ENV'] && (ENV['RACK_ENV'] == 'staging' || ENV['RACK_ENV'] == 'produ
     end
   end
 
-  use Rack::TryStatic, root: 'build', urls: %w[/], try: ['.html', 'index.html', '/index.html']
+  use Rack::TryStatic,
+    root: 'build',
+    urls: %w[/], try: ['.html', 'index.html', '/index.html'],
+    header_rules: [
+      [:all, {
+        'X-Frame-Options' => 'SAMEORIGIN',
+        'X-XSS-Protection' => '1; mode=block',
+        'X-Content-Type-Options' => 'nosniff',
+        'Content-Security-Policy' => ENV.fetch('CONTENT_SECURITY_POLICY') { '' },
+        'Strict-Transport-Security' => 'max-age=15552000; includeSubDomains',
+        'Referrer-Policy' => 'no-referrer-when-downgrade'
+      }],
+      [['png', 'jpg', 'js', 'css', 'svg', 'woff', 'ttf', 'eot'], { 'Cache-Control' => 'public, max-age=31536000' }]
+    ]
 
   # Run your own Rack app here or use this one to serve 404 messages:
   run lambda { |_env|

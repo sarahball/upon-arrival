@@ -4,7 +4,28 @@
   "repository": "https://github.com/sarahball/upon-arrival",
   "logo": "https://raw.githubusercontent.com/sarahball/upon-arrival/master/source/images/icon/logo.png",
   "keywords": ["middleman", "static"],
-  "addons": [
-    "memcachedcloud"
-  ]
+  "addons": [],
+  "env": {
+    "LANG": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "MEMCACHEDCLOUD_PASSWORD": {
+      "required": true
+    },
+    "MEMCACHEDCLOUD_SERVERS": {
+      "required": true
+    },
+    "MEMCACHEDCLOUD_USERNAME": {
+      "required": true
+    },
+    "DARKSKY_API_KEY": {
+      "required": true
+    },
+    "OPEN_EXCHANGE_RATE_API": {
+      "required": true
+    }
+  }
 }
