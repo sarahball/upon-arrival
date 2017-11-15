@@ -9,7 +9,7 @@ $bp-larger-than-desktop   : "min-width: 1000px" !default;
 $bp-larger-than-desktophd : "min-width: 1200px" !default;
 
 // Colors
-$tangerine: #F67542 !default;
+$tangerine: #d44811 !default;
 $white: #F0F0F0 !default;
 $light-grey: #e1e1e1 !default;
 $dark-grey: #333 !default;
@@ -37,5 +37,6 @@ $column-width: 100 / $total-columns !default; // calculates individual column wi
 $column-margin: 4% !default; // space between columns
 
 // Misc
+$space: 45px !default;
 $global-radius: 4px !default;
 $border: 2px solid $white !default;
