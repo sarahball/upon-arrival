@@ -10,12 +10,14 @@
 
 .container {
   position: relative;
-  width: 100%;
+  width: 85%;
   max-width: $container-width;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
+
+.container-full {width: 100%;}
 
 .column,
 .columns {
