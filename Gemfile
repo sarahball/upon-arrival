@@ -14,10 +14,11 @@ source 'https://rubygems.org' do
   gem 'middleman-autoprefixer', '~> 2.7'
   gem 'middleman-sprockets'
   gem 'middleman-minify-html'
+  gem 'middleman-cdn'
 
-  gem 'countries'
-  gem 'money'
-  gem 'open_exchange_rates'
+  gem 'countries', '~> 1.2'
+  gem 'money', '~> 6.9'
+  gem 'open_exchange_rates', '~> 0.5'
 
   # gem 'bootstrap', '~> 4.0.0.alpha6'
 

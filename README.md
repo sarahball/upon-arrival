@@ -2,7 +2,7 @@
 
 # Upon Arrival
 
-The key information you need to know once you get there.
+The key information you need to know once you get there - https://uponarriv.al
 
 ## Running Locally
 
