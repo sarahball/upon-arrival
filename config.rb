@@ -62,6 +62,9 @@ ignore '/locations/template.html'
 helpers do
 end
 
+# No need for .html in filenames, so users can go /london-from-usa
+activate :directory_indexes
+
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
