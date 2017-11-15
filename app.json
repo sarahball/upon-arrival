@@ -12,9 +12,6 @@
     "RACK_ENV": {
       "required": true
     },
-    "REQUIRE-AUTH": {
-      "required": true
-    },
     "MEMCACHEDCLOUD_PASSWORD": {
       "required": true
     },
