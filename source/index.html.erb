@@ -3,7 +3,16 @@ title: Upon Arrival
 ---
 <% content_for(:body_class, 'locations') %>
 
-<form id="locations-form" data-redirect-to="/#{wheregoing}-from-#{wherefrom}.html" action="#" method="post">
+<div class="row">
+  <div class="eight columns offset-by-two">
+    <div class="logo-parent">
+      <div class="logo-container"></div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <form id="locations-form" data-redirect-to="/#{wheregoing}-from-#{wherefrom}.html" action="#" method="post">
 
     <label for="wherefrom">Where are you from?</label>
     <select name="Where are you from?" id="wherefrom">
@@ -23,7 +32,8 @@ title: Upon Arrival
 
     <input type="submit" value="Search">
 
-</form>
+  </form>
+</div>
 
 <div class="locations-preloader">
   <% destinations.each do |destination| %>
