@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Yanone+Kaffeesatz" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/jquery-ui.css">
-    
-    <%= favicon_tag 'favicon.ico' %>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Yanone+Kaffeesatz" as="stylesheet" />
+    <link rel="preload" href="<%= asset_path(:css, 'site') %>" as="stylesheet" />
+    <link rel="preload" href="<%= asset_path(:js, 'site') %>" as="script" />
 
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= yield_content(:title) || current_page.data.title || 'Upon Arrival' %></title>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Yanone+Kaffeesatz" rel="stylesheet">
+    
+    <%= favicon_tag 'favicon.ico' %>
+
+    <%= stylesheet_link_tag 'site' %>
+    <%= javascript_include_tag 'site' %>
+
+    <meta name="theme-color" content="#F67542" >
   </head>
   <body class="<%= yield_content(:body_class) %>">
 
@@ -28,9 +33,5 @@
         <%= yield %>
         
     </div>
-
-    <script>
-        
-    </script>
   </body>
 </html>
