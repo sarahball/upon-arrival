@@ -14,7 +14,7 @@ activate :middleman_cache_do do |config|
     namespace: ENV.fetch('CACHE_PREFIX') { 'middleman_cache_do' },
     expires_in: 86_400, # 12 hour default cache.
     compress: true
-  }) if ENV['MEMCACHEDCLOUD_SERVERS']
+  }) if ENV['MEMCACHEDCLOUD_SERVERS'] && ENV['MEMCACHEDCLOUD_USERNAME'] != 'user'
 end
 
 OpenExchangeRates.configure do |config|
