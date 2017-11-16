@@ -1,0 +1,26 @@
+self.addEventListener('install', e => {
+  let timeStamp = Date.now();
+  e.waitUntil(
+    caches.open('upon-arrival').then(cache => {
+      return cache.addAll([
+        `/`,
+        <% data.destinations.each do |destination_code, destination_data| %>
+          `<%= asset_path(:images, "bg-#{destination_data.slug}.jpg") %>`,
+        <% end %>
+      ])
+      .then(() => self.skipWaiting());
+    })
+  )
+});
+
+self.addEventListener('activate',  event => {
+  event.waitUntil(self.clients.claim());
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request, {ignoreSearch:true}).then(response => {
+      return response || fetch(event.request);
+    })
+  );
+});

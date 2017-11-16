@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Yanone+Kaffeesatz" as="stylesheet" />
-    <link rel="preload" href="<%= asset_path(:css, 'site') %>" as="stylesheet" />
+    <link rel="preload" href="<%= asset_path(:css, 'site') %>" as="style" />
     <link rel="preload" href="<%= asset_path(:js, 'site') %>" as="script" />
+
+    <link rel="service-worker" href="/service-worker.js" />
 
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= yield_content(:title) || current_page.data.title || 'Upon Arrival' %></title>

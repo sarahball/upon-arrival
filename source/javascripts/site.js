@@ -1,9 +1,10 @@
 // This is where it all goes :)
 //= require jquery
 //= require jquery-ui
-//=require jquery-ui/widgets/accordion
-//=require jquery-ui/widgets/selectmenu
+//= require jquery-ui/widgets/accordion
+//= require jquery-ui/widgets/selectmenu
 //= require jquery.matchHeight
+//= require register-service-worker
 
 $( function() {
   $( "#accordion" ).accordion({
