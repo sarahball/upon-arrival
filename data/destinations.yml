@@ -2,7 +2,7 @@ london-gb:
   slug: london
   title: London
   country: gb
-  factbook_country_code: uk
+  factbook_path: europe/uk
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Excuse me, mate"
@@ -14,6 +14,7 @@ chiang-mai-th:
   slug: chiang-mai
   title: Chiang Mai
   country: th
+  factbook_path: east-n-southeast-asia/th
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Excuse me"
@@ -27,6 +28,7 @@ bangkok-th:
   slug: bangkok
   title: Bangkok
   country: th
+  factbook_path: east-n-southeast-asia/th
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Excuse Me"
@@ -40,7 +42,7 @@ berlin-de:
   slug: berlin
   title: Berlin
   country: de
-  factbook_country_code: gm
+  factbook_path: europe/gm
   key_phrases:
     "Greeting": "Bitte"
     "Excuse Me": "Bitte?"
@@ -52,7 +54,7 @@ lisbon-pt:
   slug: lisbon
   title: Lisbon
   country: pt
-  factbook_country_code: po
+  factbook_path: europe/po
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Excuse me, mate"
@@ -64,6 +66,7 @@ new-york-city-us:
   slug: new-york-city
   title: New York City
   country: us
+  factbook_path: north-america/us
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Are you Will Ferrell?"
@@ -75,7 +78,7 @@ barcelona-es:
   slug: barcelona
   title: Barcelona
   country: es
-  factbook_country_code: sp
+  factbook_path: europe/sp
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Excuse Me"
@@ -88,6 +91,7 @@ buenos-aires-ar:
   slug: buenos-aires
   title: Buenos Aires
   country: ar
+  factbook_path: south-america/ar
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Excuse Me"
@@ -99,6 +103,7 @@ amsterdam-nl:
   slug: amsterdam
   title: Amsterdam
   country: nl
+  factbook_path: europe/nl
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Are you Peter Levels?"
@@ -109,6 +114,7 @@ budapest-hu:
   slug: budapest
   title: Budapest
   country: hu
+  factbook_path: europe/hu
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Excuse Me"

@@ -19,7 +19,6 @@ source 'https://rubygems.org' do
   gem 'countries', '~> 1.2'
   gem 'money', '~> 6.9'
   gem 'open_exchange_rates', '~> 0.5'
-  gem 'factbook'
 
   # gem 'bootstrap', '~> 4.0.0.alpha6'
 
