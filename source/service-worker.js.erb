@@ -3,8 +3,16 @@ self.addEventListener('install', function(e){
     caches.open('upon-arrival').then(function(cache){
       return cache.addAll([
         '/',
+        '<%= asset_path(:css, 'site') %>',
+        '<%= asset_path(:js, 'site') %>',
         <% data.destinations.each do |destination_code, destination_data| %>
           '<%= asset_path(:images, "bg-#{destination_data.slug}.jpg") %>',
+        <% end %>
+
+        <% data.departures.each do |departure_code, departure_data| %>
+          <% data.destinations.each do |destination_code, destination_data| %>
+            '<%= "/#{destination_data.slug}-from-#{departure_code.downcase}" %>',
+          <% end %>
         <% end %>
       ])
         .then(function(){ self.skipWaiting() });
