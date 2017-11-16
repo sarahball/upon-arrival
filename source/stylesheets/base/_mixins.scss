@@ -9,3 +9,7 @@
 	  image-url("bg-#{$location}.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
+
+@mixin define($section) {
+  grid-area: #{$section};
+}

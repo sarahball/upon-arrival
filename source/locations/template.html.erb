@@ -4,12 +4,27 @@
   content_for(:body_class, "locations locations-#{destination.slug}")
 %>
 
-<div id="accordion" class="navblocks" role="tablist" aria-multiselectable="true">
-    <div class="row item-parent">
-
-        <%= partial 'shared/money', locals: { destination: destination, departure: departure } %>
-        <%= partial 'shared/language', locals: { destination: destination, departure: departure } %>
-        <%= partial 'shared/health_and_safety', locals: { destination: destination, departure: departure } %>
-        <%= partial 'shared/weather', locals: { destination: destination, departure: departure } %>
-    </div>
+<div id="tabs" class="grid tabs">
+	<div class="menu">
+	  <ul>
+	    <li><a href="#tabs-1">Money</a></li>
+	    <li><a href="#tabs-2">Language</a></li>
+	    <li><a href="#tabs-3">Health & Safety</a></li>
+	    <li><a href="#tabs-4">Weather</a></li>
+	  </ul>
+	</div>
+	<div class="content">
+	  <div id="tabs-1">
+	    <%= partial 'shared/money', locals: { destination: destination, departure: departure } %>
+	  </div>
+	  <div id="tabs-2">
+	    <%= partial 'shared/language', locals: { destination: destination, departure: departure } %>
+	  </div>
+	  <div id="tabs-3">
+	    <%= partial 'shared/health_and_safety', locals: { destination: destination, departure: departure } %>
+	  </div>
+	  <div id="tabs-4">
+	    <%= partial 'shared/weather', locals: { destination: destination, departure: departure } %>
+	  </div>
+	</div>
 </div>

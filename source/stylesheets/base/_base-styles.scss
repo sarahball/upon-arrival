@@ -20,6 +20,14 @@ body {
   min-height: 100vh;
 }
 
+.locations {
+  @each $location in 'london' 'chiang-mai' 'berlin' 'lisbon' 'new-york-city' 'barcelona' 'bangkok' 'buenos-aires' 'amsterdam' 'budapest' {
+    &-#{$location} {
+      @include background(#{$location});
+    }
+  }
+}
+
 // Links
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 

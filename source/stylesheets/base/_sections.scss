@@ -1,169 +1,42 @@
 // Sections
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-/* Logo */
+/* Minibar */
 
-.logo-parent {
-	max-width: 400px;
-	margin: 0 auto;
+.minibar {
+	background-color: pink;
+	min-height: 100vh;
 }
 
-.logo-container {
-	width: 100%;
-	background-image: url(/images/logo.svg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	height: 0;
-	padding: 0; /* reset */
-	padding-bottom: 55%;
-	margin: 45px auto;
-}
-
-/* Items */
-
-.item-container {
-	border-top: 2px solid $white;
-
-	&:first-of-type {
-		border-top: 2px solid transparent;
-	}
-}
-
-.item-title {
-	cursor: pointer;
-	min-height: calc(25vh - 2px);
-	max-height: calc(25vh - 2px);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.item-content {
-	background-color: $white;
-	padding: 0 30px 75px;
-	padding: 0 calc(5% + 20px) 73px;
-}
-
-/* Locations */
-
-#locations-form {
-  //height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  font-size: .8em;
-}
-
-.locations {
-	nav, 
-	label {display: none;}
-
-    &-preloader {
-      opacity: 0;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      height: 1px;
-      width: 1px;
-      z-index: -1;
-    }
-
-	@each $location in 'london' 'chiang-mai' 'berlin' 'lisbon' 'new-york-city' 'barcelona' 'bangkok' 'buenos-aires' 'amsterdam' 'budapest' {
-    &-#{$location} {
-    	@include background(#{$location});
-    }
-	}
-
-	&-#{icon} {
-      order: 1;
-	  background-image: image-url("icon/icn-map-pin.svg");
-	  background-size: 23px 27px;
-	  width: 23px;
-	  height: 27px;
-	  display: inline-block;
-	  line-height: 0;
-	}
-}
-
-#wherefrom-button, #wheregoing-button {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.ui-menu {
-  .ui-menu-item-wrapper {padding: 10px 20px;}
-
-  .ui-icon {
-    margin: auto 10px;
-  }
-
-  .ui-state-focus, .ui-state-active {
-    margin: 0;
-    background-color: rgba($tangerine, 0.25);
-  }
-}
-
-.ui-selectmenu {
-
-  &-#{button}.ui-button {
-    background: rgba($white, 0.7);
-    padding: 18px;
-    margin-bottom: 15px;
-  }
-
-  &-#{menu} .ui-menu {background: $white;}
-
-  &-#{text} {
-  	order: 2;
-  	display: inline-block;
-  	margin-right: 0;
-  }
-
-  &-#{icon}.ui-icon {
-  	order: 3;
-    content: "";
-    height: 8px;
-    width: 14px;
-    background-image: image-url("icon/icn-chevron-down.svg");
-  }
+.minibar-container {
+	-webkit-transform: rotate(90deg);
+	  -moz-transform: rotate(90deg);
+	  -ms-transform: rotate(90deg);
+	  -o-transform: rotate(90deg);
+	  transform: rotate(90deg);
 }
 
 // Larger than tablet
 @media (#{$bp-larger-than-tablet}) {
 
-	.item-parent {
-		display: flex;
-		align-items: flex-start;
-		flex-flow: row wrap;
-		padding-top: 50px;
-		margin-left: -2%;
-		margin-right: -2%;
-	}
-
-	.item-container {
-		flex: 1 33.333%;
-		margin: 0 3% 6%;
-		border: 1px solid $white;
-
-		&:first-of-type {
-			border: 1px solid $white;
-		}
-	}
-
-	.item-title {
-		height: auto;
-		min-height: auto;
-		max-height: none;
-		padding: 50px 20px;
-	}
 }
 
 // Larger than desktop
 @media (#{$bp-larger-than-desktop}) {
-	.item-parent {width: grid-column-width(8);}
 }
+
+/* Menu */
+
+#tabs {
+	background-color: pink;
+	position: absolute;
+	width: 100%;
+	width: 100vw;
+	top: calc(100vh - 100px);
+	transition: top .5s ease;
+	left: 85px;
+
+	&.menu-open {top: 0;}
+}
+
+.ui-tabs-nav {height: 100px;}
