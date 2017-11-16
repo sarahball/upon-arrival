@@ -29,6 +29,6 @@ module WeatherHelper
   end
 
   def weather_typical(destination)
-    'Temperate. Moderated by prevailing southwest winds over the North Atlantic Current. More than one-half of the days are overcast.'
+    destination.climate
   end
 end

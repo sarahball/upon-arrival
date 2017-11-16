@@ -1,0 +1,11 @@
+$(document).on('ready', function(){
+  if('serviceWorker' in navigator && $('[rel="service-worker"]').attr('href') != undefined ) {
+    navigator.serviceWorker.register($('[rel="service-worker"]').attr('href'), { scope: '/' })
+      .then(function(registration) {
+        console.log('Service Worker Registered');
+      });
+    navigator.serviceWorker.ready.then(function(registration) {
+      console.log('Service Worker Ready');
+    });
+  }
+});

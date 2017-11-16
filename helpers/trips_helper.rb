@@ -16,8 +16,20 @@ module TripsHelper
         latitude_dec: country_data.latitude_dec,
         longitude_dec: country_data.longitude_dec,
         currency: country_data.currency,
-        languages: country_data.languages
+        languages: country_data.languages,
+        climate: get_climate(destination_data.factbook_path)
       })
     end
+  end
+
+  def get_climate(factbook_path)
+    climate = app.cache "factbook-from-github/#{factbook_path}" do
+      uri = URI("https://raw.githubusercontent.com/opendatajson/factbook.json/2ea746ff6dcf3a9b8f47534014937b68b8c915dd/#{factbook_path}.json")
+      response = Net::HTTP.get(uri)
+      factbook = JSON.parse(response)
+      factbook['Geography']['Climate']['text']
+    end
+
+    "#{climate.capitalize}."
   end
 end

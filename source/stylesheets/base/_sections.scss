@@ -8,12 +8,82 @@
 	min-height: 100vh;
 }
 
-.minibar-container {
-	-webkit-transform: rotate(90deg);
-	  -moz-transform: rotate(90deg);
-	  -ms-transform: rotate(90deg);
-	  -o-transform: rotate(90deg);
-	  transform: rotate(90deg);
+.logo-container {
+	width: 100%;
+	background-image: url(/images/logo.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 0;
+	padding: 0; /* reset */
+	padding-bottom: 55%;
+	margin: 45px auto;
+}
+
+/* Items */
+
+.item-container {
+	border-top: 2px solid $white;
+
+	&:first-of-type {
+		border-top: 2px solid transparent;
+	}
+}
+
+.item-title {
+	cursor: pointer;
+	min-height: calc(25vh - 2px);
+	max-height: calc(25vh - 2px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.item-content {
+	background-color: $white;
+	padding: 0 30px 75px;
+	padding: 0 calc(5% + 20px) 73px;
+}
+
+/* Locations */
+
+#locations-form {
+  //height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: .8em;
+}
+
+.locations {
+	nav, 
+	label {display: none;}
+
+	@each $location in 'london' 'chiang-mai' 'berlin' 'lisbon' 'new-york-city' 'barcelona' 'bangkok' 'buenos-aires' 'amsterdam' 'budapest' {
+    &-#{$location} {
+    	@include background(#{$location});
+    }
+	}
+
+	&-#{icon} {
+      order: 1;
+	  background-image: image-url("icon/icn-map-pin.svg");
+	  background-size: 23px 27px;
+	  width: 23px;
+	  height: 27px;
+	  display: inline-block;
+	  line-height: 0;
+	}
+}
+
+#wherefrom-button, #wheregoing-button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+>>>>>>> master
 }
 
 // Larger than tablet
