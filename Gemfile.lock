@@ -15,6 +15,13 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    activemodel (4.2.10)
+      activesupport (= 4.2.10)
+      builder (~> 3.1)
+    activerecord (4.2.10)
+      activemodel (= 4.2.10)
+      activesupport (= 4.2.10)
+      arel (~> 6.0)
     activesupport (4.2.10)
       i18n (~> 0.7)
       minitest (~> 5.1)
@@ -23,6 +30,7 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     ansi (1.5.0)
+    arel (6.0.4)
     autoprefixer-rails (7.1.6)
       execjs
     backports (3.10.3)
@@ -47,11 +55,18 @@ GEM
     erubis (2.7.0)
     excon (0.59.0)
     execjs (2.7.0)
+    factbook (1.2.2)
+      activerecord
+      fetcher
+      logutils
+      nokogiri
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
     fast_blank (1.0.0)
     fastimage (2.1.0)
     fastly (1.13.1)
+    fetcher (0.4.5)
+      logutils (>= 0.6)
     ffi (1.9.18)
     fog-aws (1.4.1)
       fog-core (~> 1.38)
@@ -94,6 +109,7 @@ GEM
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    logutils (0.6.1)
     loofah (2.1.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -226,6 +242,7 @@ DEPENDENCIES
   countries (~> 1.2)!
   dalli!
   dotenv!
+  factbook!
   jquery-matchheight-rails!
   jquery-rails!
   jquery-ui-rails!

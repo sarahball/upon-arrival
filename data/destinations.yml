@@ -2,6 +2,7 @@ london-gb:
   slug: london
   title: London
   country: gb
+  factbook_country_code: uk
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Excuse me, mate"
@@ -39,6 +40,7 @@ berlin-de:
   slug: berlin
   title: Berlin
   country: de
+  factbook_country_code: gm
   key_phrases:
     "Greeting": "Bitte"
     "Excuse Me": "Bitte?"
@@ -50,6 +52,7 @@ lisbon-pt:
   slug: lisbon
   title: Lisbon
   country: pt
+  factbook_country_code: po
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Excuse me, mate"
@@ -72,6 +75,7 @@ barcelona-es:
   slug: barcelona
   title: Barcelona
   country: es
+  factbook_country_code: sp
   key_phrases:
     "Greeting": "Hello"
     "Excuse Me": "Excuse Me"
