@@ -4,6 +4,7 @@
 //= require jquery-ui/widgets/accordion
 //= require jquery-ui/widgets/selectmenu
 //= require jquery.matchHeight
+//= require register-service-worker
 
 $( function() {
   $( "#accordion" ).accordion({
