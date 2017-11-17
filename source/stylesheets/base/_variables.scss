@@ -20,6 +20,12 @@ $gradient-warm-b: $tangerine !default; // tangerine
 $gradient-cool-a: #2b5876 !default; // dark blue
 $gradient-cool-b: #4e4376 !default; // dark purple
 
+// Colors New
+$midnight: #00203B !default;
+$white: #F8F8F8 !default;
+$cinnabar: #E74C3C !default;
+$turquoise: #28D6D5 !default;
+
 // Typography
 $font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-secondary: "Yanone Kaffeesatz", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
@@ -40,3 +46,4 @@ $column-margin: 4% !default; // space between columns
 $space: 45px !default;
 $global-radius: 4px !default;
 $border: 2px solid $white !default;
+$minibar-size: 45px !default;

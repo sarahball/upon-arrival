@@ -1,24 +1,37 @@
-// Grid Page
+// Grid
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.container {
-  display: grid;
-  grid-template-areas:
-    "minibar"
-    "tabs";
-}
-
-@each $section in 'minibar' 'tabs' 'content-left' 'content-right' 'sidebar' {
+@each $section in 'minibar' 'tabs' 'menu' 'content' 'content-left' 'content-right' 'sidebar' {
   .#{$section} {
     @include define(#{$section});
   }
 }
 
+/* Container Grid */
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "minibar"
+    "tabs";
+}
+
 // Larger than tablet
 @media (#{$bp-larger-than-tablet}) {
   .container {
-    grid-template-columns: 85px auto;
+    grid-template-columns: $minibar-size auto;
     grid-template-areas:
       "minibar tabs";
   }
+}
+
+/* Content Grid */
+
+.tabs {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "menu"
+    "content";
 }

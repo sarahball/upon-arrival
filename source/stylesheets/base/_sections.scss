@@ -4,9 +4,27 @@
 /* Minibar */
 
 .minibar {
-	background-color: pink;
-	min-height: 100vh;
+  position: fixed;
+  height: 100vh;
+  width: $minibar-size;
+  background-color: rgba($turquoise, 0.5);
+  color: $white;
+
+  &--inner {text-align: center;}
+
+  &--rotate {
+    position: absolute;
+    transform: rotate(270deg);
+    line-height: $minibar-size;
+    height: 0;
+    width: 100vh;
+    top: 50vh;
+    left: -50vh;
+    white-space: nowrap;
+  }
 }
+
+/* Logo */
 
 .logo-container {
 	width: 100%;
@@ -93,19 +111,3 @@
 // Larger than desktop
 @media (#{$bp-larger-than-desktop}) {
 }
-
-/* Menu */
-
-#tabs {
-	background-color: pink;
-	position: absolute;
-	width: 100%;
-	width: 100vw;
-	top: calc(100vh - 100px);
-	transition: top .5s ease;
-	left: 85px;
-
-	&.menu-open {top: 0;}
-}
-
-.ui-tabs-nav {height: 100px;}

@@ -1,12 +1,36 @@
 // Navigation
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.nav {display: none;}
+/* Jquery UI tabs reset */
 
-// Larger than tablet
-@media (#{$bp-larger-than-tablet}) {
-	.nav {display: block;}
+.ui-tabs,
+.ui-tabs .ui-tabs-nav {
+  padding: 0;
 }
 
-// Larger than desktop
-@media (#{$bp-larger-than-desktop}) {}
+.ui-tabs .ui-tabs-nav li {margin: 0;}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {padding: 0;} // spacing around link
+
+/* Nav Positioning */
+
+#tabs {
+	background-color: $midnight;
+	position: relative;
+	width: 100%;
+	top: calc(100vh - 100px);
+	transition: top .5s ease;
+
+	&.menu-open {top: 0;}
+}
+
+.ui-tabs-nav {height: 100px;}
+
+
+/* Nav Items */
+
+.ui-tabs, .ui-tabs .ui-tabs-nav {
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
