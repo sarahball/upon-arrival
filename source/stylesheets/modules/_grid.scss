@@ -10,8 +10,8 @@
 /* Container Grid */
 
 .container {
-  display: grid;
-  grid-template-columns: 100%;
+  @include display-grid;
+  @include grid-template-columns(100%);
   grid-template-areas:
     "minibar"
     "tabs";
@@ -20,7 +20,7 @@
 // Larger than tablet
 @media (#{$bp-larger-than-tablet}) {
   .container {
-    grid-template-columns: $minibar-size auto;
+    @include grid-template-columns($minibar-size auto);
     grid-template-areas:
       "minibar tabs";
   }
@@ -29,8 +29,8 @@
 /* Content Grid */
 
 .tabs {
-  display: grid;
-  grid-template-columns: 100%;
+  @include display-grid;
+  @include grid-template-columns(100%);
   grid-template-areas:
     "menu"
     "content";

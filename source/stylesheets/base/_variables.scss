@@ -14,17 +14,15 @@ $white: #F0F0F0 !default;
 $light-grey: #e1e1e1 !default;
 $dark-grey: #333 !default;
 
-$gradient-warm-a: #F7C4AC !default; // peach
-$gradient-warm-b: $tangerine !default; // tangerine
-
-$gradient-cool-a: #2b5876 !default; // dark blue
-$gradient-cool-b: #4e4376 !default; // dark purple
+$gradient-a: #26D0CE !default;
+$gradient-b: #1A2980 !default;
 
 // Colors New
 $midnight: #00203B !default;
 $white: #F8F8F8 !default;
 $cinnabar: #E74C3C !default;
 $turquoise: #28D6D5 !default;
+$semi-turquoise: rgba(#28D6D5, 0.5) !default;
 
 // Typography
 $font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;

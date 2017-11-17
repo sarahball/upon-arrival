@@ -14,8 +14,7 @@
 
 /* Nav Positioning */
 
-#tabs {
-	background-color: $midnight;
+.tabs {
 	position: relative;
 	width: 100%;
 	top: calc(100vh - 100px);
@@ -29,8 +28,27 @@
 
 /* Nav Items */
 
-.ui-tabs, .ui-tabs .ui-tabs-nav {
+.ui-tabs .ui-tabs-nav { // ul
 	display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.ui-tabs .ui-tabs-nav li { // li
+	flex: 1;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor { // a
+	line-height: 0;
+	padding: 50px 0;
+	width: 100%;
+	text-align: center;
+	background-color: $midnight;
+	transition: 0.25s ease;
+
+	&:hover {
+		background-color: $semi-turquoise;
+		transition: 0.25s ease;
+	}
+}
+

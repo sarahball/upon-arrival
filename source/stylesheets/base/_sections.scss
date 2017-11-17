@@ -7,7 +7,7 @@
   position: fixed;
   height: 100vh;
   width: $minibar-size;
-  background-color: rgba($turquoise, 0.5);
+  background-color: $semi-turquoise;
   color: $white;
 
   &--inner {text-align: center;}
@@ -78,12 +78,6 @@
 .locations {
 	nav, 
 	label {display: none;}
-
-	@each $location in 'london' 'chiang-mai' 'berlin' 'lisbon' 'new-york-city' 'barcelona' 'bangkok' 'buenos-aires' 'amsterdam' 'budapest' {
-    &-#{$location} {
-    	@include background(#{$location});
-    }
-	}
 
 	&-#{icon} {
       order: 1;
