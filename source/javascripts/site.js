@@ -7,7 +7,9 @@
 
 $( function() {
   $("#tabs li a").click(function (e) {
-      $(this).closest('#tabs').addClass('menu-open'); // I also tried .parent().addClass
+    $(this).closest('#tabs').addClass('menu-open');
+    $('.menu-open').find('.ui-tabs-anchor').addClass('tabs-top-a');
+    $('.menu-open').find('.ui-tabs-nav').addClass('tabs-top-ul');
   });
 } );
 

@@ -8,6 +8,7 @@
     <meta name="author" content="">
     <link rel="preload" href="<%= asset_path(:css, 'site') %>" as="style" />
     <link rel="preload" href="<%= asset_path(:js, 'site') %>" as="script" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
 
     <% if ENV['RAILS_ENV'] == 'production' %>
       <link rel="service-worker" href="/service-worker.js" />
@@ -28,8 +29,6 @@
     <%= partial 'shared/sprite' %>
 
     <div class="container">
-
-        <%= partial 'shared/minibar' %>
 
         <%= yield %>
         

@@ -8,7 +8,10 @@
   height: 100vh;
   width: $minibar-size;
   background-color: $semi-turquoise;
-  color: $white;
+  cursor: default;
+  @extend h1;
+	text-shadow: 0 0 2px rgba($midnight, 0.5);
+	margin: 0;
 
   &--inner {text-align: center;}
 
@@ -24,7 +27,22 @@
   }
 }
 
+.plane {
+	font-size: 120%;
+	color: $midnight;
+	text-shadow: none;
+}
+
 /* Logo */
+
+.logo-inner {
+	position: fixed;
+	right: 0;
+	width: 20%;
+	margin: 0 5%;
+	margin-top: 60px;
+	max-width: 300px;
+}
 
 .logo-container {
 	width: 100%;
@@ -34,7 +52,7 @@
 	height: 0;
 	padding: 0; /* reset */
 	padding-bottom: 55%;
-	margin: 45px auto;
+	//margin: 45px auto;
 }
 
 /* Items */

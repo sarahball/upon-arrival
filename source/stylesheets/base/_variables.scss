@@ -25,12 +25,12 @@ $turquoise: #28D6D5 !default;
 $semi-turquoise: rgba(#28D6D5, 0.5) !default;
 
 // Typography
-$font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-secondary: "Yanone Kaffeesatz", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-secondary: 'Cabin', sans-serif !default;
 $font-size: 1.5em !default;
-$font-color: $dark-grey !default;
+$font-color: $midnight !default;
 $font-normal: 400 !default;
-$font-heavy: 600 !default;
+$font-heavy: 700 !default;
 
 //Grid Variables
 $container-width: 1024px !default;

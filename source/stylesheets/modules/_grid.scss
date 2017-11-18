@@ -1,7 +1,7 @@
 // Grid
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@each $section in 'minibar' 'tabs' 'menu' 'content' 'content-left' 'content-right' 'sidebar' {
+@each $section in 'minibar' 'tabs' 'menu' 'content' {
   .#{$section} {
     @include define(#{$section});
   }

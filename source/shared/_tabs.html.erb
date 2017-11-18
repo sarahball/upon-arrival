@@ -1,0 +1,24 @@
+<div id="tabs" class="tabs">
+	<div class="menu">
+	  <ul>
+	    <li><a href="#money">Money</a></li>
+	    <li><a href="#language">Language</a></li>
+	    <li><a href="#safety">Health & Safety</a></li>
+	    <li><a href="#weather">Weather</a></li>
+	  </ul>
+	</div>
+	<div class="content">
+	  <div id="money">
+	    <%= partial 'shared/money', locals: { destination: destination, departure: departure } %>
+	  </div>
+	  <div id="language">
+	    <%= partial 'shared/language', locals: { destination: destination, departure: departure } %>
+	  </div>
+	  <div id="safety">
+	    <%= partial 'shared/health_and_safety', locals: { destination: destination, departure: departure } %>
+	  </div>
+	  <div id="weather">
+	    <%= partial 'shared/weather', locals: { destination: destination, departure: departure } %>
+	  </div>
+	</div>
+</div>

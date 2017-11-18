@@ -12,6 +12,11 @@
 
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {padding: 0;} // spacing around link
 
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	margin: 0;
+	padding: 0;
+}
+
 /* Nav Positioning */
 
 .tabs {
@@ -45,10 +50,27 @@
 	text-align: center;
 	background-color: $midnight;
 	transition: 0.25s ease;
+	@extend h1;
+	margin: 0;
+	color: $white;
 
 	&:hover {
-		background-color: $semi-turquoise;
+		background-color: $white;
+		color: $midnight;
 		transition: 0.25s ease;
 	}
 }
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+	background-color: $white;
+	color: $midnight;
+}
+
+/* Menu Open */
+
+.tabs-top-ul {height: 60px;}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor.tabs-top-a {padding: 30px 0;}
+
+
 
