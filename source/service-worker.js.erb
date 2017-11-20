@@ -2,15 +2,13 @@ self.addEventListener('install', function(e){
   e.waitUntil(
     caches.open('upon-arrival').then(function(cache){
       return cache.addAll([
-        '/',
         '<%= asset_path(:images, 'logo.svg') %>',
         '<%= asset_path(:images, 'icon/icn-chevron-down.svg') %>',
         '<%= asset_path(:images, 'icon/icn-map-pin.svg') %>',
-        '<%= asset_path(:css, 'site') %>',
         <% data.destinations.each do |destination_code, destination_data| %>
           '<%= asset_path(:images, "bg-#{destination_data.slug}.jpg") %>',
         <% end %>
-        '<%= asset_path(:js, 'site') %>'
+        '/'
       ])
         .then(function(){ self.skipWaiting() });
     })
