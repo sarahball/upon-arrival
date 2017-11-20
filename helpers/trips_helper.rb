@@ -1,12 +1,12 @@
 module TripsHelper
   def departures
-    @departures ||= @app.data.departures.collect do |country_code, activated|
-      if activated
-        ISO3166::Country.new(country_code)
-      else
-        nil
-      end
-    end.compact
+    @departures ||= @app.data.departures.collect do |country_code, departure_data|
+      country_data = ISO3166::Country.new(country_code)
+      departure_data.merge({
+        currency: country_data.currency,
+        languages: country_data.languages,
+      })
+    end
   end
 
   def destinations

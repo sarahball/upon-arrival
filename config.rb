@@ -53,7 +53,7 @@ include TripsHelper
 # Create all the proxy pages for locations we support
 departures.each do |departure|
   destinations.each do |destination|
-    proxy "/#{destination.slug}-from-#{departure.alpha2.downcase}.html", '/locations/template.html', locals: { departure: departure, destination: destination }, ignore: true
+    proxy "/#{destination.slug}/from/#{departure.slug}/index.html", '/locations/template.html', locals: { departure: departure, destination: destination }, ignore: true
   end
 end
 
