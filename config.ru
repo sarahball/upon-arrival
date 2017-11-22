@@ -62,7 +62,8 @@ if ENV['SERVE_STATIC'] && ENV['SERVE_STATIC'] == 'true'
         'Content-Security-Policy' => ENV.fetch('CONTENT_SECURITY_POLICY') { '' },
         'Strict-Transport-Security' => 'max-age=15552000; includeSubDomains',
         'Referrer-Policy' => 'no-referrer-when-downgrade',
-        'Access-Control-Allow-Origin' => '*'
+        'Access-Control-Allow-Origin' => '*',
+        'Cache-Control' => 'public, max-age=86400'
       }],
       [['png', 'jpg', 'js', 'css', 'svg', 'woff', 'ttf', 'eot'], { 'Cache-Control' => 'public, max-age=31536000' }]
     ]
