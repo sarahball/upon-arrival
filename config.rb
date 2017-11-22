@@ -100,5 +100,6 @@ activate :cdn do |cdn|
     distribution_id: ENV['AWS_CLOUDFRONT_DISTRIBUTION_ID']
   }
 
-  cdn.after_build = ENV['INVALIDATE_CDN_AFTER_BUILD'].present?
+  # We only run this during the release task.
+  cdn.after_build = false
 end
