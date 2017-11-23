@@ -1,0 +1,35 @@
+// Content
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.section-container {
+	border-top: 2px solid $white;
+
+	&:first-of-type {
+		border-top: 2px solid transparent;
+	}
+}
+
+.section-title {
+	cursor: pointer;
+	min-height: calc(25vh - 2px);
+	max-height: calc(25vh - 2px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.section-content {
+	background-color: $white;
+	padding: 0 30px 75px;
+	padding: 0 calc(5% + 20px) 73px;
+}
+
+// Larger than tablet
+@media (#{$bp-larger-than-tablet}) {
+
+}
+
+// Larger than desktop
+@media (#{$bp-larger-than-desktop}) {
+}
