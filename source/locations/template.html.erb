@@ -1,7 +1,9 @@
 <%
-  # Set the title with a yield because it's dynamic.
-  content_for(:title, "#{destination.title} from #{departure.name} - Upon Arrival")
-  content_for(:body_class, "locations locations-#{destination.slug}")
+  # The <title> value
+  content_for(:title, "#{departure.title} ✈ #{destination.title} - Upon Arrival")
+
+  # The classes on the `<body>` element
+  content_for(:body_class, "locations departure-#{departure.slug} destination-#{destination.slug}")
 %>
 
 <%= partial 'shared/minibar' %>
