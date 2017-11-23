@@ -1,7 +1,11 @@
----
-title: Upon Arrival
----
-<% content_for(:body_class, 'locations') %>
+<%
+
+  # The <title> value
+  content_for(:title, 'Upon Arrival')
+
+  # The classes on the `<body>` element
+  content_for(:body_class, 'page-index')
+%>
 
 <div class="logo-landing">
   <div class="logo-container"></div>
