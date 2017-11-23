@@ -4,7 +4,7 @@
 //= require jquery-ui/widgets/accordion
 //= require jquery-ui/widgets/selectmenu
 //= require jquery.matchHeight
-//= require register-service-worker
+//= require postload
 
 $( function() {
   $( "#accordion" ).accordion({
@@ -26,8 +26,8 @@ $(function() {
 
 $(function() {
 
-  // Restore previous selections
-  if( $("#wheregoing").length > 0 &&  typeof(localStorage["wherefrom"]) != 'undefined' && typeof(localStorage["wheregoing"]) != 'undefined'){
+  // Restore previous selections - TODO: Renable when we've decided on how this should work.
+  if( false && $("#wheregoing").length > 0 &&  typeof(localStorage["wherefrom"]) != 'undefined' && typeof(localStorage["wheregoing"]) != 'undefined'){
     $("select#wherefrom option").each(function() { this.selected = (this.value == localStorage["wherefrom"]); });
     $("select#wheregoing option").each(function() { this.selected = (this.value == localStorage["wheregoing"]); });
 
