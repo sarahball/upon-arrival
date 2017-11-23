@@ -8,11 +8,10 @@
     <meta name="author" content="">
     <link rel="preload" href="<%= asset_path(:css, 'site') %>" as="style" />
     <link rel="preload" href="<%= asset_path(:js, 'site') %>" as="script" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
 
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= yield_content(:title) || current_page.data.title || 'Upon Arrival' %></title>
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Yanone+Kaffeesatz" rel="stylesheet">
     
     <%= favicon_tag 'favicon.ico' %>
 
@@ -29,9 +28,7 @@
 
     <%= partial 'shared/sprite' %>
 
-    <div class="container container-full">
-
-        <%= partial 'shared/navigation' %>
+    <div class="container">
 
         <%= yield %>
         

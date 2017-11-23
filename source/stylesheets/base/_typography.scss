@@ -4,12 +4,12 @@
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
-  font-weight: $font-normal;
+  //font-weight: $font-normal;
 }
 
-h1 { font-size: 2.9rem; line-height: 1.2;  letter-spacing: .29rem;  }
+/*h1 { font-size: 2.9rem; line-height: 1.2;  letter-spacing: .29rem;  }
 h2 { font-size: 3.2rem; line-height: 1.2; letter-spacing: .123rem;  }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem;  }
+h3 { font-size: 1rem; line-height: 1.3;  letter-spacing: -.1rem;  }
 h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
 h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0;       }
@@ -22,19 +22,27 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0;       }
   h4 { font-size: 3.0rem; }
   h5 { font-size: 2.4rem; }
   h6 { font-size: 1.5rem; }
-}
+}*/
+
+
 
 p {
   margin-top: 0;
 }
 
 h1 {
-  color: $white;
+  font-family: $font-secondary;
+  font-weight: $font-heavy;
+  font-size: 1.55rem;
   text-transform: uppercase;
-  text-align: center;
+  letter-spacing: .15rem;
+  color: $white;
+  word-spacing: .2em;
 }
 
 h2 {
-  font-family: $font-secondary;
-  color: $tangerine;
+
+}
+
+h3 {
 }

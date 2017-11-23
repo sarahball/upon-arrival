@@ -1,11 +1,46 @@
 // Mixins
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+// Background location
+
 @mixin background($location) {
 	background:
 	  linear-gradient(
-	    rgba(38, 208, 206, 0.5) 0%,
-	    rgba(26, 41, 128, 0.5) 100%),
+	    rgba($gradient-a, 0.5) 0%,
+	    rgba($gradient-b, 0.5) 100%),
 	  image-url("bg-#{$location}.jpg") no-repeat center center fixed;
 	background-size: cover;
+}
+
+// CSS grid browser compatibility
+// https://css-tricks.com/browser-compatibility-css-grid-layouts-simple-sass-mixins/
+
+@mixin display-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+@mixin grid-child ($col-start, $col-end, $row-start, $row-end) {
+  -ms-grid-column: $col-start;
+  -ms-grid-column-span: $col-end - $col-start;
+  -ms-grid-row: $row-start;
+  -ms-grid-row-span: $row-end - $row-start;
+  grid-column: #{$col-start}/#{$col-end};
+  grid-row: #{$row-start}/#{$row-end};
+}
+
+@mixin grid-template-columns ($columns) {
+	-ms-grid-columns: $columns;
+	grid-template-columns: $columns;
+}
+
+@mixin grid-template-rows ($rows) {
+	-ms-grid-rows: $rows;
+	grid-template-rows: $rows;
+}
+
+// Define grid sections
+
+@mixin define($section) {
+  grid-area: #{$section};
 }

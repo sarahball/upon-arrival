@@ -8,3 +8,6 @@ log/*
 tmp/*
 
 spec/.validation/*
+
+*old.html.erb
+*old.scss

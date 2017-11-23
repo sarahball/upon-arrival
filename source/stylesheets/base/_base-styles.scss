@@ -8,7 +8,7 @@
 
 html {
   font-size: 62.5%;
-  background-color: $gradient-warm-a;
+  background-color: $midnight;
 }
 
 body {
@@ -19,6 +19,16 @@ body {
   color: $font-color;
   min-height: 100vh;
 }
+
+.locations {
+  @each $location in 'london' 'chiang-mai' 'berlin' 'lisbon' 'new-york-city' 'barcelona' 'bangkok' 'buenos-aires' 'amsterdam' 'budapest' {
+    &-#{$location} {
+      @include background(#{$location});
+    }
+  }
+}
+
+//.container {min-height: 100vh;}
 
 // Links
 //––––––––––––––––––––––––––––––––––––––––––––––––––

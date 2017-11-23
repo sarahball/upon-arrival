@@ -1,19 +1,24 @@
 // This is where it all goes :)
 //= require jquery
-//= require jquery-ui
-//= require jquery-ui/widgets/accordion
 //= require jquery-ui/widgets/selectmenu
+//= require jquery-ui/widgets/tabs
 //= require jquery.matchHeight
 //= require postload
 
 $( function() {
-  $( "#accordion" ).accordion({
-  	collapsible: true,
-  	active: false,
-  	heightStyle: "content",
-  	header: ".item-title"
+  $("#tabs li a").click(function (e) {
+    $(this).closest('#tabs').addClass('menu-open');
+    $('.menu-open').find('.ui-tabs-anchor').addClass('tabs-top-a');
+    $('.menu-open').find('.ui-tabs-nav').addClass('tabs-top-ul');
   });
 } );
+
+$( function() {
+    $( "#tabs" ).tabs({
+      collapsible: true,
+      active: false
+    });
+  } );
 
 $(function() {
 	$('.item-title').matchHeight({

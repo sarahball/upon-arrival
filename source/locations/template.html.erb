@@ -4,12 +4,8 @@
   content_for(:body_class, "locations locations-#{destination.slug}")
 %>
 
-<div id="accordion" class="navblocks" role="tablist" aria-multiselectable="true">
-    <div class="row item-parent">
+<%= partial 'shared/minibar' %>
 
-        <%= partial 'shared/money', locals: { destination: destination, departure: departure } %>
-        <%= partial 'shared/language', locals: { destination: destination, departure: departure } %>
-        <%= partial 'shared/health_and_safety', locals: { destination: destination, departure: departure } %>
-        <%= partial 'shared/weather', locals: { destination: destination, departure: departure } %>
-    </div>
-</div>
+<%= partial 'shared/tabs' %>
+
+<%= partial 'shared/logo' %>
