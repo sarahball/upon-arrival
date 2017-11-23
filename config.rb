@@ -53,7 +53,7 @@ include TripsHelper
 # Create all the proxy pages for locations we support
 departures.each do |departure|
   destinations.each do |destination|
-    proxy "/#{destination.slug}-from-#{departure.alpha2.downcase}.html", '/locations/template.html', locals: { departure: departure, destination: destination }, ignore: true
+    proxy "/#{departure.slug}/#{destination.slug}/index.html", '/locations/template.html', locals: { departure: departure, destination: destination }, ignore: true
   end
 end
 
@@ -100,5 +100,6 @@ activate :cdn do |cdn|
     distribution_id: ENV['AWS_CLOUDFRONT_DISTRIBUTION_ID']
   }
 
-  cdn.after_build = ENV['INVALIDATE_CDN_AFTER_BUILD'].present?
+  # We only run this during the release task.
+  cdn.after_build = false
 end

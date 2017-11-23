@@ -10,10 +10,6 @@
     <link rel="preload" href="<%= asset_path(:js, 'site') %>" as="script" />
     <link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
 
-    <% if ENV['RAILS_ENV'] == 'production' %>
-      <link rel="service-worker" href="/service-worker.js" />
-    <% end %>
-
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= yield_content(:title) || current_page.data.title || 'Upon Arrival' %></title>
     
@@ -23,6 +19,10 @@
     <%= javascript_include_tag 'site' %>
 
     <meta name="theme-color" content="#F67542" >
+
+    <% data.destinations.each do |destination_code, destination_data| %>
+      <link rel="postload" href="<%= asset_path(:images, "bg-#{destination_data.slug}.jpg") %>" as="image" />
+    <% end %>
   </head>
   <body class="<%= yield_content(:body_class) %>">
 

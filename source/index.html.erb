@@ -7,14 +7,14 @@ title: Upon Arrival
   <div class="logo-container"></div>
 </div>
 
-<div class="search">
-  <form id="locations-form" data-redirect-to="/#{wheregoing}-from-#{wherefrom}" action="#" method="post">
+<div class="row">
+  <form id="locations-form" data-redirect-to="/#{wherefrom}/#{wheregoing}" action="#" method="post">
 
     <label for="wherefrom">Where are you from?</label>
     <select name="Where are you from?" id="wherefrom">
       <option value="">Where are you from?</option>
       <% departures.each do |departure| %>
-        <option value="<%= departure.alpha2.downcase %>"><%= departure.name %></option>
+        <option value="<%= departure.slug %>"><%= departure.title %></option>
       <% end %>
     </select>
 
@@ -22,7 +22,7 @@ title: Upon Arrival
     <select name="Where are you going?" id="wheregoing">
       <option value="">Where are you going?</option>
       <% destinations.each do |destination| %>
-        <option value="<%= destination[:slug] %>"><%= destination[:title] %></option>
+        <option value="<%= destination.slug %>"><%= destination.title %></option>
       <% end %>
     </select>
 
