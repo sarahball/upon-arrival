@@ -25,6 +25,13 @@
           <% end %>
         </tbody>
       </table>
+
+      <h2>Drinkable Water</h2>
+      <% if destination.drinkable_water %>
+        <p>You can safely drink the tap water</p>
+      <% else %>
+        <p>Don't drink the tap water</p>
+      <% end %>
     </div>
   </section>
 </div>
