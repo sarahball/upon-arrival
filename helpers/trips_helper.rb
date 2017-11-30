@@ -17,13 +17,14 @@ module TripsHelper
         longitude_dec: country_data.longitude_dec,
         currency: country_data.currency,
         languages: country_data.languages,
-        climate: get_climate(destination_data.factbook_path)
+        climate: get_climate(destination_data.factbook_path),
+        drinkable_water: get_drinkable_water(destination_data.factbook_path), 
       })
     end
   end
 
   def get_climate(factbook_path)
-    climate = app.cache "factbook-from-github/#{factbook_path}" do
+    climate = app.cache "factbook-from-github/#{factbook_path}/climate" do
       uri = URI("https://raw.githubusercontent.com/opendatajson/factbook.json/2ea746ff6dcf3a9b8f47534014937b68b8c915dd/#{factbook_path}.json")
       response = Net::HTTP.get(uri)
       factbook = JSON.parse(response)
@@ -31,5 +32,17 @@ module TripsHelper
     end
 
     "#{climate.capitalize}."
+  end
+
+
+  def get_drinkable_water(factbook_path)
+    drinkable_water = app.cache "factbook-from-github/#{factbook_path}/drinkable_water" do
+      uri = URI("https://raw.githubusercontent.com/opendatajson/factbook.json/2ea746ff6dcf3a9b8f47534014937b68b8c915dd/#{factbook_path}.json")
+      response = Net::HTTP.get(uri)
+      factbook = JSON.parse(response)
+      factbook['People and Society']['Drinking water source']['improved']['text']
+    end
+
+   drinkable_water == ' ++ urban: 100% of population ++ rural: 100% of population ++ total: 100% of population'
   end
 end
