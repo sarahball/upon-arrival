@@ -5,10 +5,15 @@ london-gb:
   factbook_path: europe/uk
   key_phrases:
     "Greeting": "Hello"
+    "Yes": "afjdal;sjf"
+    "No": ""
+    "Thank You": ""
     "Excuse Me": "Excuse me, mate"
   emergency_numbers:
     "emergency": "999"
     "non-emergency": "101"
+  pizza:
+    "cheese or pepperoni": "1-800-yum-mmmm"
 
 chiang-mai-th:
   slug: chiang-mai
