@@ -33,7 +33,7 @@
       <h2>Pizza</h2>
       <table>
         <tbody>
-          <% destination.pizza.each do |meaning, phrase| %>
+          <% (destination.pizza || []).each do |meaning, phrase| %>
             <tr>
               <td><%= meaning %></td>
               <td><%= phrase %></td>
