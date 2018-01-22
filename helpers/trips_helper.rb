@@ -18,24 +18,27 @@ module TripsHelper
         currency: country_data.currency,
         languages: country_data.languages,
         climate: get_climate(destination_data.factbook_path),
-        drinkable_water: get_drinkable_water(destination_data.factbook_path), 
+        drinkable_water: get_drinkable_water?(destination_data.factbook_path)
       })
     end
   end
 
   def get_climate(factbook_path)
+    return 'temperate; moderated by prevailing southwest winds over the North Atlantic Current; more than one-half of the days are overcast' if  ENV['RACK_ENV'] == 'development'
+
     climate = app.cache "factbook-from-github/#{factbook_path}/climate" do
       uri = URI("https://raw.githubusercontent.com/opendatajson/factbook.json/2ea746ff6dcf3a9b8f47534014937b68b8c915dd/#{factbook_path}.json")
       response = Net::HTTP.get(uri)
       factbook = JSON.parse(response)
       factbook['Geography']['Climate']['text']
     end
-
     "#{climate.capitalize}."
   end
 
 
-  def get_drinkable_water(factbook_path)
+  def get_drinkable_water?(factbook_path)
+    return true if ENV['RACK_ENV'] == 'development'
+
     drinkable_water = app.cache "factbook-from-github/#{factbook_path}/drinkable_water" do
       uri = URI("https://raw.githubusercontent.com/opendatajson/factbook.json/2ea746ff6dcf3a9b8f47534014937b68b8c915dd/#{factbook_path}.json")
       response = Net::HTTP.get(uri)
