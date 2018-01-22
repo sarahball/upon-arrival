@@ -5,11 +5,32 @@ module WeatherHelper
   end
 
   def get_weather(destination)
+    return fallback_data if ENV['RACK_ENV'] == 'development'
+
     app.cache "dark-sky/#{destination.latitude_dec},#{destination.longitude_dec}" do
       uri = URI("https://api.darksky.net/forecast/#{ENV['DARKSKY_API_KEY']}/#{destination.latitude_dec},#{destination.longitude_dec}?units=si&exclude=minutely,currently,flags")
       response = Net::HTTP.get(uri)
       JSON.parse(response)
     end
+  end
+
+  def fallback_data
+    {
+      'daily' => {
+        'icon' => 'cloudy',
+        'data' => [
+          {
+            'temperatureHigh' => '35.87',
+            'temperatureLow' => '30.87'
+          }
+        ]
+      },
+      'hourly' => {
+        'data' => [
+          { 'summary' => 'Partly Cloudy' }
+        ]
+      }
+    }
   end
 
   def weather_temperature_high(destination)

@@ -15,6 +15,8 @@ module ExchangeRateHelper
   private
 
   def get_exchange_rate_between(departure, destination, date_sampled)
+    return 1.0 if ENV['RACK_ENV'] == 'development'
+
     app.cache "open-exchange-rate-2/#{departure.currency.code},#{destination.currency.code}/#{date_sampled.to_s}" do
       open_exchange_rates_client.exchange_rate(from: departure.currency.code, to: destination.currency.code, on: date_sampled.to_s)
     end
