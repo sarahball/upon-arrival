@@ -4,14 +4,16 @@
   content_for(:title, 'Upon Arrival')
 
   # The classes on the `<body>` element
-  content_for(:body_class, 'page-index')
+  content_for(:body_class, 'locations')
 %>
 
-<div class="logo-landing">
-  <div class="logo-container"></div>
+<div class="landing--logo">
+  <div class="logo-parent">
+    <div class="logo-container"></div>
+  </div>
 </div>
 
-<div class="row">
+<div class="row landing--search">
   <form id="locations-form" data-redirect-to="/#{wherefrom}/#{wheregoing}" action="#" method="post">
 
     <label for="wherefrom">Where are you from?</label>

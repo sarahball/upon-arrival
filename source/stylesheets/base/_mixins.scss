@@ -6,9 +6,18 @@
 @mixin background($location) {
 	background:
 	  linear-gradient(
-	    rgba($gradient-a, 0.5) 0%,
-	    rgba($gradient-b, 0.5) 100%),
+	    rgba($gradient-1a, 0.5) 0%,
+	    rgba($gradient-1b, 0.5) 100%),
 	  image-url("bg-#{$location}.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+// Gradient
+@mixin gradient {
+	background:
+	  linear-gradient(
+	    rgba($gradient-1a, 1) 0%,
+	    rgba($gradient-1b, 1) 100%);
 	background-size: cover;
 }
 

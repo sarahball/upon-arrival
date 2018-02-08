@@ -1,39 +1,45 @@
 // Search Page
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-/* Logo */
+.locations {
+  .container {
+    min-height: 100vh;
+  }
 
-.logo-parent {
-	max-width: 400px;
-	margin: 0 auto;
-}
+  /* Logo */
 
-.logo-container {
-	width: 100%;
-	background-image: url(/images/logo.svg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	height: 0;
-	padding: 0; /* reset */
-	padding-bottom: 55%;
-	margin: 45px auto;
+  .logo-parent {
+  	max-width: 80%;
+  	margin: 0 auto;
+  }
+
+  .logo-container {
+  	width: 100%;
+  	background-image: url(/images/logo.svg);
+  	background-size: contain;
+  	background-repeat: no-repeat;
+  	height: 0;
+  	padding: 0; /* reset */
+  	padding-bottom: 55%;
+  	margin: 45px auto;
+  }
 }
 
 /* Locations Form */
 
 #locations-form {
-  //height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0;
   font-size: .8em;
+
+  label {display: none;}
 }
 
 .locations {
-	nav, 
-	label {display: none;}
+	nav
 
     &-preloader {
       opacity: 0;
@@ -53,14 +59,22 @@
 	  height: 27px;
 	  display: inline-block;
 	  line-height: 0;
+    background-repeat: no-repeat;
+    background-position: center;
 	}
 }
 
-#wherefrom-button, #wheregoing-button {
+#wherefrom-button,
+#wheregoing-button,
+input[type="submit"] {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+  min-width: 230px;
+  margin-bottom: 20px;
+
+  span {padding: 0 10px;}
 }
 
 .ui-menu {
@@ -72,19 +86,21 @@
 
   .ui-state-focus, .ui-state-active {
     margin: 0;
-    background-color: rgba($tangerine, 0.25);
+    background-color: rgba(130, 17, 212, 0.25);
   }
 }
 
 .ui-selectmenu {
-
   &-#{button}.ui-button {
     background: rgba($white, 0.7);
-    padding: 18px;
-    margin-bottom: 15px;
+    padding: 10px 20px;
+    margin-bottom: 0;
+    width: auto;
   }
 
-  &-#{menu} .ui-menu {background: $white;}
+  &-#{menu} .ui-menu {
+    @include gradient();
+  }
 
   &-#{text} {
   	order: 2;
@@ -100,3 +116,13 @@
     background-image: image-url("icon/icn-chevron-down.svg");
   }
 }
+
+// Larger than tablet
+@media (#{$bp-larger-than-tablet}) {
+  .locations {
+    .logo-parent {max-width: 400px;}
+  }
+}
+
+// Larger than desktop
+@media (#{$bp-larger-than-desktop}) {}

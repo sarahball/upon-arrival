@@ -3,7 +3,7 @@
   content_for(:title, "#{departure.title} ✈ #{destination.title} - Upon Arrival")
 
   # The classes on the `<body>` element
-  content_for(:body_class, "locations departure-#{departure.slug} destination-#{destination.slug}")
+  content_for(:body_class, "result departure-#{departure.slug} destination-#{destination.slug}")
 %>
 
 <%= partial 'shared/minibar' %>

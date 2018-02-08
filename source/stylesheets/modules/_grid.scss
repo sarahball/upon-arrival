@@ -1,13 +1,14 @@
 // Grid
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@each $section in 'minibar' 'tabs' 'menu' 'content' {
+@each $section in 'minibar' 'tabs' 'menu' 'content' 'landing--logo' 'landing--search' {
   .#{$section} {
     @include define(#{$section});
   }
 }
 
-/* Container Grid */
+// Container Grid
+//––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .container {
   @include display-grid;
@@ -17,21 +18,45 @@
     "tabs";
 }
 
-// Larger than tablet
-@media (#{$bp-larger-than-tablet}) {
+/* Landing Page */
+
+.locations {
   .container {
-    @include grid-template-columns($minibar-size auto);
+    @include display-grid;
+    @include grid-template-columns(100%);
     grid-template-areas:
-      "minibar tabs";
+      "landing--logo"
+      "landing--search";
   }
 }
 
 /* Content Grid */
-
 .tabs {
   @include display-grid;
   @include grid-template-columns(100%);
   grid-template-areas:
     "menu"
     "content";
+}
+
+// Larger than tablet
+@media (#{$bp-larger-than-tablet}) {
+  .results {
+    .container {
+      @include grid-template-columns($minibar-size auto);
+      grid-template-areas:
+        "minibar tabs";
+    }
+  }
+
+  /* Landing Page */
+.locations {
+    .container {
+      @include display-grid;
+      @include grid-template-columns(100%);
+      grid-template-areas:
+        "landing--logo"
+        "landing--search";
+    }
+  }
 }
