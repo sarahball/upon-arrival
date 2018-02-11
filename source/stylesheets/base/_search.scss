@@ -115,6 +115,17 @@ input[type="submit"] {
     width: 14px;
     background-image: image-url("icon/icn-chevron-down.svg");
   }
+
+ &-open {
+   ul {
+     max-height: calc(50vh - 250px);
+     min-height: calc(44px * 2);
+   }
+
+   ul#wherefrom-menu {
+     min-height: calc(44px * 3);
+   }
+ }
 }
 
 // Larger than tablet
