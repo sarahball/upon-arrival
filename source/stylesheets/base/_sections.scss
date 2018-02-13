@@ -40,7 +40,7 @@
 	right: 0;
 	width: 20%;
 	margin: 0 5%;
-	margin-top: 60px;
+	margin-top: calc(#{$tab-size} + 20px);
 	max-width: 200px;
 }
 

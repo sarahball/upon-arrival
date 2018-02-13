@@ -22,13 +22,13 @@
 .tabs {
 	position: relative;
 	width: 100%;
-	top: calc(100vh - 100px);
+	//top: calc(100vh - 100px);
 	transition: top .5s ease;
 
-	&.menu-open {top: 0;}
+	//&.menu-open {top: 0;}
 }
 
-.ui-tabs-nav {height: 100px;}
+.ui-tabs-nav {height: $tab-size;}
 
 
 /* Nav Items */

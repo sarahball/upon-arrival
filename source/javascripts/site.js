@@ -5,13 +5,12 @@
 //= require jquery.matchHeight
 //= require postload
 
-$( function() {
+/*$( function() {
   $("#tabs li a").click(function (e) {
     $(this).closest('#tabs').addClass('menu-open');
     $('.menu-open').find('.ui-tabs-anchor').addClass('tabs-top-a');
-    $('.menu-open').find('.ui-tabs-nav').addClass('tabs-top-ul');
   });
-} );
+} );*/
 
 $( function() {
     $( "#tabs" ).tabs({
