@@ -29,17 +29,21 @@ $(function() {
   });
 });
 
+function homepageSelectRandomBackground(){
+  if($("#wheregoing").length == 0) {
+    return;
+  }
+
+  // Pick a random city from the <options>, then make that the background.
+  var potentialCities = $("select#wheregoing option:not([value=''])");
+  var randomNumber = Math.floor(Math.random() * potentialCities.length);
+  var randomCity = potentialCities.eq(randomNumber);
+  $('body').attr('class', 'locations locations-' + randomCity.val());
+}
+
 $(function() {
 
-  // Restore previous selections - TODO: Renable when we've decided on how this should work.
-  if( false && $("#wheregoing").length > 0 &&  typeof(localStorage["wherefrom"]) != 'undefined' && typeof(localStorage["wheregoing"]) != 'undefined'){
-    $("select#wherefrom option").each(function() { this.selected = (this.value == localStorage["wherefrom"]); });
-    $("select#wheregoing option").each(function() { this.selected = (this.value == localStorage["wheregoing"]); });
-
-    // Set the background image to be the same
-    var labelClassName = $("select#wheregoing option:selected").val();
-    $('body').attr('class', 'locations locations-'+labelClassName);
-  }
+  homepageSelectRandomBackground();
 
   $("#wherefrom").selectmenu({});
   
