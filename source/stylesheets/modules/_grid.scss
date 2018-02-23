@@ -10,12 +10,14 @@
 // Container Grid
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.container {
-  @include display-grid;
-  @include grid-template-columns(100%);
-  grid-template-areas:
-    "minibar"
-    "tabs";
+.result {
+  .container {
+    @include display-grid;
+    @include grid-template-columns(100%);
+    grid-template-areas:
+      "minibar"
+      "tabs";
+  }
 }
 
 /* Landing Page */
@@ -23,7 +25,7 @@
 .locations {
   .container {
     @include display-grid;
-    @include grid-template-columns(100%);
+    @include grid-template-rows(auto minmax(245px 50%));
     grid-template-areas:
       "landing--logo"
       "landing--search";
@@ -41,22 +43,11 @@
 
 // Larger than tablet
 @media (#{$bp-larger-than-tablet}) {
-  .results {
+  .result {
     .container {
       @include grid-template-columns($minibar-size auto);
       grid-template-areas:
         "minibar tabs";
-    }
-  }
-
-  /* Landing Page */
-.locations {
-    .container {
-      @include display-grid;
-      @include grid-template-columns(100%);
-      grid-template-areas:
-        "landing--logo"
-        "landing--search";
     }
   }
 }

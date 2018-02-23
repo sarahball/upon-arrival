@@ -4,27 +4,16 @@
 /* Minibar */
 
 .minibar {
-  position: fixed;
-  height: 100vh;
-  width: $minibar-size;
-  background-color: $semi-turquoise;
+  width: 100vw;
+  //height: $minibar-size;
+  height: 50px; //???
+  background-color: rgba($tangerine, 0.5);
   cursor: default;
   @extend h1;
 	text-shadow: 0 0 2px rgba($midnight, 0.5);
 	margin: 0;
 
   &--inner {text-align: center;}
-
-  &--rotate {
-    position: absolute;
-    transform: rotate(270deg);
-    line-height: $minibar-size;
-    height: 0;
-    width: 100vh;
-    top: 50vh;
-    left: -50vh;
-    white-space: nowrap;
-  }
 }
 
 .plane {
@@ -56,6 +45,31 @@
 
 // Larger than tablet
 @media (#{$bp-larger-than-tablet}) {
+
+	/* Minibar */
+
+	.minibar {
+		position: fixed;
+		height: 100vh;
+		width: $minibar-size;
+
+	  &--rotate {
+	    position: absolute;
+	    transform: rotate(270deg);
+	    line-height: $minibar-size;
+	    height: 0;
+	    width: 100vh;
+	    top: 50vh;
+	    left: -50vh;
+	    white-space: nowrap;
+	  }
+	}
+
+	.plane {
+		font-size: 120%;
+		color: $midnight;
+		text-shadow: none;
+	}
 
 }
 

@@ -8,9 +8,14 @@
 
   /* Logo */
 
+  .landing--logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .logo-parent {
-  	max-width: 80%;
-  	margin: 0 auto;
+  	width: 80%;
   }
 
   .logo-container {
@@ -33,7 +38,7 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  font-size: .8em;
+  font-size: .9em;
 
   label {display: none;}
 }
@@ -92,14 +97,15 @@ input[type="submit"] {
 
 .ui-selectmenu {
   &-#{button}.ui-button {
-    background: rgba($white, 0.7);
+    background: rgba($white, 0.8);
     padding: 10px 20px;
     margin-bottom: 0;
     width: auto;
   }
 
   &-#{menu} .ui-menu {
-    @include gradient();
+    //@include gradient();
+    background: $white;
   }
 
   &-#{text} {
@@ -117,19 +123,19 @@ input[type="submit"] {
   }
 
  &-open {
-   ul {
-     max-height: calc(50vh - 250px);
-     min-height: calc(44px * 2);
-   }
-
    ul#wherefrom-menu {
-     min-height: calc(44px * 3);
+     min-height: calc(44px * 4.5);
+     max-height: calc(44px * 4.5);
+   }
+   ul#wheregoing-menu {
+     max-height: calc(44px * 3.5);
+     min-height: calc(44px * 3.5);
    }
  }
 }
 
 // Larger than tablet
-@media (#{$bp-larger-than-tablet}) {
+@media (#{$bp-larger-than-phablet}) {
   .locations {
     .logo-parent {max-width: 400px;}
   }
