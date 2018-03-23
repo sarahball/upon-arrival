@@ -1,18 +1,37 @@
 <div id="tabs" class="tabs">
-	<div class="menu">
-	  <ul>
+	<nav class="main-nav menu">
+	    <ul>
+	    <li class="mobile-button"><a href="#">Menu</a></li>
 	    <li><a href="#money">Money</a></li>
-	    <li><a href="#communication">Communication</a></li>
+	    <li><a href="#tech">Tech</a></li>
+	    <li><a href="#getting-around">Getting Around</a></li>
+	    <li><a href="#culture">Culture</a></li>
 	    <li><a href="#safety">Health & Safety</a></li>
 	    <li><a href="#weather">Weather</a></li>
 	  </ul>
-	</div>
+	</nav>
+	<!--<div class="menu">
+	  <ul>
+	    <li><a href="#money">Money</a></li>
+	    <li><a href="#tech">Tech</a></li>
+	    <li><a href="#getting-around">Getting Around</a></li>
+	    <li><a href="#culture">Culture</a></li>
+	    <li><a href="#safety">Health & Safety</a></li>
+	    <li><a href="#weather">Weather</a></li>
+	  </ul>
+	</div>-->
 	<div class="content">
 	  <div id="money">
 	    <%= partial 'shared/money' %>
 	  </div>
-	  <div id="communication">
-	    <%= partial 'shared/communication', locals: { destination: destination, departure: departure } %>
+	  <div id="tech">
+	    <%= partial 'shared/tech' %>
+	  </div>
+	  <div id="getting-around">
+	    <%= partial 'shared/getting-around' %>
+	  </div>
+	  <div id="culture">
+	    <%= partial 'shared/culture', locals: { destination: destination, departure: departure } %>
 	  </div>
 	  <div id="safety">
 	    <%= partial 'shared/health_and_safety' %>

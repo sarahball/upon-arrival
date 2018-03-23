@@ -15,3 +15,8 @@
 @function grid-offset-length($n) {
   @return grid-column-width($n) + $column-margin;
 }
+
+//Convert px to em
+@function em($px, $base: $font-size) {
+  @return ($px / $base) * 1em;
+}

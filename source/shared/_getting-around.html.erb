@@ -1,0 +1,31 @@
+<!-- Getting Around -->
+<div class="section-container">
+  <div class="section-title">
+    <h1>Getting Around</h1>
+    <svg width="26px" height="14px">
+      <use xlink:href="#caret-down"></use>
+    </svg>
+  </div>
+  <section>
+    <svg width="100%" height="75px">
+      <use xlink:href="#slope-border"></use>
+    </svg>
+    <div class="section-content">
+      <svg width="27px" height="29px">
+        <use xlink:href="#icn-zap"></use>
+      </svg>
+    </div>
+    <h2>Public Transport/Travel Card</h2>
+    <%= destination.transport_intro %>
+    <table>
+      <tbody>
+        <% destination.transport.each do |item, details| %>
+          <tr>
+            <td><%= item %></td>
+            <td><%= details %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </section>
+</div>

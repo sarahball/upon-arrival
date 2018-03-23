@@ -12,8 +12,16 @@ london-gb:
   emergency_numbers:
     "emergency": "999"
     "non-emergency": "101"
-  pizza:
-    "cheese or pepperoni": "1-800-yum-mmmm"
+  sim:
+    "Best network": "EE"
+    "Where to buy": "EE shops and online"
+    "Topping up": "By prepaid card (widely available at convenience and grocery shops) and online with a UK credit card."
+  transport_intro: ""
+  transport:
+    "Card": "Oyster. Oyster is a smartcard which can hold pay as you go credit, Travelcard and Bus & Tram Pass season tickets. Use it to travel on bus, Tube, tram, DLR, London Overground, and most National Rail services in London."
+    "Where to buy": "In the station: at ticket windows and automated machines, most newsagents shops, online, and by telephone"
+    "How to use": "Your card must be pre-loaded at a top up point. At the station, tap it on the yellow circle at the barriers to enter. (Busses and the DLR have the same yellow circles to tap but no barrier.)"
+    "Topping up": "Cards may be topped-up by online purchase, at credit card terminals, or by cash, the last two methods at stations or ticket offices."
 
 chiang-mai-th:
   slug: chiang-mai
@@ -28,6 +36,18 @@ chiang-mai-th:
     "Police": "191"
     "Medical Emergency": "1669"
     "Vehicle Theft Police": "1192"
+  sim_intro: "Thailand has started mandatory SIM card registration and now you need to provide your ID or passport at the points of purchase."
+  sim:
+    "Average 4G speeds": "11 Mbps"
+    "Best network": "True Move"
+    "Where to buy": "True Move shops, at any 7-Eleven, and airport kiosks. At Chiang Mai airport you may find a True Move stall giving out reduced SIM cards."
+    "Topping up": "online at mobiletopup.com or anyplace you can buy a SIM"
+  transport_intro: "The public bus system is generally not used by many people, and has few buses operating. Bus #4 will take you to the city center from the airport for 15 baht, or charter a tuk-tuk or songthaew for 50-60 baht per person. 160 baht is the current rate for a legal taxi to central Chiang Mai from the airport."
+  transport:
+    "Card": ""
+    "Where to buy": ""
+    "How to use": ""
+    "Topping up": ""
 
 bangkok-th:
   slug: bangkok
@@ -42,6 +62,18 @@ bangkok-th:
     "Police": "191"
     "Medical Emergency": "1669"
     "Vehicle Theft Police": "1192"
+  sim_intro: "Thailand has started mandatory SIM card registration and now you need to provide your ID or passport at the points of purchase."
+  sim:
+    "Average 4G speeds": "11 Mbps"
+    "Best network": "True Move"
+    "Where to buy": "<p>True Move shops, at any 7-Eleven, and airport kiosks.</p><p>Arriving at Suvarnabhumi airport (BKK), you can find the True Move flagship store in the big arrivals hall just past the customs check. If you'd like to compare prices and promotions, the other big carriers, AIS and DTAC are there as well. There are also several third party phone shops near the elevated train entry point at the lower level.</p><p>At Don Meuang airport, you can find the True Move store facing exit gate 6.</p>"
+    "Topping up": "online at mobiletopup.com or anyplace you can buy a SIM"
+    transport_intro: "<p>There are two train systems in Bangkok, BTS Skytrain and MRT (the metro). BTS tends to be much more useful for visitors. There is also a bus system, BRT.</p><p>The Airport Rail Link is the most popular and affordable way to get downtown from Suvarnabhumi Airport (BKK).</p>"
+    transport:
+      "Card": "Rabbit. It serves the BTS Skytrain and the Bangkok BRT (the bus system), but not the MRT (the metro)."
+      "Where to buy": ""
+      "How to use": ""
+      "Topping up": ""
 
 berlin-de:
   slug: berlin
@@ -54,6 +86,17 @@ berlin-de:
   emergency_numbers:
     "emergency": "112"
     "Emergency Police": "110"
+  sim_intro: "<p>By law, all SIM cards in Germany need to be registered first on your name and an address verified by your ID document to be activated.</p><ul>You'll need:<li>a valid ID document like passport, national ID card or any other internationally acknowledged ID document with your name and a photo on it.</li><li>a German street address consisting of street name, house number, postal code (called Postleitzahl or in short PLZ in German) and the name of the location. You can give any German address, you don't need to have residency. Normally, it won't be verified in any way. But it should physically exist as some systems run a plausibility check. So you might use your accommodation address or that of a friend you know.</li></ul>"
+  sim:
+    "Best network": "<ul>It's a tradeoff between price and coverage:<li>Telekom for the best available coverage and speeds at the highest prices</li><li>Vodafone for a slightly weaker network at somewhat lower prices</li><li>O2 (with E-Plus) for the cheapest rates on (a fairly good) 3G and (a rather unreliable) LTE</li>"
+    "Where to buy": "Go to one of the big supermarket, drugstore, service station, electronic market chains or an operator's store."
+    "Topping up": "by prepaid voucher (widely available anyplace you can buy a SIM)"
+    transport_intro: "Berlin uses a zone system, but most visitors don't need to go beyond zone A and B, except on trips to Potsdam or to Schönefeld Airport (SXF)."
+    transport:
+      "Card": "Berlin has several tourist cards that include discounts for many attractions. Otherwise, you can buy single, day, seven day, and month passes depending on your needs. https://www.visitberlin.de/en/tickets-events-attractions-berlin"
+      "Where to buy": "All tickets are available at vending machines at U- and S-Bahn platforms, in ticket offices at larger stations, and at the airports. Vending machines usually only take cash and local bank cards."
+      "How to use": "You don't need to show your card to use public transportation, except on buses. Otherwise it's enough to carry it on you and show it to an inspector if one comes through your compartment."
+      "Topping up": ""
 
 lisbon-pt:
   slug: lisbon
@@ -66,6 +109,15 @@ lisbon-pt:
   emergency_numbers:
     "emergency": "112"
     "urgent care": "111"
+  sim:
+    "Best network": "MEO"
+    "Where to buy": "MEO and Phone House stores for 9.99 €. You can order it online for free, but you have to send it to a Portuguese postal address."
+  transport_intro: ""
+  transport:
+    "Card": "<p>The best and, in many cases, the sole way to pay for city transport is buying a rechargeable green-coloured card Viva Viagem. It's valid for metro, trams (electrico), urban trains, most buses and ferries.</p><p>Day pass for metro and buses (€6.15)</p><p>Zapping. This is a 'stored value' mode, similar to the Oyster card in London. The rates are also cheaper comparing to single ride: every journey costs €1.25, but the transfers are not free</p>"
+    "Where to buy": ""
+    "How to use": ""
+    "Topping up": "The Viva Viagem card can be charged in three different modes. Single tickets for bus (€1.40; €1.80 if bought on the bus) or metro (€1.40). You put this exact amount on this card. Unlike Zapping mode, this ticket allows free transfers within one hour."
 
 new-york-city-us:
   slug: new-york-city
@@ -78,6 +130,16 @@ new-york-city-us:
   emergency_numbers:
     "emergency": "911"
     "police": "911"
+  sim:
+    "Best network": "T-Mobile offers the best prepaid plans, with a pay-as-you-go plan and a tourist plan.<br />pay as you go: https://prepaid-phones.t-mobile.com/pay-as-you-go<br />tourist plan: https://prepaid-phones.t-mobile.com/prepaid-international-tourist-plan"
+    "Where to buy": "Buying a SIM card is difficult. You can do it in a T-Mobile shop, but there aren't any shops in New York City's airports. Check their locations here.<br />t-mboile locations: https://www.t-mobile.com/store-locator.html"
+    "Topping up": "online or in a T-Mobile shop"
+  transport_intro: ""
+  transport:
+    "Card": "MetroCard. They are available as pay-per-ride or 7- and 30-day unlimited passes."
+    "Where to buy": "Cards can be bought online, at station booths, at vending machines in subway stations, and at many grocery stores and newstands (look for a MetroCard sign on the store window)."
+    "How to use": "<p>To enter the subway, you will need to swipe your MetroCard through the slot on the right hand side of the turnstile that greets you at the subway entrance. Hold your card with the logo facing your body and black magnetic strip down. Then slide it forward through the slot at a moderate speed. You'll know you succeeded when the display flashes ""Go"" in green and you hear a *CLICK* sound. Only once you hear the *CLICK* is it OK to walk through the turnstile.</p><p>When boarding a bus with a MetroCard, insert the card vertically, with the pin hole down, the black stripe to the right and the word MetroCard facing towards you, into the card slot in the top of the fare box next to the driver. You should be able to read the word MetroCard from bottom to top when inserting the card in this manner. The fare box will swallow the card, read it, and return it to you.</p>"
+    "Topping up": "At machines and station booths"
 
 barcelona-es:
   slug: barcelona
@@ -91,6 +153,17 @@ barcelona-es:
     "emergency": "112"
     "police": "092"
     "Accident / Ambulance": "061"
+  sim_intro: "All SIM cards have to be registered by law. Usually you do this in the shops of purchase showing your photo ID (passport or national ID card)."
+  sim:
+    "Average 4G speeds": "up to 150 Mbps"
+    "Best network": "Vodafone"
+    "Where to buy": "Vodafone shop. SIM card stands in the Barcelona airport are very overpriced. It's advised to go to a branded shop instead."
+  transport_intro: ""
+  transport:
+    "Card": "The Barcelona Card features unlimited free travel on public transport and free admission and discounts at around 100 visitor attractions. The card is available for purchase for periods of between 2 and 5 days, costing €37.00 for a 2-day card and €62.00 for a 5-day card."
+    "Where to buy": "You will get an online discount of 10% if you are booking in advance."
+    "How to use": ""
+    "Topping up": ""
 
 buenos-aires-ar:
   slug: buenos-aires
@@ -103,6 +176,17 @@ buenos-aires-ar:
   emergency_numbers:
     "Tourist Police": "436"
     "Medical Emergency Emergency Service": "107"
+  sim:
+    "Average 4G speeds": "Generally data is pretty slow and 3G coverage variable, although they have greatly improved in areas with 4G availability."
+    "Best network": "Personal"
+    "Where to buy": "Prepaid SIM cards (called chips in Argentina) and can be bought in hundreds of shops around the city and public transports. They sell the chips typically at around AR$ 20."
+    "Topping up": "You can refill your SIM at automated vending machines or many shops in towns. You need to look for a sign saying 'cargo virtual' or orange vending machines in kiosks."
+  transport_intro: "The metro here is called the Subte, which is short for Subterraneo (underground)."
+  transport:
+    "Card": "SUBE card. The card works with every bus, metro and commuter train."
+    "Where to buy": "At stations only"
+    "How to use": ""
+    "Topping up": "At stations and some shops"
 
 amsterdam-nl:
   slug: amsterdam
@@ -114,6 +198,17 @@ amsterdam-nl:
     "Excuse Me": "Are you Peter Levels?"
   emergency_numbers:
     "emergency": "112"
+  sim:
+    "Average 4G speeds": "up to 16 Mbps"
+    "Best network": "T-mobile. KPN has equal coverage but does not offer 4G to non-contract customers."
+    "Where to buy": "Prepaid SIMs are widely available in T-Mobile shops, in supermarkets, or online."
+    "Topping up": "Top-ups can be made directly in T-mobile shops or by vouchers of €10, €20 and €40 sold in many outlets."
+  transport_intro: "Going around the city center, you can get most places on foot within half an hour. And of course, Amsterdam is the most bike-friendly city in the world, so consider picking up a rental!"
+  transport:
+    "Card": "<ul>OV-chipkaart. Three types of OV-chipkaart are available:<li>a personal card on which you can load weekly/monthly/yearly subscriptions</li><li>an anonymous card on which you can load money which can be spent on public transport</li><li>a disposable card which can be used for a limited number of hours only</li></ul>"
+    "Where to buy": ""
+    "How to use": ""
+    "Topping up": ""
 
 budapest-hu:
   slug: budapest
@@ -127,3 +222,13 @@ budapest-hu:
     "emergency": "112"
     "police": "107"
     "Ambulance": "104"
+  sim_intro: "Identity check by service providers is legally required before signing up."
+  sim:
+    "Best network": "Telekom aka Magyar Telekom"
+    "Where to buy": "The prepaid SIM cards are called Domino and are sold at their stores called T-Point, online, and other outlets."
+  transport_intro: "Ticketing systems are not automated, many vehicles are insufficiently or not at all heated/air conditioned, and mechanical problems are frequent. Nonetheless, for getting from A to B, public transit is still a good option."
+  transport:
+    "Card": ""
+    "Where to buy": ""
+    "How to use": ""
+    "Topping up": ""

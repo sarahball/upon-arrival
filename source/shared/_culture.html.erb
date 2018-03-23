@@ -1,7 +1,7 @@
-<!-- Communication -->
+<!-- Culture -->
 <div class="section-container">
   <div class="section-title">
-    <h1>Communication</h1>
+    <h1>Culture</h1>
     <svg width="26px" height="14px">
       <use xlink:href="#caret-down"></use>
     </svg>
@@ -23,17 +23,6 @@
       <table>
         <tbody>
           <% destination.key_phrases.each do |meaning, phrase| %>
-            <tr>
-              <td><%= meaning %></td>
-              <td><%= phrase %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <h2>Pizza</h2>
-      <table>
-        <tbody>
-          <% (destination.pizza || []).each do |meaning, phrase| %>
             <tr>
               <td><%= meaning %></td>
               <td><%= phrase %></td>
