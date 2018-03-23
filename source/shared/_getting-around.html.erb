@@ -14,18 +14,20 @@
       <svg width="27px" height="29px">
         <use xlink:href="#icn-zap"></use>
       </svg>
+      <h2>Public Transport/Travel Card</h2>
+      <p><%= destination.transport_intro %></p>
+      <table>
+        <tbody>
+          <% (destination.transport || []).each do |item, details| %>
+            <tr>
+              <td><%= item %></td>
+              <td><%= details %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <h2>Ridesharing/Taxi apps</h2>
+      <p><%= destination.ridesharing %></p>
     </div>
-    <h2>Public Transport/Travel Card</h2>
-    <%= destination.transport_intro %>
-    <table>
-      <tbody>
-        <% destination.transport.each do |item, details| %>
-          <tr>
-            <td><%= item %></td>
-            <td><%= details %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
   </section>
 </div>
