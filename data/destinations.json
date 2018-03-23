@@ -77,7 +77,7 @@
     },
     "transport_intro": "<p>There are two train systems in Bangkok, BTS Skytrain and MRT (the metro). BTS tends to be much more useful for visitors. There is also a bus system, BRT.</p><p>The Airport Rail Link is the most popular and affordable way to get downtown from Suvarnabhumi Airport (BKK).</p>",
     "transport": {
-      "Card": "Rabbit. It serves the BTS Skytrain and the Bangkok BRT (the bus system), but not the MRT (the metro).",
+      "Card": "Rabbit. It serves the BTS Skytrain and the Bangkok BRT (the bus system), but not the MRT (the metro)."
     },
     "ridesharing": "Grab, Uber<br />These modern apps make 'taxi' rides more straightforward, less prone to scams, and often a bit cheaper than ordinary taxis. There's no need to attempt to pronounce the destination in Thai because you simply type it in the app. Drivers expect a cash payment, so you don't need to enter your credit card in the app."
   },
@@ -104,7 +104,7 @@
     "transport": {
       "Card": "Berlin has several tourist cards that include discounts for many attractions. Otherwise, you can buy single, day, seven day, and month passes depending on your needs. https://www.visitberlin.de/en/tickets-events-attractions-berlin",
       "Where to buy": "All tickets are available at vending machines at U- and S-Bahn platforms, in ticket offices at larger stations, and at the airports. Vending machines usually only take cash and local bank cards.",
-      "How to use": "You don't need to show your card to use public transportation, except on buses. Otherwise it's enough to carry it on you and show it to an inspector if one comes through your compartment.",
+      "How to use": "You don't need to show your card to use public transportation, except on buses. Otherwise it's enough to carry it on you and show it to an inspector if one comes through your compartment."
     },
     "ridesharing": "Ride sharing isn't legal in Germany, but you can use the Uber app to order a regular taxi at the official taxi rates. A 1.50 Euro fee applies to all credit card transactions in taxis, so best to pay in cash."
   },
@@ -179,7 +179,7 @@
     },
     "transport": {
       "Card": "The Barcelona Card features unlimited free travel on public transport and free admission and discounts at around 100 visitor attractions. The card is available for purchase for periods of between 2 and 5 days, costing €37.00 for a 2-day card and €62.00 for a 5-day card.",
-      "Where to buy": "You will get an online discount of 10% if you are booking in advance.",
+      "Where to buy": "You will get an online discount of 10% if you are booking in advance."
     },
     "ridesharing": "Ride sharing is banned. To use an app to order a taxi, try Easytaxi."
   },
@@ -230,7 +230,7 @@
     },
     "transport_intro": "Going around the city center, you can get most places on foot within half an hour. And of course, Amsterdam is the most bike-friendly city in the world, so consider picking up a rental!",
     "transport": {
-      "Card": "<ul>OV-chipkaart. Three types of OV-chipkaart are available:<li>a personal card on which you can load weekly/monthly/yearly subscriptions</li><li>an anonymous card on which you can load money which can be spent on public transport</li><li>a disposable card which can be used for a limited number of hours only</li></ul>",
+      "Card": "<ul>OV-chipkaart. Three types of OV-chipkaart are available:<li>a personal card on which you can load weekly/monthly/yearly subscriptions</li><li>an anonymous card on which you can load money which can be spent on public transport</li><li>a disposable card which can be used for a limited number of hours only</li></ul>"
     },
     "ridesharing": "Uber"
   },
