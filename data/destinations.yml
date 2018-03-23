@@ -68,12 +68,12 @@ bangkok-th:
     "Best network": "True Move"
     "Where to buy": "<p>True Move shops, at any 7-Eleven, and airport kiosks.</p><p>Arriving at Suvarnabhumi airport (BKK), you can find the True Move flagship store in the big arrivals hall just past the customs check. If you'd like to compare prices and promotions, the other big carriers, AIS and DTAC are there as well. There are also several third party phone shops near the elevated train entry point at the lower level.</p><p>At Don Meuang airport, you can find the True Move store facing exit gate 6.</p>"
     "Topping up": "online at mobiletopup.com or anyplace you can buy a SIM"
-    transport_intro: "<p>There are two train systems in Bangkok, BTS Skytrain and MRT (the metro). BTS tends to be much more useful for visitors. There is also a bus system, BRT.</p><p>The Airport Rail Link is the most popular and affordable way to get downtown from Suvarnabhumi Airport (BKK).</p>"
-    transport:
-      "Card": "Rabbit. It serves the BTS Skytrain and the Bangkok BRT (the bus system), but not the MRT (the metro)."
-      "Where to buy": ""
-      "How to use": ""
-      "Topping up": ""
+  transport_intro: "<p>There are two train systems in Bangkok, BTS Skytrain and MRT (the metro). BTS tends to be much more useful for visitors. There is also a bus system, BRT.</p><p>The Airport Rail Link is the most popular and affordable way to get downtown from Suvarnabhumi Airport (BKK).</p>"
+  transport:
+    "Card": "Rabbit. It serves the BTS Skytrain and the Bangkok BRT (the bus system), but not the MRT (the metro)."
+    "Where to buy": ""
+    "How to use": ""
+    "Topping up": ""
 
 berlin-de:
   slug: berlin
@@ -91,8 +91,8 @@ berlin-de:
     "Best network": "<ul>It's a tradeoff between price and coverage:<li>Telekom for the best available coverage and speeds at the highest prices</li><li>Vodafone for a slightly weaker network at somewhat lower prices</li><li>O2 (with E-Plus) for the cheapest rates on (a fairly good) 3G and (a rather unreliable) LTE</li>"
     "Where to buy": "Go to one of the big supermarket, drugstore, service station, electronic market chains or an operator's store."
     "Topping up": "by prepaid voucher (widely available anyplace you can buy a SIM)"
-    transport_intro: "Berlin uses a zone system, but most visitors don't need to go beyond zone A and B, except on trips to Potsdam or to Schönefeld Airport (SXF)."
-    transport:
+  transport_intro: "Berlin uses a zone system, but most visitors don't need to go beyond zone A and B, except on trips to Potsdam or to Schönefeld Airport (SXF)."
+  transport:
       "Card": "Berlin has several tourist cards that include discounts for many attractions. Otherwise, you can buy single, day, seven day, and month passes depending on your needs. https://www.visitberlin.de/en/tickets-events-attractions-berlin"
       "Where to buy": "All tickets are available at vending machines at U- and S-Bahn platforms, in ticket offices at larger stations, and at the airports. Vending machines usually only take cash and local bank cards."
       "How to use": "You don't need to show your card to use public transportation, except on buses. Otherwise it's enough to carry it on you and show it to an inspector if one comes through your compartment."
