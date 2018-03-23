@@ -1,0 +1,34 @@
+{
+  "US": {
+    "slug": "usa",
+    "title": "United States"
+  },
+  "GB": {
+    "slug": "uk",
+    "title": "Great Britain"
+  },
+  "CA": {
+    "slug": "canada",
+    "title": "Canada"
+  },
+  "FR": {
+    "slug": "france",
+    "title": "France"
+  },
+  "DE": {
+    "slug": "germany",
+    "title": "Germany"
+  },
+  "NL": {
+    "slug": "netherlands",
+    "title": "Netherlands"
+  },
+  "AU": {
+    "slug": "australia",
+    "title": "Australia"
+  },
+  "KR": {
+    "slug": "korea",
+    "title": "Korea"
+  }
+}
