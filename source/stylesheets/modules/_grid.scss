@@ -1,7 +1,7 @@
 // Grid
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@each $section in 'minibar' 'tabs' 'menu' 'content' 'landing--logo' 'landing--search' {
+@each $section in 'minibar' 'cards' 'tabs' 'menu' 'content' 'landing--logo' 'landing--search' {
   .#{$section} {
     @include define(#{$section});
   }
@@ -16,7 +16,7 @@
     @include grid-template-columns(100%);
     grid-template-areas:
       "minibar"
-      "tabs";
+      "cards";
   }
 }
 
@@ -33,13 +33,13 @@
 }
 
 /* Content Grid */
-.tabs {
+/*.tabs {
   @include display-grid;
   @include grid-template-columns(100%);
   grid-template-areas:
     "menu"
     "content";
-}
+}*/
 
 // Larger than tablet
 @media (#{$bp-larger-than-tablet}) {
@@ -47,7 +47,7 @@
     .container {
       @include grid-template-columns($minibar-size auto);
       grid-template-areas:
-        "minibar tabs";
+        "minibar cards";
     }
   }
 }

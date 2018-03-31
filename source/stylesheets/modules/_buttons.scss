@@ -8,8 +8,8 @@ input {
     display: inline-block;
     line-height: 20px;
     padding: 13.5px 30px;
-    color: $white;
-    background-color: $tangerine;
+    color: $light;
+    background-color: $pop;
     text-align: center;
     font-weight: $font-heavy;
     letter-spacing: .1rem;
@@ -22,7 +22,7 @@ input {
     transition: background 0.5s ease;
 
     &:hover {
-      background: rgba($tangerine, 0.8);
+      background: rgba($pop, 0.8);
       transition: background 0.5s ease;
     }
   }

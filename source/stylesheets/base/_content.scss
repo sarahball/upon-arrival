@@ -2,7 +2,7 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .section-container {
-	border-top: 2px solid $white;
+	border-top: 2px solid $light;
 
 	&:first-of-type {
 		border-top: 2px solid transparent;
@@ -20,7 +20,7 @@
 }
 
 .section-content {
-	background-color: $white;
+	background-color: $light;
 	padding: 0 30px 75px;
 	padding: 0 calc(5% + 20px) 73px;
 }

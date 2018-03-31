@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="preload" href="<%= asset_path(:css, 'site') %>" as="style" />
     <link rel="preload" href="<%= asset_path(:js, 'site') %>" as="script" />
-    <link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:600,700" rel="stylesheet">
 
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= yield_content(:title) || current_page.data.title || 'Upon Arrival' %></title>

@@ -26,7 +26,8 @@
       "How to use": "Your card must be pre-loaded at a top up point. At the station, tap it on the yellow circle at the barriers to enter. (Busses and the DLR have the same yellow circles to tap but no barrier.)",
       "Topping up": "Cards may be topped-up by online purchase, at credit card terminals, or by cash, the last two methods at stations or ticket offices."
     },
-    "ridesharing": "Uber, mytaxi"
+    "ridesharing": "Uber, mytaxi",
+    "bigmac": "from USD - Price: $4.41 (£3.19)<br/>from Euro - Price: €3.60 (£3.19)"
   },
   "chiang-mai-th": {
     "slug": "chiang-mai",
@@ -51,7 +52,9 @@
       "Topping up": "online at mobiletopup.com or anyplace you can buy a SIM"
     },
     "transport_intro": "The public bus system is generally not used by many people, and has few buses operating. Bus #4 will take you to the city center from the airport for 15 baht, or charter a tuk-tuk or songthaew for 50-60 baht per person. 160 baht is the current rate for a legal taxi to central Chiang Mai from the airport.",
-    "ridesharing": "Grab, Uber<br />These modern apps make 'taxi' rides more straightforward, less prone to scams, and often a bit cheaper than ordinary taxis. There's no need to attempt to pronounce the destination in Thai because you simply type it in the app. Drivers expect a cash payment, so you don't need to enter your credit card in the app."
+    "ridesharing": "Grab, Uber<br />These modern apps make 'taxi' rides more straightforward, less prone to scams, and often a bit cheaper than ordinary taxis. There's no need to attempt to pronounce the destination in Thai because you simply type it in the app. Drivers expect a cash payment, so you don't need to enter your credit card in the app.",
+    "scams": "the tuk-tuk scam, where a smooth-talking tuk-tuk driver tells you that the attraction you want to see is closed, and instead offers you a sightseeing tour for 20 baht (or some similarly unrealistic number)",
+    "bigmac": "from USD - Price: $3.72 (Baht 119.00)<br/>from Euro - Price: €3.04 (Baht 119.00)<br/>from UK - Price: £2.69 (Baht 119.00)"
   },
   "bangkok-th": {
     "slug": "bangkok",
@@ -79,7 +82,9 @@
     "transport": {
       "Card": "Rabbit. It serves the BTS Skytrain and the Bangkok BRT (the bus system), but not the MRT (the metro)."
     },
-    "ridesharing": "Grab, Uber<br />These modern apps make 'taxi' rides more straightforward, less prone to scams, and often a bit cheaper than ordinary taxis. There's no need to attempt to pronounce the destination in Thai because you simply type it in the app. Drivers expect a cash payment, so you don't need to enter your credit card in the app."
+    "ridesharing": "Grab, Uber<br />These modern apps make 'taxi' rides more straightforward, less prone to scams, and often a bit cheaper than ordinary taxis. There's no need to attempt to pronounce the destination in Thai because you simply type it in the app. Drivers expect a cash payment, so you don't need to enter your credit card in the app.",
+    "scams": "Wrong Change – always count your change, especially from convenience stores/7-11 - they often take advantage of foreigners who don't know what correct change should be.<br/>Airport Taxi Scam – Official looking touts will pretend that they are meter taxis and tell you that it is 500-1000 baht to go into town. The meter taxi outside is less than half this. The police have tried to crack down on them but they are back. Ignore anyone who asks if you want a taxi. The real taxi drivers are waiting outside by their cars.<br/>Tuk Tuks – if yo umust take one, only hail a moving vehicle from the road and be sure to agree on the price and destination clearly in advance<br/>Overcharging – businesses may overcharge or give incorrect change if they think they can get away with it, so always check <br/>Being approached by someone who wants to help – As a rule of thumb, it's wise to decline all offers made by someone who appears to be a friendly local giving a hapless tourist some local advice.",
+    "bigmac": "from USD - Price: $3.72 (Baht 119.00)<br/>from Euro - Price: €3.04 (Baht 119.00)<br/>from UK - Price: £2.69 (Baht 119.00)"
   },
   "berlin-de": {
     "slug": "berlin",
@@ -106,7 +111,9 @@
       "Where to buy": "All tickets are available at vending machines at U- and S-Bahn platforms, in ticket offices at larger stations, and at the airports. Vending machines usually only take cash and local bank cards.",
       "How to use": "You don't need to show your card to use public transportation, except on buses. Otherwise it's enough to carry it on you and show it to an inspector if one comes through your compartment."
     },
-    "ridesharing": "Ride sharing isn't legal in Germany, but you can use the Uber app to order a regular taxi at the official taxi rates. A 1.50 Euro fee applies to all credit card transactions in taxis, so best to pay in cash."
+    "ridesharing": "Ride sharing isn't legal in Germany, but you can use the Uber app to order a regular taxi at the official taxi rates. A 1.50 Euro fee applies to all credit card transactions in taxis, so best to pay in cash.",
+    "scams": "Scammers selling already validated metro tickets – only buy tickets from machines or the ticket office<br/>Fake ticket inspectors on the metro - The only way to tell a fake is if the inspector demands that you pay on the spot. A real inspector can allow you to pay later by printing out a notice for you. Should you suspect the authenticity of the inspector, ask for identification and threaten to call the company to verify his identification.",
+    "bigmac": "from USD - Price: $4.84 (€3.95)<br/>from UK - Price: £3.50 (€3.95)"
   },
   "lisbon-pt": {
     "slug": "lisbon",
@@ -129,7 +136,8 @@
       "Card": "<p>The best and, in many cases, the sole way to pay for city transport is buying a rechargeable green-coloured card Viva Viagem. It's valid for metro, trams (electrico), urban trains, most buses and ferries.</p><p>Day pass for metro and buses (€6.15)</p><p>Zapping. This is a 'stored value' mode, similar to the Oyster card in London. The rates are also cheaper comparing to single ride: every journey costs €1.25, but the transfers are not free</p>",
       "Topping up": "The Viva Viagem card can be charged in three different modes. Single tickets for bus (€1.40; €1.80 if bought on the bus) or metro (€1.40). You put this exact amount on this card. Unlike Zapping mode, this ticket allows free transfers within one hour."
     },
-    "ridesharing": "Uber. Be aware that taxi drivers have a bad reputation here."
+    "ridesharing": "Uber. Be aware that taxi drivers have a bad reputation here.",
+    "bigmac": "from USD - Price: $4.84 (€3.95)<br/>rom UK - Price: £3.50 (€3.95)"
   },
   "new-york-city-us": {
     "slug": "new-york-city",
@@ -155,7 +163,8 @@
       "How to use": "<p>To enter the subway, you will need to swipe your MetroCard through the slot on the right hand side of the turnstile that greets you at the subway entrance. Hold your card with the logo facing your body and black magnetic strip down. Then slide it forward through the slot at a moderate speed. You'll know you succeeded when the display flashes \"\"Go\"\" in green and you hear a *CLICK* sound. Only once you hear the *CLICK* is it OK to walk through the turnstile.</p><p>When boarding a bus with a MetroCard, insert the card vertically, with the pin hole down, the black stripe to the right and the word MetroCard facing towards you, into the card slot in the top of the fare box next to the driver. You should be able to read the word MetroCard from bottom to top when inserting the card in this manner. The fare box will swallow the card, read it, and return it to you.</p>",
       "Topping up": "At machines and station booths"
     },
-    "ridesharing": "New York has several NYC-only ridesharing apps where you might get a better deal than with the bigger companies. Uber, Lyft tends to have cheaper surge pricing, Via https://ridewithvia.com/ (carpooling and limited hours), Juno https://gojuno.com/"
+    "ridesharing": "New York has several NYC-only ridesharing apps where you might get a better deal than with the bigger companies. Uber, Lyft tends to have cheaper surge pricing, Via https://ridewithvia.com/ (carpooling and limited hours), Juno https://gojuno.com/",
+    "bigmac": "from Euro - Price: €4.31 ($5.28)<br/>from UK - Price: £3.82 ($5.28)"
   },
   "barcelona-es": {
     "slug": "barcelona",
@@ -181,7 +190,9 @@
       "Card": "The Barcelona Card features unlimited free travel on public transport and free admission and discounts at around 100 visitor attractions. The card is available for purchase for periods of between 2 and 5 days, costing €37.00 for a 2-day card and €62.00 for a 5-day card.",
       "Where to buy": "You will get an online discount of 10% if you are booking in advance."
     },
-    "ridesharing": "Ride sharing is banned. To use an app to order a taxi, try Easytaxi."
+    "ridesharing": "Ride sharing is banned. To use an app to order a taxi, try Easytaxi.",
+    "scams": "Pickpocketing is some of the most skilled in the world",
+    "bigmac": "from USD - Price: $4.84 (€3.95)<br/>from UK - Price: £3.50 (€3.95)"
   },
   "buenos-aires-ar": {
     "slug": "buenos-aires",
@@ -208,7 +219,8 @@
       "Where to buy": "At stations only",
       "Topping up": "At stations and some shops"
     },
-    "ridesharing": "Uber"
+    "ridesharing": "Uber",
+    "bigmac": "from USD - Price: $3.96 (Peso 75.00)<br/>from UK - Price: £2.86 (Peso 75.00)<br/>from Euro - Price: €3.23 (Peso 75.00)"
   },
   "amsterdam-nl": {
     "slug": "amsterdam",
@@ -232,7 +244,9 @@
     "transport": {
       "Card": "<ul>OV-chipkaart. Three types of OV-chipkaart are available:<li>a personal card on which you can load weekly/monthly/yearly subscriptions</li><li>an anonymous card on which you can load money which can be spent on public transport</li><li>a disposable card which can be used for a limited number of hours only</li></ul>"
     },
-    "ridesharing": "Uber"
+    "ridesharing": "Uber",
+    "scams": "Pickpocketing is some of the most skilled in the world",
+    "bigmac": "from USD - Price: $4.84 (€3.95)<br/>from UK - Price: £3.50 (€3.95)"
   },
   "budapest-hu": {
     "slug": "budapest",
@@ -254,6 +268,8 @@
       "Where to buy": "The prepaid SIM cards are called Domino and are sold at their stores called T-Point, online, and other outlets."
     },
     "transport_intro": "Ticketing systems are not automated, many vehicles are insufficiently or not at all heated/air conditioned, and mechanical problems are frequent. Nonetheless, for getting from A to B, public transit is still a good option.",
-    "ridesharing": "Ride sharing is banned. To use an app to order a taxi, try Taxify."
+    "ridesharing": "Ride sharing is banned. To use an app to order a taxi, try Taxify.",
+    "scams": "Bar scam: Male tourists - This scam usually operates in the fifth district of Budapest and is known to be used along Vaci Utca, an area with lots of bars and restaurants. You will be approached by several young women who will engage you by asking you for a light for a cigarette or by asking for directions.<br/>They will start chatting with you and ask if you want to go with them for a drink in a nearby bar. After a few drinks you will ask for the bill which will be incredibly expensive. The women will claim that they don’t have enough money to pay their share. This is a scam and the women are working for the bar.",
+    "bigmac": "from USD - Price: $3.43 (Forint 864.00)<br/>from Euro - Price: €2.80 (Forint 864.00)<br/>from UK - Price: £2.48 (Forint 864.00)"
   }
 }

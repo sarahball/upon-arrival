@@ -97,7 +97,7 @@ input[type="submit"] {
 
 .ui-selectmenu {
   &-#{button}.ui-button {
-    background: rgba($white, 0.8);
+    background: rgba($light, 0.8);
     padding: 10px 20px;
     margin-bottom: 0;
     width: auto;
@@ -105,7 +105,7 @@ input[type="submit"] {
 
   &-#{menu} .ui-menu {
     //@include gradient();
-    background: $white;
+    background: $light;
   }
 
   &-#{text} {
