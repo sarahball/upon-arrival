@@ -97,8 +97,6 @@ GEM
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    masonry-rails (0.2.4)
-      railties
     maxcdn (0.3.2)
       addressable (~> 2.4)
       faraday (~> 0.9)
@@ -231,7 +229,6 @@ DEPENDENCIES
   jquery-matchheight-rails!
   jquery-rails!
   jquery-ui-rails!
-  masonry-rails!
   middleman (~> 4.2)!
   middleman-autoprefixer (~> 2.7)!
   middleman-cache-do (~> 0.1.0)!
