@@ -28,6 +28,8 @@ body {
   }
 }
 
+.wrapper {margin: $space 5%;}
+
 // Links
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -53,4 +55,6 @@ hr {
 }
 
 // Larger than desktop
-@media (#{$bp-larger-than-desktop}) {}
+@media (#{$bp-larger-than-desktophd}) {
+  .wrapper {margin: $space 60px;}
+}

@@ -26,15 +26,15 @@ $card-colors: (
   ("name": 'safety', "bg": #E03636, "text": #FFCFCF, "position": left), 
   ("name": 'money', "bg": #85E036, "text": #E5FFCF, "position": center), 
   ("name": 'tech', "bg": #36E0CA, "text": #CFFFF9, "position": left bottom), 
-  ("name": 'weather', "bg": #E0C736, "text": #FFF8CF, "position": right top)
+  ("name": 'weather', "bg": #E0C736, "text": #FFFCEC, "position": right top)
 );
 
 // Typography
-$font-family: "Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-secondary: 'Cabin', sans-serif !default;
+$font-family: 'Barlow', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-secondary: $font-family !default;
 $font-size: 1.5em !default;
 $font-color: $dark !default;
-$font-normal: 400 !default;
+$font-normal: 600 !default;
 $font-heavy: 700 !default;
 
 //Grid Variables
@@ -47,7 +47,8 @@ $column-margin: 4% !default; // space between columns
 
 // Misc
 $space: 45px !default;
-$global-radius: 4px !default;
-$border: 2px solid $light !default;
+//$global-radius: 4px !default;
+//$border: 2px solid $light !default;
 $minibar-size: 45px !default;
-$tab-size: 60px !default;
+//$tab-size: 60px !default;
+$card-width: 330px !default;

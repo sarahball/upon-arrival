@@ -22,6 +22,29 @@
 	text-shadow: none;
 }
 
+/* Masonry */
+
+/* Masonry Layout */
+
+.wrapper {
+  column-count: auto;
+  column-width: $card-width;
+  column-gap: $space;
+}
+.card--container {
+  break-inside: avoid;
+  margin: $space 0;
+  
+  &:first-child {margin-top: 0;}
+  &:last-child {margin-bottom: 0;}
+}
+
+/*@media (min-width: 770px) {.wrapper {column-count: 2;}}
+@media (min-width: 1165px) {.wrapper {column-count: 3;}}
+@media (min-width: 1560px) {.wrapper {column-count: 4;}}
+@media (min-width: 1955px) {.wrapper {column-count: 5;}}
+@media (min-width: 2350px) {.wrapper {column-count: 6;}}*/
+
 /* Cards */
 
 @each $color in $card-colors {
@@ -46,14 +69,10 @@
 
 .card {
   &--container {
-    min-width: 375px;
-			max-width: 375px;
+    //min-width: 375px;
+    //max-width: 375px;
     background-color: white;
     box-shadow: 0 20px 30px 0 rgba(0,32,59,0.12);
-			margin: 20px;
-			
-			&:first-child {margin-left: 0;}
-			&:last-child {margin-right: 0;}
   }
 
   &--info {
@@ -72,9 +91,6 @@
     span {
       display: inline-block;
       padding: .25em .5em;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 700;
     }
   }
 }
@@ -86,7 +102,7 @@
 	right: 0;
 	width: 20%;
 	margin: 0 5%;
-	margin-top: calc(#{$tab-size} + 20px);
+	margin-top: $space;
 	max-width: 200px;
 }
 
