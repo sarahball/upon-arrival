@@ -65,17 +65,19 @@
       "Greeting": "Hello",
       "Excuse Me": "Excuse Me"
     },
+    "emergency_highlight": "Tourist Police: 1155",
     "emergency_numbers": {
       "Tourist Police": "1155",
       "Police": "191",
       "Medical Emergency": "1669",
       "Vehicle Theft Police": "1192"
     },
+    "sim_highlight": "Best Network: True Move",
     "sim_intro": "Thailand has started mandatory SIM card registration and now you need to provide your ID or passport at the points of purchase.",
     "sim": {
       "Average 4G speeds": "11 Mbps",
       "Best network": "True Move",
-      "Where to buy": "<p>True Move shops, at any 7-Eleven, and airport kiosks.</p><p>Arriving at Suvarnabhumi airport (BKK), you can find the True Move flagship store in the big arrivals hall just past the customs check. If you'd like to compare prices and promotions, the other big carriers, AIS and DTAC are there as well. There are also several third party phone shops near the elevated train entry point at the lower level.</p><p>At Don Meuang airport, you can find the True Move store facing exit gate 6.</p>",
+      "Where to buy": "True Move shops, at any 7-Eleven, and airport kiosks.<br />Arriving at Suvarnabhumi airport (BKK), you can find the True Move flagship store in the big arrivals hall just past the customs check. If you'd like to compare prices and promotions, the other big carriers, AIS and DTAC are there as well. There are also several third party phone shops near the elevated train entry point at the lower level.<br />At Don Meuang airport, you can find the True Move store facing exit gate 6.",
       "Topping up": "online at mobiletopup.com or anyplace you can buy a SIM"
     },
     "transport_intro": "<p>There are two train systems in Bangkok, BTS Skytrain and MRT (the metro). BTS tends to be much more useful for visitors. There is also a bus system, BRT.</p><p>The Airport Rail Link is the most popular and affordable way to get downtown from Suvarnabhumi Airport (BKK).</p>",

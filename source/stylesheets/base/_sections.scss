@@ -59,6 +59,8 @@
   // tag border
   .#{map-get($color, "name")} .card--tag span {
     border: 1px solid #{map-get($color, "text")};
+
+    h3 {color: #{map-get($color, "text")};}
   }
 	
 	// table border

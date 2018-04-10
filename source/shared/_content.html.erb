@@ -20,6 +20,18 @@
           <% end %>
         </table>
       </div>
+<<<<<<< Updated upstream
+=======
+      <h1>Prepaid SIM</h1>
+      <h2><%= destination.sim_highlight %></h2>
+    </div>
+    <div class="card--details">
+      <p><%= destination.sim_intro %></p>
+      <% (destination.sim || []).each do |item, details| %>
+        <strong><%= item %></strong>
+        <p><%= details %></p>
+      <% end %>
+>>>>>>> Stashed changes
     </div>
   <% end %>
   
@@ -42,6 +54,21 @@
           <% end %>
         </table>
       </div>
+<<<<<<< Updated upstream
+=======
+      <h1>Emergency Services</h1>
+      <h2><%= destination.emergency_highlight %></h2>
+    </div>
+    <div class="card--details">
+      <table>
+        <% destination.emergency_numbers.each do |department, number| %>
+        <tr>
+          <td><strong><%= department %></strong></td>
+          <td><%= number %></td>
+        </tr>
+        <% end %>
+      </table>
+>>>>>>> Stashed changes
     </div>
   <% end %>
   

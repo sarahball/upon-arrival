@@ -25,16 +25,16 @@ $card-colors: (
   ("name": 'health', "bg": #870073, "text": #FFCFF8, "position": right), 
   ("name": 'safety', "bg": #E03636, "text": #FFCFCF, "position": left), 
   ("name": 'money', "bg": #85E036, "text": #E5FFCF, "position": center), 
-  ("name": 'tech', "bg": #36E0CA, "text": #CFFFF9, "position": left bottom), 
+  ("name": 'tech', "bg": #0bc7af, "text": #CFFFF9, "position": left bottom), 
   ("name": 'weather', "bg": #E0C736, "text": #FFFCEC, "position": right top)
 );
 
 // Typography
 $font-family: 'Barlow', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-secondary: $font-family !default;
-$font-size: 1.5em !default;
+$font-size: 1.6em !default;
 $font-color: $dark !default;
-$font-normal: 600 !default;
+$font-normal: 500 !default;
 $font-heavy: 700 !default;
 
 //Grid Variables
