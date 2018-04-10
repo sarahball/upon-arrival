@@ -7,7 +7,7 @@
           <span><h3>Tech</h3></span>
         </div>
         <h1>Prepaid SIM</h1>
-        <p>Best network: EEE</p>
+        <h2><%= destination.sim_highlight %></h2>
       </div>
       <div class="card--details">
         <%= destination.sim_intro if destination.sim_intro.present? %>
@@ -20,18 +20,6 @@
           <% end %>
         </table>
       </div>
-<<<<<<< Updated upstream
-=======
-      <h1>Prepaid SIM</h1>
-      <h2><%= destination.sim_highlight %></h2>
-    </div>
-    <div class="card--details">
-      <p><%= destination.sim_intro %></p>
-      <% (destination.sim || []).each do |item, details| %>
-        <strong><%= item %></strong>
-        <p><%= details %></p>
-      <% end %>
->>>>>>> Stashed changes
     </div>
   <% end %>
   
@@ -42,7 +30,7 @@
           <span><h3>Safety</h3></span>
         </div>
         <h1>Emergency Services</h1>
-        <p>Police: 191</p>
+        <h2><%= destination.emergency_highlight %></h2>
       </div>
       <div class="card--details">
         <table>
@@ -54,21 +42,6 @@
           <% end %>
         </table>
       </div>
-<<<<<<< Updated upstream
-=======
-      <h1>Emergency Services</h1>
-      <h2><%= destination.emergency_highlight %></h2>
-    </div>
-    <div class="card--details">
-      <table>
-        <% destination.emergency_numbers.each do |department, number| %>
-        <tr>
-          <td><strong><%= department %></strong></td>
-          <td><%= number %></td>
-        </tr>
-        <% end %>
-      </table>
->>>>>>> Stashed changes
     </div>
   <% end %>
   
