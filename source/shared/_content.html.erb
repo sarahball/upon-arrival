@@ -1,70 +1,64 @@
 <div class="wrapper cards">
 
-  <div class="card--container tech">
-    <div class="card--info">
-      <div class="card--tag">
-        <span><h3>Tech</h3></span>
+  <% if destination.sim.present? %>
+    <div class="card--container tech">
+      <div class="card--info">
+        <div class="card--tag">
+          <span><h3>Tech</h3></span>
+        </div>
+        <h1>Prepaid SIM</h1>
+        <p>Best network: EEE</p>
       </div>
-      <h1>Prepaid SIM</h1>
-      <p>Best network: EEE</p>
+      <div class="card--details">
+        <%= destination.sim_intro if destination.sim_intro.present? %>
+        <table>
+          <% destination.sim.each do |field, value| %>
+            <tr>
+              <td><%= field %></td>
+              <td><%= value %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
     </div>
-    <div class="card--details">
-      <table>
-        <tr>
-          <td>Best Network</td>
-          <td>EE</td>
-        </tr>
-        <tr>
-          <td>Where to buy</td>
-          <td>EE shops and online</td>
-        </tr>
-        <tr>
-          <td>Topping up</td>
-          <td>By prepaid card (widely available at convenience and grocery shops) and online with a local credit card.</td>
-        </tr>
-      </table>
-    </div>
-  </div>
+  <% end %>
   
-  <div class="card--container safety">
-    <div class="card--info">
-      <div class="card--tag">
-        <span><h3>Safety</h3></span>
+  <% if destination.emergency_numbers.present? %>
+    <div class="card--container safety">
+      <div class="card--info">
+        <div class="card--tag">
+          <span><h3>Safety</h3></span>
+        </div>
+        <h1>Emergency Services</h1>
+        <p>Police: 191</p>
       </div>
-      <h1>Emergency Services</h1>
-      <p>Police: 191</p>
+      <div class="card--details">
+        <table>
+          <% destination.emergency_numbers.each do |field, value| %>
+            <tr>
+              <td><%= field %></td>
+              <td><%= value %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
     </div>
-    <div class="card--details">
-      <table>
-        <tr>
-          <td>Tourist Police</td>
-          <td>1155</td>
-        </tr>
-        <tr>
-          <td>Police</td>
-          <td>191</td>
-        </tr>
-        <tr>
-          <td>Medical Emergency</td>
-          <td>1669</td>
-        </tr>
-      </table>
-    </div>
-  </div>
+  <% end %>
   
-  <div class="card--container getting-around">
-    <div class="card--info">
-      <div class="card--tag">
-        <span><h3>Getting Around</h3></span>
+  <% if destination.ridesharing.present? %>
+    <div class="card--container getting-around">
+      <div class="card--info">
+        <div class="card--tag">
+          <span><h3>Getting Around</h3></span>
+        </div>
+        <h1>Ridesharing</h1>
+        <p>Grab, Uber</p>
       </div>
-      <h1>Ridesharing</h1>
-      <p>Grab, Uber</p>
+      <div class="card--details">
+        <%= destination.ridesharing %>
+      </div>
     </div>
-    <div class="card--details">
-      <p>The taxi system is broken in Thailand, so ridesharing makes rides easier, safer, and often a bit cheaper than ordinary taxis.</p>
-      <p>Even with apps, cash payments are standard.</p>
-    </div>
-  </div>
+  <% end %>
   
   <div class="card--container money">
     <div class="card--info">
