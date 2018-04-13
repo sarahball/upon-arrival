@@ -1,31 +1,24 @@
 <!-- Tech -->
-<div class="section-container">
-  <div class="section-title">
-    <h1>Tech</h1>
-    <svg width="26px" height="14px">
-      <use xlink:href="#caret-down"></use>
-    </svg>
-  </div>
-  <section>
-    <svg width="100%" height="75px">
-      <use xlink:href="#slope-border"></use>
-    </svg>
-    <div class="section-content">
-      <svg width="27px" height="29px">
-        <use xlink:href="#icn-zap"></use>
-      </svg>
-      <h2>Prepaid SIM</h2>
-      <p><%= destination.sim_intro %></p>
-			<table>
-			  <tbody>
-			    <% (destination.sim || []).each do |item, details| %>
-			      <tr>
-			        <td><%= item %></td>
-			        <td><%= details %></td>
-			      </tr>
-			    <% end %>
-			  </tbody>
-			</table>
+
+<% if destination.sim.present? %>
+  <div class="card--container tech">
+    <div class="card--info">
+      <div class="card--tag">
+        <h3>Tech</h3>
+      </div>
+      <h1>Prepaid SIM</h1>
+      <h2><%= destination.sim_highlight %></h2>
     </div>
-  </section>
-</div>
+    <div class="card--details">
+      <%= destination.sim_intro if destination.sim_intro.present? %>
+      <table>
+        <% destination.sim.each do |field, value| %>
+          <tr>
+            <td><%= field %></td>
+            <td><%= value %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+<% end %>

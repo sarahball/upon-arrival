@@ -1,40 +1,58 @@
 <!-- Money -->
-<div class="section-container">
-  <div class="section-title">
-    <h1>Money</h1>
-    <svg width="26px" height="14px">
-      <use xlink:href="#caret-down"></use>
-    </svg>
+
+<% if destination.currency.present? %>
+  <div class="card--container money">
+    <div class="card--info">
+      <div class="card--tag">
+        <h3>Money</h3>
+      </div>
+      <h1>Currency</h1>
+      <h2><%= destination.currency.name %> (<%= destination.currency.code %>)</h2>
+    </div>
   </div>
-  <section>
-    <svg width="100%" height="75px">
-      <use xlink:href="#slope-border"></use>
-    </svg>
-    <div class="section-content">
-      <svg width="27px" height="29px">
-        <use xlink:href="#icn-zap"></use>
-      </svg>
-      <h2>Currency</h2>
-      <p><%= destination.currency.name %> (<%= destination.currency.code %>)</p>
-      <svg width="27px" height="29px">
-        <use xlink:href="#icn-zap"></use>
-      </svg>
-      <h2>Exchange Rate</h2>
-      <p>
-        <%= exchange_rate_between(departure, destination) %> | <%= exchange_rate_between(destination, departure) %>
-      </p>
-      <svg width="27px" height="29px">
-            <use xlink:href="#icn-zap"></use>
-          </svg>
-      <h2>Is the rate favorable?</h2>
+<% end %>
+
+<% if destination.exchange_rate.present? %>
+  <div class="card--container money">
+    <div class="card--info">
+      <div class="card--tag">
+        <h3>Money</h3>
+      </div>
+      <h1>Exchange Rate</h1>
+      <h2><%= exchange_rate_between(departure, destination) %> | <%= exchange_rate_between(destination, departure) %></h2>
+    </div>
+  </div>
+<% end %>
+
+<% if destination.rate_favorable.present? %>
+  <div class="card--container money">
+    <div class="card--info">
+      <div class="card--tag">
+        <h3>Money</h3>
+      </div>
+      <h1>Is the exchange rate favorable?</h1>
+      <h2></h2>
+    </div>
+    <div class="card--details">
       <% if exchange_rate_between_favorable?(departure, destination) %>
         <p>Yes. <%= departure.currency.name %> have typically been stronger in the past three months.</p>
       <% else %>
         <p>No. <%= destination.currency.name %> have typically been stronger in the past three months.</p>
       <% end %>
+    </div>
+  </div>
+<% end %>
 
-      <h2>Big Mac Index</h2>
+<% if destination.bigmac.present? %>
+  <div class="card--container money">
+    <div class="card--info">
+      <div class="card--tag">
+        <h3>Money</h3>
+      </div>
+      <h1>Big Mac Index</h1>
+    </div>
+    <div class="card--details">
       <p><%= destination.bigmac %></p>
     </div>
-  </section>
-</div>
+  </div>
+<% end %>
