@@ -6,8 +6,8 @@
 .minibar {
   width: 100vw;
   //height: $minibar-size;
-  height: 50px; //???
-  background-color: rgba($pop, 0.5);
+  height: 43px; //???
+  background-color: rgba($dark-accent, 0.5);
   cursor: default;
   @extend h1;
 	text-shadow: 0 0 2px rgba($dark, 0.5);
@@ -17,8 +17,8 @@
 }
 
 .plane {
-	font-size: 120%;
-	color: $dark;
+	font-size: 150%;
+	color: $light;
 	text-shadow: none;
 }
 
@@ -100,12 +100,10 @@
 /* Logo */
 
 .logo-inner {
-	position: fixed;
-	right: 0;
-	width: 20%;
-	margin: 0 5%;
-	margin-top: $space;
-	max-width: 200px;
+    width: 80px;
+    position: absolute;
+    right: 5%;
+    z-index: 1;
 }
 
 .logo-container {
@@ -115,7 +113,7 @@
 	background-repeat: no-repeat;
 	height: 0;
 	padding: 0; /* reset */
-	padding-bottom: 55%;
+	padding-bottom: 87%;
 }
 
 // Larger than tablet
@@ -126,7 +124,7 @@
 	.minibar {
 		position: fixed;
 		height: 100vh;
-		width: $minibar-size;
+		width: 50px; //???
 
 	  &--rotate {
 	    position: absolute;
@@ -140,11 +138,11 @@
 	  }
 	}
 
-	.plane {
-		font-size: 120%;
-		color: $dark;
-		text-shadow: none;
-	}
+  .logo-inner {
+    margin: 10px -12px;
+    width: auto;
+    position: relative;
+  }
 
 }
 
