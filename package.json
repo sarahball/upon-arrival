@@ -1,0 +1,9 @@
+{
+  "name": "upon-arrival",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-match-height": "^0.7.2",
+    "jquery-ui": "^1.12.1"
+  }
+}
