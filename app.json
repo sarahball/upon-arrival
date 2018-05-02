@@ -27,5 +27,27 @@
     "OPEN_EXCHANGE_RATE_API": {
       "required": true
     }
-  }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 0
+    }
+  },
+  "addons": [
+    "memcachedcloud",
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+  
 }
