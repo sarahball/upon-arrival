@@ -36,6 +36,19 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# jQuery UI Asset
+gem 'jquery-ui-rails'
+
+# Gems for adhoc data sources
+gem 'countries', '~> 1.2'
+gem 'money', '~> 6.9'
+gem 'open_exchange_rates', '~> 0.5'
+gem 'factbook'
+gem 'i18n_data'
+
+# Drapper to keep our content displayed nicely
+gem 'draper'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

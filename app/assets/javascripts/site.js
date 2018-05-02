@@ -1,9 +1,4 @@
 // This is where it all goes :)
-//= require jquery/dist/jquery.min.js
-//= require jquery-ui/ui/widgets/selectmenu
-//= require jquery-ui/ui/widgets/tabs
-//= require jquery-match-height/dist/jquery.matchHeight-min.js
-//= require postload
 
 /*$( function() {
   $("#tabs li a").click(function (e) {

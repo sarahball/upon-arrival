@@ -13,4 +13,11 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery/dist/jquery.min.js
+//
+//= require jquery-ui/widgets/selectmenu
+//= require jquery-ui/widgets/tabs
+//
+//= require jquery-match-height/dist/jquery.matchHeight-min.js
+//= require postload
 //= require site.js

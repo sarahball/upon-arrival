@@ -33,11 +33,15 @@ module UponArrival
       config.action_mailer.asset_host = ENV['ASSET_HOST']
     end
 
+    # Don't generate to much scaffolding.
     config.generators do |g|
       g.helper false
       g.assets false
       g.helper false
       g.view_specs false
     end
+
+    # Let us break our I18n into lots of smaller files.
+    config.i18n.load_path += Dir["#{Rails.root}/config/locales/**/*.{rb,yml}"]
   end
 end

@@ -7,7 +7,7 @@
 	  linear-gradient(
 	    rgba($light-accent, 0.5) 0%,
 	    rgba($dark-accent, 0.5) 100%),
-	  image-url("bg-#{$location}.jpg") no-repeat center center fixed;
+	  image-url("bg/#{$location}.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 

@@ -1,2 +1,33 @@
-<h1>Landing#index</h1>
-<p>Find me in app/views/landing/index.html.erb</p>
+<% Destination.all.each do |destination| %>
+  <link rel="postload" href="<%= asset_path("bg/#{destination.slug}.jpg") %>" as="image" />
+<% end %>
+
+<div class="landing--logo">
+  <div class="logo-parent">
+    <div class="logo-container"></div>
+  </div>
+</div>
+
+<div class="row landing--search">
+  <form id="locations-form" data-redirect-to="/#{wherefrom}✈️#{wheregoing}" action="#" method="post">
+
+    <label for="wherefrom">Where are you from?</label>
+    <select name="Where are you from?" id="wherefrom">
+      <option value="">Where are you from?</option>
+      <% Departure.all.each do |departure| %>
+        <option value="<%= departure.slug %>"><%= departure.title %></option>
+      <% end %>
+    </select>
+
+    <label for="wheregoing">Where are you going?</label>
+    <select name="Where are you going?" id="wheregoing">
+      <option value="">Where are you going?</option>
+      <% Destination.all.each do |destination| %>
+        <option value="<%= destination.slug %>"><%= destination.title %></option>
+      <% end %>
+    </select>
+
+    <input type="submit" value="Search">
+
+  </form>
+</div>

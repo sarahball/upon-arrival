@@ -1,0 +1,6 @@
+en:
+  seo:
+    titles:
+      landing: 'Upon Arrival'
+      destinations:
+        show: "%{departure} ✈️ %{destination}"
