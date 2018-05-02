@@ -4,3 +4,7 @@ en:
       landing: 'Upon Arrival'
       destinations:
         show: "%{departure} ✈️ %{destination}"
+      passwords: "Forgot your password?"
+      sessions: "Log In"
+      password: "Change your password"
+      registrations: "Join Us"

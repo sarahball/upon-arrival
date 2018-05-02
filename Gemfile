@@ -43,12 +43,14 @@ gem 'jquery-ui-rails'
 gem 'countries', '~> 1.2'
 gem 'money', '~> 6.9'
 gem 'open_exchange_rates', '~> 0.5'
-gem 'factbook'
+#gem 'factbook'
 gem 'i18n_data'
 
 # Drapper to keep our content displayed nicely
 gem 'draper'
 
+# Devise for users
+gem 'devise'
 gem 'simple_form'
 
 group :development, :test do

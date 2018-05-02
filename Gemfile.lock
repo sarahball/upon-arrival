@@ -51,6 +51,7 @@ GEM
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    bcrypt (3.1.11)
     bindex (0.5.0)
     bootsnap (1.3.0)
       msgpack (~> 1.0)
@@ -81,6 +82,12 @@ GEM
       i18n_data (~> 0.7.0)
     crass (1.0.4)
     currencies (0.4.2)
+    devise (4.4.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.3)
     draper (3.0.1)
       actionpack (~> 5.0)
@@ -90,13 +97,6 @@ GEM
       request_store (~> 1.0)
     erubi (1.7.1)
     execjs (2.7.0)
-    factbook (1.2.2)
-      activerecord
-      fetcher
-      logutils
-      nokogiri
-    fetcher (0.4.5)
-      logutils (>= 0.6)
     ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -113,7 +113,6 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    logutils (0.6.1)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -135,6 +134,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     open_exchange_rates (0.5.1)
       yajl-ruby
+    orm_adapter (0.5.0)
     pg (1.0.0)
     public_suffix (3.0.2)
     puma (3.11.4)
@@ -171,6 +171,9 @@ GEM
       ffi (>= 0.5.0, < 2)
     request_store (1.4.1)
       rack (>= 1.4)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -234,6 +237,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.10)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -256,8 +261,8 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   countries (~> 1.2)
+  devise
   draper
-  factbook
   i18n_data
   jbuilder (~> 2.5)
   jquery-ui-rails
