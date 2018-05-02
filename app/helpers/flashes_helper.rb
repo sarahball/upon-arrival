@@ -3,7 +3,9 @@ module FlashesHelper
     if flash.any?
       content_tag :div, class: 'alerts' do
         flash.collect do |key, value|
-          render_component 'alert', type: key, text: value
+          content_tag :div, class: 'alert' do
+            value
+          end
         end.join('').html_safe
       end
     end

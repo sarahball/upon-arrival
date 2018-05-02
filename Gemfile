@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
 
+# Use .env to store environment variables
+gem 'dotenv-rails', groups: %i[development test]
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use pg as the database for Active Record
@@ -51,6 +54,8 @@ gem 'draper'
 
 # Devise for users
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
 gem 'simple_form'
 
 group :development, :test do

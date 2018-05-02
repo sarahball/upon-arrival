@@ -4,11 +4,8 @@ Rails.application.routes.draw do
     sign_out: 'logout',
     sign_up: 'join-us',
     registration: 'register'
-  }
-
-  namespace :destination do
-    resources :cards
-  end
+  },
+  controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
   get '/:departure_id✈️:destination_id', controller: :destinations, action: :show, as: :destination
 
