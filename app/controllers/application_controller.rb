@@ -5,5 +5,7 @@ class ApplicationController < ActionController::Base
   def page_title_i18n_interpolations; end
 
   helper_method :body_classes
-  def body_classes; end
+  def body_classes
+    'application'
+  end
 end

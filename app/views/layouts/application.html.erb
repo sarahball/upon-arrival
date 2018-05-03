@@ -18,10 +18,10 @@
   </head>
 
   <body class="<%= body_classes %>">
-
+    <%= render 'shared/sprite' %>
     <%= render_flashes %>
 
-    <div class="application">
+    <div class="container">
       <%= yield %>
     </div>
   </body>

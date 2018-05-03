@@ -1,6 +1,4 @@
 class DestinationsController < ApplicationController
-  layout 'landing'
-
   def show
   end
 

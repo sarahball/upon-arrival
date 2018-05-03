@@ -30,6 +30,12 @@
     <input type="submit" value="Search">
 
 
-  <p><%= link_to 'Login', new_user_session_path %> | <%= link_to 'Join Us', new_user_registration_path %></p>
+    <div class="application--user-links">
+      <% if current_user %>
+        <p><%= link_to "Update Profile", '#' %> | <%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
+      <% else %>
+        <p><%= link_to "Sign in with #{OmniAuth::Utils.camelize(:twitter)}", omniauth_authorize_path(:user, :twitter) %></p>
+      <% end %>
+    </div>
   </form>
 </div>

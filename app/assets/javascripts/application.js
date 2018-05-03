@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require activestorage
-//= require turbolinks
 //= require jquery/dist/jquery.min.js
 //
 //= require jquery-ui/widgets/selectmenu
