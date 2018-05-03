@@ -8,3 +8,5 @@ en:
       sessions: "Log In"
       password: "Change your password"
       registrations: "Join Us"
+      profiles: "Update Profile"
+      public_profiles: "🐣 %{resource}"
