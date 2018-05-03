@@ -1,0 +1,15 @@
+<h1>Update Profile</h1>
+
+<p><%= link_to 'View profile', public_profile_path(resource) %></p>
+
+<%= simple_form_for resource, url: profile_path, method: :patch do |f| %>
+  <%= f.input :username, readonly: true %>
+  <%= f.input :email %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :location %>
+  <%= f.input :website_url %>
+  <%= f.input :profile_image_url %>
+
+  <%= f.submit %>
+<% end %>

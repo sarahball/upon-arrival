@@ -32,7 +32,7 @@
 
     <div class="application--user-links">
       <% if current_user %>
-        <p><%= link_to "Update Profile", '#' %> | <%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
+        <p><%= link_to "Update Profile", edit_profile_path %> | <%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
       <% else %>
         <p><%= link_to "Sign in with #{OmniAuth::Utils.camelize(:twitter)}", omniauth_authorize_path(:user, :twitter) %></p>
       <% end %>

@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   },
   controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
-  get '/:departure_id✈️:destination_id', controller: :destinations, action: :show, as: :destination
+  resource :profile, only: [:edit, :update]
+  get '🐣:username', to: 'profiles#show', as: :public_profile
+
+  get '/:departure_id✈️:destination_id', to: 'destinations#show', as: :destination
 
   root 'landing#index'
 end

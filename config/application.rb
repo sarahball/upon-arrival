@@ -39,6 +39,7 @@ module UponArrival
       g.assets false
       g.helper false
       g.view_specs false
+      g.decorator false
     end
 
     # Let us break our I18n into lots of smaller files.
