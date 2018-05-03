@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
   resource :profile, only: [:edit, :update]
-  get '🐣:username', to: 'profiles#show', as: :public_profile
+
+  get '🐣:username', to: 'public_profiles#show', as: :public_profile
 
   get '/:departure_id✈️:destination_id', to: 'destinations#show', as: :destination
 

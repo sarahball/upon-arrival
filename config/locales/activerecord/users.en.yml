@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    models:
+      user: 'Profile'
+    attributes:
+      user:
+        description: "Description"
+        location: "Location"
+        website_url: "Website URL"
+        profile_image_url: "Profile Image"

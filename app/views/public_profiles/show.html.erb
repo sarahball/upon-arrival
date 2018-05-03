@@ -1,0 +1,8 @@
+<h1><%= resource.name %></h1>
+
+<% [:description, :location, :website_url, :profile_image_url].each do |field| %>
+  <h2><%= User.human_attribute_name(field) %></h2>
+  <div>
+    <%= resource.send(field) %>
+  </div>
+<% end %>
