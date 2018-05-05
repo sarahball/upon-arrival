@@ -23,6 +23,9 @@
     },
     "TWITTER_SECRET": {
       "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
     }
   },
   "formation": {
