@@ -82,6 +82,7 @@ GEM
       i18n_data (~> 0.7.0)
     crass (1.0.4)
     currencies (0.4.2)
+    dalli (2.7.8)
     devise (4.4.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -278,6 +279,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   countries (~> 1.2)
+  dalli
   devise
   dotenv-rails
   draper
