@@ -13,3 +13,19 @@
     color: #fff;
   }
 }
+
+.simple_form {
+  .input {
+    label {
+      display: block;
+      &:after {
+        content: ':'
+      }
+    }
+
+    textarea {
+      min-height: 3rem;
+      max-width: 100%;
+    }
+  }
+}

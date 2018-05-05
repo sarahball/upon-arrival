@@ -3,8 +3,8 @@
 <p><%= link_to 'View profile', public_profile_path(resource) %></p>
 
 <%= simple_form_for resource, url: profile_path, method: :patch do |f| %>
-  <%= f.input :username, readonly: true %>
-  <%= f.input :email %>
+  <%#= f.input :username, readonly: true %>
+  <%#= f.input :email %>
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :location %>

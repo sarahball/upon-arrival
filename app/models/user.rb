@@ -8,6 +8,8 @@ class User < ApplicationRecord
   validates :uid, presence: true, uniqueness: { scope: :provider }
 
   validates :username, presence: true, uniqueness: true
+  validates :email, presence: true
+  validates :name, presence: true
 
   def to_s
     name || username
