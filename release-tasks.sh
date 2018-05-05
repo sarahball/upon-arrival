@@ -9,7 +9,7 @@ fi
 
 if [ "$CLEAR_CACHE_DURING_RELEASE" == "true" ]; then 
   echo "Clearing Rails Cache"
-  bundle exec rake deploy:clear_rails_cache
+  bundle exec rails r "Rails.cache.clear"
 fi
 
 echo "Done"
