@@ -26,6 +26,12 @@
     },
     "SECRET_KEY_BASE": {
       "required": true
+    },
+    "RUN_MIGRATIONS_DURING_RELEASE": {
+      "required": true
+    },
+    "CLEAR_CACHE_DURING_RELEASE": {
+      "required": true
     }
   },
   "formation": {
