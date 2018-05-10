@@ -1,7 +1,7 @@
+ruby File.read('.ruby-version').chomp
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
-ruby '2.5.0'
 
 # Use .env to store environment variables
 gem 'dotenv-rails', groups: %i[development test]
