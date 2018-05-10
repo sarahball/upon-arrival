@@ -1,0 +1,5 @@
+<div class="wrapper cards">
+  <% destination.cards(departure).each do |card| %>
+    <%= render 'card', card: Destination::CardDecorator.new(card) %>
+  <% end %>
+</div>

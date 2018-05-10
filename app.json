@@ -12,20 +12,48 @@
     "RACK_ENV": {
       "required": true
     },
-    "MEMCACHEDCLOUD_PASSWORD": {
-      "required": true
-    },
-    "MEMCACHEDCLOUD_SERVERS": {
-      "required": true
-    },
-    "MEMCACHEDCLOUD_USERNAME": {
-      "required": true
-    },
     "DARKSKY_API_KEY": {
       "required": true
     },
     "OPEN_EXCHANGE_RATE_API": {
       "required": true
+    },
+    "TWITTER_KEY": {
+      "required": true
+    },
+    "TWITTER_SECRET": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    },
+    "RUN_MIGRATIONS_DURING_RELEASE": {
+      "required": true
+    },
+    "CLEAR_CACHE_DURING_RELEASE": {
+      "required": true
     }
-  }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 0
+    }
+  },
+  "addons": [
+    "memcachedcloud",
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+  
 }
