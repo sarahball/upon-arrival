@@ -6,27 +6,17 @@ The key information you need to know once you get there.
 
 ## Running Locally
 
-Copy and paste the below command and you should be good to go!
+Tl;dr: Install [docker](https://store.docker.com/editions/community/docker-ce-desktop-mac) & [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
 
-### Services and Libraries
+We're using [docker-compose](https://docs.docker.com/compose/rails/) to help everyone has the same setup. Navigate over to [The Docker Store](https://store.docker.com/editions/community/docker-ce-desktop-mac) and install docker locally.
 
-    brew install memcached &&
-    brew install postgresql@9.6 &&
-    brew install redis &&
-    gem install foreman &&
-    gem install powder
-
-### Puma Dev Server
-
-Follow the instructions found [in this gist](https://gist.github.com/MikeRogers0/5d3eceb38bae7b662476778f1d8d29cc) to migrate from Pow to Puma Dev & enabling https locally.
+For JavaScript & NPM assets, we're using [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable), make sure that's also installed.
 
 ## The Site
 
     git clone git@github.com:sarahball/upon-arrival.git &&
     cd upon-arrival &&
-    bundle &&
-    bundle exec rails db:setup &&
-    puma-dev link -n Upon-Arrival &&
-    powder open
+    yarn && 
+    docker-compose up
 
-You should be able to access the local version of the site at https://upon-arrival.localhost/.
+You should be able to access the local version of the site at http://127.0.0.1:3000/.
