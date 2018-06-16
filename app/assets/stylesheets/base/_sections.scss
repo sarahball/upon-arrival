@@ -17,9 +17,13 @@
 }
 
 .plane {
-	font-size: 150%;
 	color: $light;
 	text-shadow: none;
+}
+
+/* Cards */
+.card--info {
+  h1 {margin-bottom: 20px;}
 }
 
 /* Masonry */
