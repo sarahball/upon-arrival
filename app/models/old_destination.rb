@@ -1,4 +1,4 @@
-class OldDestination < JSONRecord
+class OldOldDestination < JSONRecord
   def slug
     data['slug']
   end
@@ -14,7 +14,7 @@ class OldDestination < JSONRecord
   def sim
     return nil unless data['sim'].present?
 
-    Destination::Card.new({
+    OldDestination::Card.new({
       type: 'tech',
       title: 'Prepaid SIM',
       subtitle: data['sim_highlight'],
@@ -26,7 +26,7 @@ class OldDestination < JSONRecord
   def emergency_numbers
     return nil unless data['emergency_numbers'].present?
 
-    Destination::Card.new({
+    OldDestination::Card.new({
       type: 'safety',
       title: 'Emergency Services',
       subtitle: data['emergency_highlight'],
@@ -37,7 +37,7 @@ class OldDestination < JSONRecord
   def ridesharing
     return nil unless data['ridesharing'].present?
 
-    Destination::Card.new({
+    OldDestination::Card.new({
       type: 'getting-around',
       title: 'Ridesharing',
       subtitle: 'Grab, Uber',
@@ -48,7 +48,7 @@ class OldDestination < JSONRecord
   def money(departure)
     # Maybe use the Big Mac Index as an indicator?
     # https://www.quandl.com/data/ECONOMIST-The-Economist-Big-Mac-Index?keyword=Germany
-    Destination::Card.new({
+    OldDestination::Card.new({
       type: 'money',
       title: 'Is the exchange rate favorable?',
       subtitle: "#{departure.currency.code} to #{currency.code} is good"
@@ -56,7 +56,7 @@ class OldDestination < JSONRecord
   end
 
   def languages
-    Destination::Card.new({
+    OldDestination::Card.new({
       type: 'culture',
       title: 'Languages',
       subtitle: offical_languages.to_sentence,
@@ -65,7 +65,7 @@ class OldDestination < JSONRecord
   end
 
   def health
-    Destination::Card.new({
+    OldDestination::Card.new({
       type: 'health',
       title: 'Can I drink the tap water?',
       subtitle: 'No',
@@ -73,7 +73,7 @@ class OldDestination < JSONRecord
   end
 
   def weather
-    Destination::Card.new({
+    OldDestination::Card.new({
       type: 'weather',
       title: 'Typical Weather',
       subtitle: 'Tropical',
