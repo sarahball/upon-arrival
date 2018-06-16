@@ -31,7 +31,7 @@ if Rails.env.development? || ENV['DURING_RELEASE_SEED_DB'].present?
       if row.category == 'slug'
         destinations[destination_airtable_id].slug = row.data
       elsif row.category == 'country'
-        destinations[destination_airtable_id].country = row.data
+        destinations[destination_airtable_id].country_code = row.data
       elsif row.category == 'factbook path'
         destinations[destination_airtable_id].facebook_path = row.data
       end
