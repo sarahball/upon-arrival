@@ -14,30 +14,106 @@ if Rails.env.development? || ENV['DURING_RELEASE_SEED_DB'].present?
     admin.password_confirmation = '12345678'
   end
 
-  @airtable_client = Airtable::Client.new(ENV['AIRTABLE_API'])
-
-  # Start filling in our DB
-  @departures = Hash[@airtable_client.table("appAKFBlzIeNlvnVl", "Departures").all.collect do |departure|
-    [departure.id, Departure.find_or_create_by(name: departure.name)]
+  # Start filling in our DB with the initial departures and destination
+  departures = Hash[AirtableWrapper.find_sheet("Departures").all.collect do |departure|
+    [departure.id, Departure.find_or_initialize_by(name: departure.name)]
   end]
 
-  @destinations = Hash[@airtable_client.table("appAKFBlzIeNlvnVl", "Destinations").all.collect do |destination|
-    [destination.id, Destination.find_or_create_by(name: departure.name)]
+  destinations = Hash[AirtableWrapper.find_sheet("Destinations").all.collect do |destination|
+    [destination.id, Destination.find_or_initialize_by(name: destination.name)]
   end]
 
-  @basics = {}
-  @airtable_client.table("appAKFBlzIeNlvnVl", "Basics").all.each do |basic|
-    basic.destinations.each do |destination|
-      @basics[destination] = {}
-      if basic.category = 'slug'
-        @destinations[destination].slug = basic.data
-      elsif basic.category = 'country'
-        @destinations[destination].country = basic.data
-      elsif basic.category = 'factbook path'
-        @destinations[destination].facebook_path = basic.data
+  AirtableWrapper.destinations = destinations
+
+  # Build the key information for each destination
+  AirtableWrapper.find_sheet("Basics").all.each do |row|
+    row.destinations.each do |destination_airtable_id|
+      if row.category == 'slug'
+        destinations[destination_airtable_id].slug = row.data
+      elsif row.category == 'country'
+        destinations[destination_airtable_id].country = row.data
+      elsif row.category == 'factbook path'
+        destinations[destination_airtable_id].facebook_path = row.data
       end
     end
   end
 
-  @destinations.collect(&:save)
+  destinations.collect(&:save)
+
+  # For each spreadsheet, make a card for each category.
+  ## Culture
+  AirtableWrapper.find_or_create_card(sheet: 'Culture', category: 'Languages') do |card, row|
+    card.highlight = row.highlight
+  end
+
+  AirtableWrapper.find_or_create_card(sheet: 'Culture', category: 'Key Phrases') do |card, row|
+    body = <<-EOF
+|Phrase|Translation|
+|---|---|
+|Greeting|#{row.greeting}|
+|Yes|#{row.yes}|
+|No|#{row.no}|
+|Thank You|#{row.thank_you}|
+|Excuse Me|#{row.excuse_me}|
+EOF
+    card.body = body.strip
+  end
+
+  AirtableWrapper.find_or_create_card(sheet: 'Culture', category: 'Is English widely spoken?') do |card, row|
+    card.hightlight = row.hightlight
+  end
+
+
+  ## Getting Around
+  AirtableWrapper.find_or_create_card(sheet: 'Getting Around', category: 'Ridesharing') do |card, row|
+    card.hightlight = row.hightlight
+    card.body = row.introduction
+
+    # TODO: Has cards and topping up info
+  end
+
+  AirtableWrapper.find_or_create_card(sheet: 'Getting Around', category: 'Transport') do |card, row|
+    card.hightlight = row.hightlight
+    card.body = row.introduction
+
+    # TODO: Has cards and topping up info
+  end
+
+  ## Safety
+  AirtableWrapper.find_or_create_card(sheet: 'Safety', category: 'Emergency Numbers') do |card, row|
+    card.hightlight = row.hightlight
+    # TODO: Has more info to import
+  end
+
+  AirtableWrapper.find_or_create_card(sheet: 'Safety', category: 'Scams') do |card, row|
+    card.body = row.introduction
+    # TODO: Has more info to import
+  end
+
+  ### TODO: Where's my nearest embassy?
+
+  ## Tech
+  AirtableWrapper.find_or_create_card(sheet: 'Tech', category: 'Prepaid SIM') do |card, row|
+    card.hightlight = row.hightlight
+    card.body = row.introduction
+    # TODO: Has more info to import
+  end
+
+  ## Money
+  ### TODO: Big Mac Index
+  AirtableWrapper.find_or_create_card(sheet: 'Money', category: 'Tipping') do |card, row|
+    card.hightlight = row.hightlight
+    card.body = row.introduction
+    # TODO: Has more info to import
+  end
+
+  ## Health
+  AirtableWrapper.find_or_create_card(sheet: 'Health', category: 'Can you drink the tap water?') do |card, row|
+    card.hightlight = row.hightlight
+  end
+
+  AirtableWrapper.find_or_create_card(sheet: 'Health', category: 'Reputable hospital') do |card, row|
+    card.hightlight = row.hightlight
+    card.body = row.introduction
+  end
 end
