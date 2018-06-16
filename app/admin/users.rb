@@ -13,4 +13,6 @@ ActiveAdmin.register User do
 # end
 
   decorate_with UserDecorator
+
+  actions :index, :show
 end

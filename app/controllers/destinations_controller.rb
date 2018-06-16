@@ -10,7 +10,7 @@ class DestinationsController < ApplicationController
 
   helper_method :departure
   def departure
-    @departure ||= Departure.find(params[:departure_id])
+    @departure ||= params[:departure_id] == 'anywhere' ? Departure.anywhere : Departure.find(params[:departure_id])
   end
 
   def page_title_i18n_interpolations
