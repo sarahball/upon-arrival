@@ -25,11 +25,7 @@ body {
 
 .wrapper {margin: $space 5%;}
 
-// Links
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-
-// Misc
+// Utils
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 *:focus {
@@ -45,9 +41,15 @@ hr {
   border-top: 1px solid $light;
 }
 
-// Larger than tablet
-@media (#{$bp-larger-than-tablet}) {
-}
+.right {float: right;}
+
+.left {float: left;}
+
+.fit {max-width: 100%;}
+
+.hidden {display: none;}
+
+strong {font-weight: $font-heavy;}
 
 // Larger than desktop
 @media (#{$bp-larger-than-desktophd}) {

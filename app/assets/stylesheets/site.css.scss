@@ -2,25 +2,14 @@
 @import "jquery-ui";
 
 /* Stylesheets */
-@import "base/normalize";
-@import "base/variables";
-@import "base/mixins";
-@import "base/functions";
-@import "base/base-styles";
-@import "base/utils";
-@import "base/typography";
-@import "base/navigation";
-@import "modules/grid";
-@import "base/search";
-@import "base/sections";
-@import "base/content";
-@import "modules/buttons";
-//@import "modules/forms";
-//@import "modules/lists";
-//@import "modules/code";
-@import "modules/tables";
-//@import "modules/spacing";
-@import "modules/media-queries";
-
-@import "modules/alerts";
-@import "base/application";
+@import "sheets/normalize";
+@import "sheets/variables";
+@import "sheets/mixins";
+@import "sheets/base-styles";
+@import "sheets/typography";
+@import "sheets/grid";
+@import "sheets/landing";
+@import "sheets/app";
+@import "sheets/buttons";
+@import "sheets/tables";
+@import "sheets/application";

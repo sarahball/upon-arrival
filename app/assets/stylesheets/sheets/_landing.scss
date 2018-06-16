@@ -1,4 +1,4 @@
-// Search Page
+// Landing
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .locations {
@@ -96,7 +96,7 @@ input[type="submit"] {
 
   .ui-state-focus, .ui-state-active {
     margin: 0;
-    background-color: rgba(130, 17, 212, 0.25);
+    background-color: rgba($dark-accent, 0.25);
   }
 }
 
@@ -109,7 +109,6 @@ input[type="submit"] {
   }
 
   &-#{menu} .ui-menu {
-    //@include gradient();
     background: $light;
   }
 
@@ -145,6 +144,3 @@ input[type="submit"] {
     .logo-parent {max-width: 400px;}
   }
 }
-
-// Larger than desktop
-@media (#{$bp-larger-than-desktop}) {}

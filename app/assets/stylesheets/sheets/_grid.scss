@@ -32,15 +32,6 @@
   }
 }
 
-/* Content Grid */
-/*.tabs {
-  @include display-grid;
-  @include grid-template-columns(100%);
-  grid-template-areas:
-    "menu"
-    "content";
-}*/
-
 // Larger than tablet
 @media (#{$bp-larger-than-tablet}) {
   .result {

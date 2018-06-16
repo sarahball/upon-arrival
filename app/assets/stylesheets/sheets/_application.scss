@@ -2,15 +2,15 @@
   max-width: 60rem;
   margin: 3rem auto;
   padding: 3rem;
-  background-color: white;
+  background-color: $light;
   box-shadow: 0 20px 30px 0 rgba(0, 32, 59, 0.12);
 }
 
 .application--user-links {
-  color: #fff;
+  color: $light;
 
   a {
-    color: #fff;
+    color: $light;
     text-shadow: 0 0 2px rgba($dark, 0.5);
   }
 }
