@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2018_06_16_155849) do
     t.string "name"
     t.string "slug"
     t.string "country_code"
+    t.string "airtable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -73,6 +74,7 @@ ActiveRecord::Schema.define(version: 2018_06_16_155849) do
     t.string "slug"
     t.string "country_code"
     t.string "facebook_path"
+    t.string "airtable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

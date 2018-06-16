@@ -5,6 +5,7 @@ class CreateDestinations < ActiveRecord::Migration[5.2]
       t.string :slug
       t.string :country_code
       t.string :facebook_path
+      t.string :airtable_id
 
       t.timestamps
     end

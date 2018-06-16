@@ -4,6 +4,7 @@ class CreateDepartures < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :slug
       t.string :country_code
+      t.string :airtable_id
 
       t.timestamps
     end
