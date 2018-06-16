@@ -21,7 +21,7 @@ class Airtable::Wrapper
             card.body = (row.fields['Introduction'] || '').strip
 
             row.fields.reject { |k, v| ['Category', 'Departures', "Destinations", "Display?", "Highlight", "Introduction", "id"].include?(k) }.each do |key, value|
-              card.body += "\n\n" + '###' + key + "\n" + value
+              card.body += "\n\n" + '##' + key + "\n" + value
             end
 
             card.body.strip!

@@ -15,8 +15,8 @@ class DestinationsController < ApplicationController
 
   def page_title_i18n_interpolations
     {
-      departure: departure.title,
-      destination: destination.title,
+      departure: departure.name,
+      destination: destination.name,
     }
   end
 

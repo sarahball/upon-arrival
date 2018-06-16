@@ -23,8 +23,6 @@ if Rails.env.development? || ENV['DURING_RELEASE_SEED_DB'].present?
   Airtable::Wrapper.find_or_create_card(sheet: 'Culture', category: 'Languages')
   Airtable::Wrapper.find_or_create_card(sheet: 'Culture', category: 'Key Phrases') do |card, row|
     body = <<-EOF
-|Phrase|Translation|
-|---|---|
 |Greeting|#{row.greeting}|
 |Yes|#{row.yes}|
 |No|#{row.no}|

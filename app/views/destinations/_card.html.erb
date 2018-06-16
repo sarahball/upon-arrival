@@ -1,26 +1,16 @@
 <div class="card--container <%= card.type %>">
   <div class="card--info">
     <div class="card--tag">
-      <span><h3><%= card.type.titleize %></h3></span>
+      <span><h3><%= card.category %></h3></span>
     </div>
     <h1><%= card.title %></h1>
-    <% if card.subtitle.present? %>
-      <h2><%= card.subtitle %></h2>
+    <% if card.highlight? %>
+      <h2><%= card.highlight %></h2>
     <% end %>
   </div>
-  <% if card.body || ( card.tabular_data && card.tabular_data.any? ) %>
+  <% if card.body? %>
     <div class="card--details">
       <%= card.body %>
-      <% if card.tabular_data && card.tabular_data.any? %>
-        <table>
-          <% card.tabular_data.each do |field, value| %>
-            <tr>
-              <td><%= field %></td>
-              <td><%= value %></td>
-            </tr>
-          <% end %>
-        </table>
-      <% end %>
     </div>
   <% end %>
 </div>

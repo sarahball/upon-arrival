@@ -12,6 +12,8 @@ ActiveAdmin.register Departure do
 #   permitted
 # end
 
+  decorate_with DepartureDecorator
+
   actions :index, :show
   filter :name
 end

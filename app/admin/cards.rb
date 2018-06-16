@@ -12,6 +12,8 @@ ActiveAdmin.register Card do
 #   permitted
 # end
 
+  decorate_with CardDecorator
+
   actions :index, :show
   
   config.sort_order = ['position_asc']

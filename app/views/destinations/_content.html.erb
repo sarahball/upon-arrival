@@ -1,5 +1,5 @@
 <div class="wrapper cards">
-  <% destination.cards(departure).each do |card| %>
-    <%= render 'card', card: Destination::CardDecorator.new(card) %>
+  <% destination.cards.with_departure_or_empty(departure).decorate.each do |card| %>
+    <%= render 'card', card: card %>
   <% end %>
 </div>
