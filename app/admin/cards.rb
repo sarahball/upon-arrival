@@ -12,4 +12,6 @@ ActiveAdmin.register Card do
 #   permitted
 # end
 
+  
+  config.sort_order = ['position_asc']
 end

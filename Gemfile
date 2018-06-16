@@ -67,6 +67,9 @@ gem 'airtable'
 # Admin - So we can see how the import went & trigger new imports
 gem 'activeadmin'
 
+# Friendly IDs - For SEO friendly URLs
+gem 'friendly_id'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
