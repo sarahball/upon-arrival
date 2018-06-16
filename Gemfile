@@ -61,8 +61,11 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'simple_form'
 
-# AirTable API - where we store our data
+# AirTable API - where we stored our data for import
 gem 'airtable'
+
+# Admin - So we can see how the import went & trigger new imports
+gem 'activeadmin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
