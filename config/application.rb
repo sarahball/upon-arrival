@@ -42,6 +42,8 @@ module UponArrival
       g.decorator false
     end
 
+    config.redis = { url: ENV['REDIS_URL'], size: 1 } if ENV['REDIS_URL']
+
     # Let us break our I18n into lots of smaller files.
     config.i18n.load_path += Dir["#{Rails.root}/config/locales/**/*.{rb,yml}"]
   end
