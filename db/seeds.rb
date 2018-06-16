@@ -29,7 +29,7 @@ if Rails.env.development? || ENV['DURING_RELEASE_SEED_DB'].present?
 |Thank You|#{row.thank_you}|
 |Excuse Me|#{row.excuse_me}|
 EOF
-    card.body = body.strip
+    card.body.strip!
   end
   Airtable::Wrapper.find_or_create_card(sheet: 'Culture', category: 'Is English widely spoken?')
 
@@ -38,7 +38,14 @@ EOF
   Airtable::Wrapper.find_or_create_card(sheet: 'Getting Around', category: 'Transport')
 
   ## Safety
-  Airtable::Wrapper.find_or_create_card(sheet: 'Safety', category: 'Emergency Numbers')
+  Airtable::Wrapper.find_or_create_card(sheet: 'Safety', category: 'Emergency Numbers') do |card, row|
+
+    card.body = ''
+    row.fields.reject { |k, v| ['Category', 'Departures', "Destinations", "Display?", "Highlight", "Introduction", "id"].include?(k) }.each do |key, value|
+      card.body += "|#{key}|#{value}|\n"
+    end
+    card.body.strip!
+  end
   Airtable::Wrapper.find_or_create_card(sheet: 'Safety', category: 'Scams')
   Airtable::Wrapper.find_or_create_card(sheet: 'Safety', category: "Where's my nearest embassy?")
 
