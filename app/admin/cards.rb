@@ -15,4 +15,23 @@ ActiveAdmin.register Card do
   actions :index, :show
   
   config.sort_order = ['position_asc']
+
+  sortable
+
+  scope :departure_is_set
+  scope :departure_is_anywhere
+
+  index do
+    # This adds columns for moving up, down, top and bottom.
+    sortable_handle_column
+
+    column :category
+    column :title
+    column :destination
+    column :departure
+    column :highlight
+    column :body
+    column :position
+    actions
+  end
 end

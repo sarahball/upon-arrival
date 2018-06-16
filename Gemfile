@@ -64,11 +64,15 @@ gem 'simple_form'
 # AirTable API - where we stored our data for import
 gem 'airtable'
 
-# Admin - So we can see how the import went & trigger new imports
-gem 'activeadmin'
-
 # Friendly IDs - For SEO friendly URLs
 gem 'friendly_id'
+
+# Acts as list - let us order cards by position
+gem 'acts_as_list'
+gem 'activeadmin-sortable'
+
+# Admin - So we can see how the import went & trigger new imports
+gem 'activeadmin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
