@@ -6,6 +6,6 @@ class ApplicationDecorator < Draper::Decorator
   end
 
   def markdown_sanitize(body)
-    h.sanitize(Redcarpet::Markdown.new(Redcarpet::Render::HTML, tables: true).render(body), tags: %w(p br a ul ol li strong em h3 h4 table tr td th))
+    h.sanitize(Kramdown::Document.new(body).to_html, tags: %w(p br a ul ol li strong em h3 h4 table tr td))
   end
 end

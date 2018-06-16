@@ -75,7 +75,7 @@ gem 'activeadmin-sortable'
 gem 'activeadmin'
 
 # Convert the markdown to html
-gem 'redcarpet'
+gem 'kramdown'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
