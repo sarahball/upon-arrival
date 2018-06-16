@@ -12,6 +12,7 @@ ActiveAdmin.register Card do
 #   permitted
 # end
 
+  actions :index, :show
   
   config.sort_order = ['position_asc']
 end

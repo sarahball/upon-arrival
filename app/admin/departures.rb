@@ -12,4 +12,6 @@ ActiveAdmin.register Departure do
 #   permitted
 # end
 
+  actions :index, :show
+  filter :name
 end
