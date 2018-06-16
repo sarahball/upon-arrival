@@ -23,7 +23,7 @@ class Airtable::Seeds
         elsif row.category == 'country'
           destinations[destination_airtable_id].country_code = row.data
         elsif row.category == 'factbook path'
-          destinations[destination_airtable_id].facebook_path = row.data
+          destinations[destination_airtable_id].factbook_path = row.data
         end
       end
     end
