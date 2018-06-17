@@ -2,6 +2,8 @@ class Destination < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: [:sequentially_slugged, :slugged, :finders]
 
+  scope :by_name, ->{ order(name: :asc) }
+
   has_many :cards
 
   private

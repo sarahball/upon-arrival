@@ -14,7 +14,7 @@
     <label for="wherefrom">Where are you from?</label>
     <select name="Where are you from?" id="wherefrom">
       <option value="">Where are you from?</option>
-      <% ([Departure.anywhere] + Departure.all).each do |departure| %>
+      <% ([Departure.anywhere] + Departure.by_name).each do |departure| %>
         <option value="<%= departure.slug %>"><%= departure.name %></option>
       <% end %>
     </select>
@@ -22,7 +22,7 @@
     <label for="wheregoing">Where are you going?</label>
     <select name="Where are you going?" id="wheregoing">
       <option value="">Where are you going?</option>
-      <% Destination.all.each do |destination| %>
+      <% Destination.by_name.each do |destination| %>
         <option value="<%= destination.slug %>"><%= destination.name %></option>
       <% end %>
     </select>
