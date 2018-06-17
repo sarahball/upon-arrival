@@ -1,21 +1,8 @@
 ActiveAdmin.register Card do
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
-
   decorate_with CardDecorator
 
-  actions :index, :show
-  
+  permit_params :destination_id, :departure_id, :category, :title, :highlight, :body
+
   config.sort_order = ['position_asc']
 
   sortable
@@ -35,5 +22,18 @@ ActiveAdmin.register Card do
     column :body
     column :position
     actions
+  end
+
+  form do |f|
+    f.inputs do
+      f.input :destination, include_blank: false
+      f.input :departure
+      f.input :category
+      f.input :title
+      f.input :highlight
+      f.input :body
+    end
+
+    f.actions
   end
 end
