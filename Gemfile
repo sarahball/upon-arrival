@@ -61,6 +61,10 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'simple_form'
 
+# Data cleaners
+gem 'auto_strip_attributes'
+
+
 # AirTable API - where we stored our data for import
 gem 'airtable'
 

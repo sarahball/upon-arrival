@@ -21,6 +21,6 @@ For JavaScript & NPM assets, we're using [Yarn](https://yarnpkg.com/lang/en/docs
 
 Then in another tab, run:
 
-    docker-compose run web bundle exec rake db:setup
+    docker-compose run --rm web bundle exec rake db:setup
 
 You should be able to access the local version of the site at http://127.0.0.1:3000/.

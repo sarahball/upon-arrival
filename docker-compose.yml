@@ -1,15 +1,39 @@
-version: '3'
+version: '3.6'
+
 services:
   db:
+    container_name: UponArrival-Database
     image: postgres
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
+    restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 90s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: none
   web:
+    container_name: UponArrival-Web
+    environment:
+      - PORT=3000
+      - DB_PORT=5432
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle && echo 'Now visit http://0.0.0.0:3000/' && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: "bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/myapp
+      - bundle_cache:/bundle
     ports:
       - "3000:3000"
     depends_on:
       - db
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "curl", "-f", "tcp://0.0.0.0:3000"]
+      interval: 90s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  bundle_cache:
