@@ -14,7 +14,7 @@ fi
 
 if [ "$DURING_RELEASE_SEED_DB" == "true" ]; then 
   echo "Seeding DB"
-  #bundle exec rails db:seed
+  bundle exec rails db:seed
 fi
 
 echo "Done"
