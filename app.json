@@ -48,7 +48,7 @@
     },
     "DURING_RELEASE_SEED_DB": {
       "description": "Should this environment be seeded from Airtable",
-      "value": true
+      "value": "true"
     },
     "AIRTABLE_API": {
       "required": true
