@@ -37,7 +37,6 @@
 </div>
 
 <% Destination.all.each do |destination| %>
-  <%= image_tag "bg/#{destination.slug}.jpg", class: 'hidden' %>
   <link rel="postload" href="<%= asset_path("bg/#{destination.slug}.jpg") %>" as="image" />
 <% end %>
 
