@@ -2,14 +2,19 @@
 
 echo "Running Release Tasks"
 
-if [ "$RUN_MIGRATIONS_DURING_RELEASE" == "true" ]; then 
+if [ "$DURING_RELEASE_RUN_MIGRATIONS" == "true" ]; then 
   echo "Running Migrations"
-  bundle exec rake db:migrate
+  bundle exec rails db:migrate
 fi
 
-if [ "$CLEAR_CACHE_DURING_RELEASE" == "true" ]; then 
+if [ "$DURING_RELEASE_CLEAR_CACHE" == "true" ]; then 
   echo "Clearing Rails Cache"
   bundle exec rails r "Rails.cache.clear"
+fi
+
+if [ "$DURING_RELEASE_SEED_DB" == "true" ]; then 
+  echo "Seeding DB"
+  #bundle exec rails db:seed
 fi
 
 echo "Done"

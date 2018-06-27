@@ -12,6 +12,19 @@
     "RACK_ENV": {
       "required": true
     },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
     "DARKSKY_API_KEY": {
       "required": true
     },
@@ -27,10 +40,17 @@
     "SECRET_KEY_BASE": {
       "required": true
     },
-    "RUN_MIGRATIONS_DURING_RELEASE": {
+    "DURING_RELEASE_RUN_MIGRATIONS": {
       "required": true
     },
-    "CLEAR_CACHE_DURING_RELEASE": {
+    "DURING_RELEASE_CLEAR_CACHE": {
+      "required": true
+    },
+    "DURING_RELEASE_SEED_DB": {
+      "description": "Should this environment be seeded from Airtable",
+      "value": true
+    },
+    "AIRTABLE_API": {
       "required": true
     }
   },
