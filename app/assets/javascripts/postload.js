@@ -1,3 +1,3 @@
-$(document).on('ready', function(){
+$(document).ready(function(){
   $('link[rel=postload]').attr('rel', 'preload');
 });
