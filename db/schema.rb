@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_16_203004) do
+ActiveRecord::Schema.define(version: 2018_06_28_155824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2018_06_16_203004) do
     t.bigint "departure_id"
     t.string "highlight"
     t.text "body"
-    t.integer "position"
+    t.integer "position", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["departure_id"], name: "index_cards_on_departure_id"
