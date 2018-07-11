@@ -16,17 +16,6 @@ module UponArrival
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    if ENV['MEMCACHEDCLOUD_SERVERS']
-      config.cache_store = :dalli_store,
-                           (ENV['MEMCACHEDCLOUD_SERVERS'] || '').split(','),
-                           { username: ENV['MEMCACHEDCLOUD_USERNAME'],
-                             password: ENV['MEMCACHEDCLOUD_PASSWORD'],
-                             failover: true,
-                             socket_timeout: 1.5,
-                             socket_failure_delay: 0.2,
-                             down_retry_delay: 60 }
-    end
-
     # Enable serving of images, stylesheets, and JavaScripts from an asset server.
     if ENV['ASSET_HOST']
       config.action_controller.asset_host = ENV['ASSET_HOST']
@@ -42,7 +31,10 @@ module UponArrival
       g.decorator false
     end
 
-    config.redis = { url: ENV['REDIS_URL'], size: 1 } if ENV['REDIS_URL']
+    if ENV['REDIS_URL']
+      config.redis = { url: ENV['REDIS_URL'] }
+      config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'] }
+    end
 
     # Let us break our I18n into lots of smaller files.
     config.i18n.load_path += Dir["#{Rails.root}/config/locales/**/*.{rb,yml}"]
