@@ -1,7 +1,7 @@
 FROM ruby:2.5.1
 
 # Ensure that our apt package list is updated and has basic build packages.
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev node nodejs netcat
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs netcat
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 ENV PATH="${HOME}/.yarn/bin:${HOME}/.config/yarn/global/node_modules/.bin:${PATH}"
 
