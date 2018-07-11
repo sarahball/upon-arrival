@@ -3,6 +3,6 @@ class LandingController < ApplicationController
 
   private
   def body_classes
-    "locations locations-#{Destination.order("RANDOM()").first.slug}"
+    "locations locations-#{Destination.by_random.first.slug}"
   end
 end

@@ -3,6 +3,7 @@ class Destination < ApplicationRecord
   friendly_id :name, use: [:sequentially_slugged, :slugged, :finders]
 
   scope :by_name, ->{ order(name: :asc) }
+  scope :by_random, ->{ order(Arel.sql('random()')) }
 
   has_many :cards
 
