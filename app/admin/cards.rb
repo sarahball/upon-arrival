@@ -10,6 +10,19 @@ ActiveAdmin.register Card do
   scope :departure_is_set
   scope :departure_is_anywhere
 
+  sidebar :versions, partial: 'versions', only: [:show, :edit]
+
+  action_item :revert_version, only: :show do
+    if params[:version].present?
+      link_to 'Revert Card', [:revert_version, :admin, resource, {version: params[:version]}], method: :patch
+    end
+  end
+
+  member_action :revert_version, method: :patch do
+    resource.save!
+    redirect_to url_for([:admin, resource])
+  end
+
   index do
     # This adds columns for moving up, down, top and bottom.
     sortable_handle_column
@@ -35,5 +48,14 @@ ActiveAdmin.register Card do
     end
 
     f.actions
+  end
+
+  controller do
+
+    def find_resource
+      tmp_resource = scoped_collection.where(id: params[:id]).includes(versions: :item).first!
+      tmp_resource = tmp_resource.versions.find(params[:version]).reify if params[:version]
+      tmp_resource
+    end
   end
 end

@@ -1,4 +1,6 @@
 class Card < ApplicationRecord
+  has_paper_trail
+  
   belongs_to :destination
   belongs_to :departure, optional: true
 
