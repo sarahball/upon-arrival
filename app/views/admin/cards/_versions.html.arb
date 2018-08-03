@@ -1,0 +1,22 @@
+strong 'Current'
+div do
+  if params[:version].nil?
+    strong link_to(resource.updated_at.to_s(:short), [:admin, resource])
+  else
+    span link_to(resource.updated_at.to_s(:short), [:admin, resource])
+  end
+end
+
+hr
+
+strong 'Previous'
+table_for resource.versions do
+  column ("Modified at") do |v|
+    if v.id == params[:version].to_i
+      strong link_to v.created_at.to_s(:short), [:admin, v.item, {version: v.id}]
+    else
+      link_to v.created_at.to_s(:short), [:admin, v.item, {version: v.id}]
+    end
+  end
+  column ("whodunnit") { |v| v.whodunnit }
+end
