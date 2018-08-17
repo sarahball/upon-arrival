@@ -15,7 +15,9 @@
 //
 //= require jquery-ui/widgets/selectmenu
 //= require jquery-ui/widgets/tabs
+//= require jquery-ui/widgets/dialog
 //
 //= require jquery-match-height/dist/jquery.matchHeight-min.js
+//= require_tree ./components/
 //= require postload
 //= require site.js

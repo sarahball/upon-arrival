@@ -13,4 +13,19 @@
       <%= card.body %>
     </div>
   <% end %>
+  <% if current_user %>
+    <button data-type="dialog" data-target="#dialog-card-<%= card.id %>">Edit</button>
+  <% end %>
 </div>
+
+<% if current_user %>
+  <div class="dialog" id="dialog-card-<%= card.id %>" title="Update Card">
+    <p class="validateTips">All form fields are required.</p>
+
+    <%= simple_form_for(card) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :highlight %>
+      <%= f.input :body %>
+    <% end %>
+  </div>
+<% end %>

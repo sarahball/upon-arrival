@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 
   resource :profile, only: [:edit, :update]
+  resources :cards, only: [:edit, :update]
 
   get '🐣:username', to: 'public_profiles#show', as: :public_profile
 

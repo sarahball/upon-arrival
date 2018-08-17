@@ -1,0 +1,26 @@
+.ui-widget-overlay {
+  background: #aaaaaa/*{bgColorOverlay}*/ /*{bgImgUrlOverlay}*/ /*{bgOverlayXPos}*/ /*{bgOverlayYPos}*/ /*{bgOverlayRepeat}*/;
+  opacity: .3/*{opacityOverlay}*/;
+  filter: Alpha(Opacity=30)/*{opacityFilterOverlay}*/;
+}
+
+.ui-widget.ui-widget-content {
+  border: 1px solid #c5c5c5/*{borderColorDefault}*/;
+}
+
+.ui-widget-content {
+  border: 1px solid #dddddd/*{borderColorContent}*/;
+  background: #ffffff/*{bgColorContent}*/ /*{bgImgUrlContent}*/ /*{bgContentXPos}*/ /*{bgContentYPos}*/ /*{bgContentRepeat}*/;
+  color: #333333/*{fcContent}*/;
+}
+
+.ui-widget-header {
+  border: 1px solid #dddddd/*{borderColorHeader}*/;
+  background: #e9e9e9/*{bgColorHeader}*/ /*{bgImgUrlHeader}*/ /*{bgHeaderXPos}*/ /*{bgHeaderYPos}*/ /*{bgHeaderRepeat}*/;
+  color: #333333/*{fcHeader}*/;
+  font-weight: bold;
+}
+
+.ui-resizable-handle {
+  display: none!important;
+}
