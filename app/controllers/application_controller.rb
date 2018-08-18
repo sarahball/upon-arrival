@@ -8,4 +8,14 @@ class ApplicationController < ActionController::Base
   def body_classes
     'application'
   end
+
+  def user_for_paper_trail
+    if current_user
+      { user: current_user.id } 
+    elsif current_admin
+      { admin: current_admin.id }
+    else
+      'Unknown'
+    end
+  end
 end
