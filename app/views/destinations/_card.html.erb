@@ -20,12 +20,6 @@
 
 <% if current_user %>
   <div class="dialog" id="dialog-card-<%= card.id %>" title="Update Card">
-    <p class="validateTips">All form fields are required.</p>
-
-    <%= simple_form_for(card) do |f| %>
-      <%= f.input :title %>
-      <%= f.input :highlight %>
-      <%= f.input :body %>
-    <% end %>
+    <%= render 'cards/form', card: card %>
   </div>
 <% end %>
