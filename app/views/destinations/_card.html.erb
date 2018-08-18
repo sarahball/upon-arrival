@@ -16,6 +16,11 @@
   <% if current_user %>
     <button data-type="dialog" data-target="#dialog-card-<%= card.id %>">Edit</button>
   <% end %>
+  <% if card.last_edit_by? %>
+    <%= link_to "https://www.twitter.com/#{card.last_edit_by.username}", targer: '_blank' do %>
+      <%= image_tag(card.last_edit_by.profile_image_url) %>
+    <% end %>
+  <% end %>
 </div>
 
 <% if current_user %>

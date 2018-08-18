@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     elsif current_admin
       { admin: current_admin.id }
     else
-      'Unknown'
+      {}
     end
   end
 end

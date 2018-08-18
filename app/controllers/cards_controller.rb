@@ -5,7 +5,9 @@ class CardsController < ApplicationController
   def edit; end
 
   def update
-    return render :edit unless resource.update_attributes(resource_params)
+    resource.attributes = resource_params
+    resource.last_edit_by_user_id = current_user.id if resource.changed.any?
+    return render :edit unless resource.save
     redirect_to destination_path(departure_id: resource.departure&.slug || 'anywhere', destination_id: resource.destination.slug), notice: t('.notice')
   end
 

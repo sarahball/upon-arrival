@@ -16,4 +16,14 @@ class Card < ApplicationRecord
   def type
     category.downcase
   end
+
+  def last_edit_by?
+    last_edit_by_user_id?
+  end
+
+  def last_edit_by
+    @last_edit_by ||= if last_edit_by_user_id?
+      User.find(last_edit_by_user_id)
+    end
+  end
 end
