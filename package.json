@@ -2,7 +2,7 @@
   "name": "upon-arrival",
   "private": true,
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jquery-match-height": "^0.7.2"
   }
 }
